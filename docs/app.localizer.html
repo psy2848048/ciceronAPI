@@ -99,7 +99,32 @@
 <dl class="method">
 <dt id="app.localizer.LocalizerAPI.localizer">
 <code class="descname">localizer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.localizer.LocalizerAPI.localizer" title="정의 주소">¶</a></dt>
-<dd></dd></dl>
+<dd><p>POST /api/v1/user/localizer</p>
+<dl class="docutils">
+<dt>Parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#8216;binary&#8217;:</th><td class="field-body">파일 binary</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#8216;target_lang&#8217;:</th><td class="field-body">프론트엔트의 언어 파일 ISO code (eg. &#8216;en&#8217;, &#8216;ko&#8217;, &#8216;ja&#8217;, ...)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Response</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">200:</th><td class="field-body">ZIP 압축 파일</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
