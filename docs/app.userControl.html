@@ -105,12 +105,8 @@
 <dt><strong>200</strong></dt>
 <dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;logged_in&quot;: true, // 로그인 상태
-  &quot;useremail&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인한 유저 메일
-  &quot;isTranslator&quot;: true // 번역가 계정인지 아닌지 확인
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;salt&quot;: &quot;a3Bd1g&quot;, // Password Salt
 }
 </pre></div>
 </td></tr></table></div>
@@ -128,7 +124,24 @@
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong> 로그인 성공</dd>
+<dd><dl class="first docutils">
+<dt><strong>200</strong> 로그인 성공</dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;logged_in&quot;: true, // 로그인 상태
+  &quot;useremail&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인한 유저 메일
+  &quot;isTranslator&quot;: true // 번역가 계정인지 아닌지 확인
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+<p><strong>403</strong>: 로그인 실패</p>
+<p class="last"><strong>501</strong>: 1유저 2 패스워드 (있을 수 없는 동작)</p>
+</dd>
 </dl>
 </dd>
 </dl>
