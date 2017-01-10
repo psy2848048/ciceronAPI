@@ -67,7 +67,8 @@
 <dl class="method">
 <dt id="app.userControl.UserControlAPI.login2">
 <code class="descname">login2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.login2" title="정의 주소">¶</a></dt>
-<dd><p>GET /api/login
+<dd><blockquote>
+<div><p>GET /api/login
 GET /api/v2/login</p>
 <p>POST /api/login
 POST /api/v2/login</p>
@@ -93,15 +94,7 @@ POST /api/v2/login</p>
 <dt>:Response</dt>
 <dd><dl class="first last docutils">
 <dt>:200</dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;logged_in&quot;: true, // 로그인 상태
-  &quot;useremail&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인한 유저 메일
-  &quot;isTranslator&quot;: true // 번역가 계정인지 아닌지 확인
-}
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
 </pre></div>
 </td></tr></table></div>
 </dd>
@@ -109,6 +102,17 @@ POST /api/v2/login</p>
 </dd>
 </dl>
 </dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>{</dt>
+<dd>&#8220;logged_in&#8221;: true, // 로그인 상태
+&#8220;useremail&#8221;: &#8220;<a class="reference external" href="mailto:blahblah&#37;&#52;&#48;ciceron&#46;me">blahblah<span>&#64;</span>ciceron<span>&#46;</span>me</a>&#8221;, // 로그인한 유저 메일
+&#8220;isTranslator&#8221;: true // 번역가 계정인지 아닌지 확인</dd>
+</dl>
+<p>}</p>
+<blockquote>
+<div><dl class="docutils">
 <dt>POST /api/login or /api/v2/login</dt>
 <dd><dl class="first last docutils">
 <dt>:Parameters</dt>
@@ -127,12 +131,14 @@ POST /api/v2/login</p>
 </dl>
 </dd>
 </dl>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
 <dt id="app.userControl.UserControlAPI.loginCheck2">
 <code class="descname">loginCheck2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.loginCheck2" title="정의 주소">¶</a></dt>
-<dd><p>GET /api
+<dd><blockquote>
+<div><p>GET /api
 GET /api/v2</p>
 <p>해당 세션의 상태를 보여준다.
 아래 return값은 session[var_name]으로 접근 가능하다</p>
@@ -148,26 +154,30 @@ GET /api/v2</p>
 <dt>:Response</dt>
 <dd><dl class="first last docutils">
 <dt>:200</dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;useremail&quot;: &quot;blahblah@gmail.com&quot;, // 로그인한 유저의 이메일주소. 로그인 상태 아니면 null
-  &quot;isLoggedIn&quot;: true, // 로그인 여부 True/False
-  &quot;isTranslator&quot; : false  //로그인한 유저의 번역가여부 True/False
-}
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
 </pre></div>
 </td></tr></table></div>
 </dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>{</dt>
+<dd>&#8220;useremail&#8221;: &#8220;<a class="reference external" href="mailto:blahblah&#37;&#52;&#48;gmail&#46;com">blahblah<span>&#64;</span>gmail<span>&#46;</span>com</a>&#8221;, // 로그인한 유저의 이메일주소. 로그인 상태 아니면 null
+&#8220;isLoggedIn&#8221;: true, // 로그인 여부 True/False
+&#8220;isTranslator&#8221; : false  //로그인한 유저의 번역가여부 True/False</dd>
+</dl>
+<p>}</p>
+<blockquote>
+<div><dl class="docutils">
 <dt>:403</dt>
 <dd><ul class="first last simple">
 <li>로그인되지 않았음</li>
 </ul>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 </dd></dl>
 
 </dd></dl>
