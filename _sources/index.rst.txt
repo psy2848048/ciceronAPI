@@ -6,10 +6,10 @@
 CICERON API doc v2.0
 ===================================
 
-.. toctree::
+.. autosummary::
+   :toctree: _autosummary
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices and tables
