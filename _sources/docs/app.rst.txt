@@ -23,6 +23,7 @@ Submodules
    app.requestwarehouse
    app.translator
    app.wikidic
+   app.userControl
 
 Module contents
 ---------------
