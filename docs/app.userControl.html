@@ -69,14 +69,24 @@
 <code class="descname">login2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.login2" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
 <dt>해당 API</dt>
-<dd><ul class="first last simple">
-<li>토큰 따기
-* GET /api/login
-* GET /api/v2/login</li>
-<li>로그인하기
-* POST /api/login
-* POST /api/v2/login</li>
-</ul>
+<dd><ol class="first arabic simple">
+<li>토큰 따기</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>GET /api/login</li>
+<li>GET /api/v2/login</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>로그인하기</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>POST /api/login</li>
+<li>POST /api/v2/login</li>
+</ol>
+</div></blockquote>
 </dd>
 <dt>로그인 로직</dt>
 <dd><ol class="first last arabic simple">
@@ -87,18 +97,12 @@
 </ol>
 </dd>
 <dt>GET /api/login or /api/v2/login</dt>
-<dd><table class="first docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">Nothing</td>
-</tr>
-</tbody>
-</table>
-<dl class="last docutils">
-<dt>:Response</dt>
 <dd><dl class="first last docutils">
-<dt>:200</dt>
+<dt><strong>Parameters</strong></dt>
+<dd>Nothing</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
 <dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -117,19 +121,11 @@
 </dd>
 <dt>POST /api/login or /api/v2/login</dt>
 <dd><dl class="first last docutils">
-<dt>:Parameters</dt>
+<dt><strong>Parameters</strong></dt>
 <dd>&#8220;email&#8221;: 유저 email 주소 (ciceron_lib.get_user_id를 통하여 email에서 user_id를 추출할 수 있다.)
 &#8220;password&#8221;: 3번 참조</dd>
-<dt>:Response</dt>
-<dd><table class="first last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">200:</th><td class="field-body">로그인 성공</td>
-</tr>
-</tbody>
-</table>
-</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong> 로그인 성공</dd>
 </dl>
 </dd>
 </dl>
@@ -140,26 +136,20 @@
 <code class="descname">loginCheck2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.loginCheck2" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
 <dt>해당 API</dt>
-<dd><ul class="first last simple">
+<dd><ol class="first last arabic simple">
 <li>GET /api</li>
 <li>GET /api/v2</li>
-</ul>
+</ol>
 </dd>
 </dl>
 <p>해당 세션의 상태를 보여준다.
 아래 return값은 session[var_name]으로 접근 가능하다</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">Nothing</td>
-</tr>
-</tbody>
-</table>
 <dl class="docutils">
-<dt>:Response</dt>
+<dt><strong>Parameters</strong></dt>
+<dd>Nothing</dd>
+<dt><strong>Response</strong></dt>
 <dd><dl class="first last docutils">
-<dt>:200</dt>
+<dt><strong>200</strong></dt>
 <dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -172,7 +162,7 @@
 </pre></div>
 </td></tr></table></div>
 </dd>
-<dt>:403</dt>
+<dt><strong>403</strong></dt>
 <dd>로그인되지 않았음</dd>
 </dl>
 </dd>
