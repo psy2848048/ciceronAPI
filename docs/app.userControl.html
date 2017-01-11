@@ -49,8 +49,18 @@
 <em class="property">class </em><code class="descclassname">app.userControl.</code><code class="descname">UserControl</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl" title="정의 주소">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
+<dt id="app.userControl.UserControl.duplicateIdChecker">
+<code class="descname">duplicateIdChecker</code><span class="sig-paren">(</span><em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.duplicateIdChecker" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControl.passwordCheck">
-<code class="descname">passwordCheck</code><span class="sig-paren">(</span><em>email</em>, <em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.passwordCheck" title="정의 주소">¶</a></dt>
+<code class="descname">passwordCheck</code><span class="sig-paren">(</span><em>email</em>, <em>salt</em>, <em>hashed_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.passwordCheck" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.signUp">
+<code class="descname">signUp</code><span class="sig-paren">(</span><em>email</em>, <em>hashed_password</em>, <em>name</em>, <em>mother_language_id</em>, <em>nationality_id=None</em>, <em>residence_id=None</em>, <em>external_service_provider=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.signUp" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -65,8 +75,40 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControlAPI.login2">
-<code class="descname">login2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.login2" title="정의 주소">¶</a></dt>
+<dt id="app.userControl.UserControlAPI.duplicateIdChecker">
+<code class="descname">duplicateIdChecker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.duplicateIdChecker" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>중복 ID check</dt>
+<dd><ol class="first last arabic simple">
+<li>POST /api/v2/idCheck</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;email&#8221;: String email</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;email&quot;: &quot;blahblah@ciceron.me&quot;, // 테스트했던 유저 메일
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt><strong>417</strong></dt>
+<dd>해당 입력 email은 중복 ID</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.login">
+<code class="descname">login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.login" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
 <dt>해당 API</dt>
 <dd><ol class="first arabic simple">
@@ -106,7 +148,7 @@
 <dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;salt&quot;: &quot;a3Bd1g&quot;, // Password Salt
+  &quot;identifier&quot;: &quot;a3Bd1g&quot;, // Password Salt
 }
 </pre></div>
 </td></tr></table></div>
@@ -148,8 +190,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControlAPI.loginCheck2">
-<code class="descname">loginCheck2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.loginCheck2" title="정의 주소">¶</a></dt>
+<dt id="app.userControl.UserControlAPI.loginCheck">
+<code class="descname">loginCheck</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.loginCheck" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
 <dt>해당 API</dt>
 <dd><ol class="first last arabic simple">
@@ -181,6 +223,73 @@
 <dt><strong>403</strong></dt>
 <dd>로그인되지 않았음</dd>
 </dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.logout">
+<code class="descname">logout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.logout" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>로그아웃 함수</dt>
+<dd><ol class="first last arabic simple">
+<li>GET /api/logout</li>
+<li>GET /api/v2/logout</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd>Nothing</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;email&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인했던 유저 메일
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt><strong>403</strong></dt>
+<dd>로그인한 적이 없을 때</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.signUp">
+<code class="descname">signUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.signUp" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>회원가입 함수</dt>
+<dd><ol class="first last arabic simple">
+<li>POST /api/signup</li>
+<li>POST /api/v2/signup</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;email&#8221;: String, 회원 E-mail</li>
+<li>&#8220;password&#8221;: sha256(password) 전송. Salt 적용 안 함.</li>
+<li>&#8220;name&#8221;: String, 이름</li>
+<li>&#8220;mother_tongue_id&#8221;: Int, 모국어 ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;email&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인했던 유저 메일
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+<p><strong>400</strong>: 파라미터 빠뜨림</p>
+<p><strong>412</strong>: 중복가입</p>
+<p class="last"><strong>417</strong>: 올바른 이메일 형식이 아님</p>
 </dd>
 </dl>
 </dd></dl>
