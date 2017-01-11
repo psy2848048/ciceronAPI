@@ -1,0 +1,13 @@
+My documentation!
+=======================================
+
+
+.. qrefflask:: app.application:app
+   :undoc-static:
+
+=======================================
+Api details!
+=======================================
+
+.. autoflask:: app.application:app
+   :undoc-static:

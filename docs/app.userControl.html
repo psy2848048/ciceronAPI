@@ -126,10 +126,13 @@
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: 변경 성공
-<strong>405</strong>: 패스워드 필드 빈칸
-<strong>403</strong>: 이전 패스워드 불일치
-<strong>502</strong>: DB 에러</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 변경 성공</li>
+<li><strong>405</strong>: 패스워드 필드 빈칸</li>
+<li><strong>403</strong>: 이전 패스워드 불일치</li>
+<li><strong>502</strong>: DB 에러</li>
+</ol>
+</dd>
 </dl>
 </dd></dl>
 
@@ -148,9 +151,12 @@
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: 복구 메일 발송 성공
-<strong>405</strong>: 복구 코드 생성 에러
-<strong>406</strong>: 메일 시스템 에러</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 복구 메일 발송 성공</li>
+<li><strong>405</strong>: 복구 코드 생성 에러</li>
+<li><strong>406</strong>: 메일 시스템 에러</li>
+</ol>
+</dd>
 </dl>
 </dd></dl>
 
@@ -171,23 +177,14 @@
 <dt><strong>Response</strong></dt>
 <dd><dl class="first last docutils">
 <dt><strong>200</strong></dt>
-<dd><p class="first">중복 ID 없음. 사용가능
-.. code-block:: json</p>
-<blockquote class="last">
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">linenos:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>{</dt>
-<dd>&#8220;email&#8221;: &#8220;<a class="reference external" href="mailto:blahblah&#37;&#52;&#48;ciceron&#46;me">blahblah<span>&#64;</span>ciceron<span>&#46;</span>me</a>&#8221;, // 테스트했던 유저 메일</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+<dd><p class="first">중복 ID 없음. 사용가능</p>
+<div class="last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;email&quot;: &quot;blahblah@ciceron.me&quot;, // 테스트했던 유저 메일
+}
+</pre></div>
+</td></tr></table></div>
 </dd>
 <dt><strong>417</strong></dt>
 <dd>해당 입력 email은 중복 ID</dd>
@@ -452,10 +449,13 @@
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: 복구 성공
-<strong>405</strong>: 패스워드 필드 빈칸
-<strong>403</strong>: 보안코드 불일치
-<strong>502</strong>: DB 에러</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 복구 성공</li>
+<li><strong>405</strong>: 패스워드 필드 빈칸</li>
+<li><strong>403</strong>: 보안코드 불일치</li>
+<li><strong>502</strong>: DB 에러</li>
+</ol>
+</dd>
 </dl>
 </dd></dl>
 
