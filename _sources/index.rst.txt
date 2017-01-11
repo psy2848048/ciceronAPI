@@ -12,6 +12,8 @@ CICERON API doc v2.0
 
 .. automodule:: app
 
+.. autoflask:: app.application:app
+   :undoc-static:
 
 Indices and tables
 ==================
