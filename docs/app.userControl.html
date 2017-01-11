@@ -49,6 +49,21 @@
 <em class="property">class </em><code class="descclassname">app.userControl.</code><code class="descname">UserControl</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl" title="정의 주소">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
+<dt id="app.userControl.UserControl.changePassword">
+<code class="descname">changePassword</code><span class="sig-paren">(</span><em>email</em>, <em>hashed_old_password</em>, <em>hashed_new_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.changePassword" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.changeProfileInfo">
+<code class="descname">changeProfileInfo</code><span class="sig-paren">(</span><em>email</em>, <em>profile_text=None</em>, <em>profile_pic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.changeProfileInfo" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.createRecoveryCode">
+<code class="descname">createRecoveryCode</code><span class="sig-paren">(</span><em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.createRecoveryCode" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControl.duplicateIdChecker">
 <code class="descname">duplicateIdChecker</code><span class="sig-paren">(</span><em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.duplicateIdChecker" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -56,6 +71,26 @@
 <dl class="method">
 <dt id="app.userControl.UserControl.passwordCheck">
 <code class="descname">passwordCheck</code><span class="sig-paren">(</span><em>email</em>, <em>salt</em>, <em>hashed_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.passwordCheck" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.passwordUpdater">
+<code class="descname">passwordUpdater</code><span class="sig-paren">(</span><em>user_id</em>, <em>rs</em>, <em>hashed_old_password</em>, <em>hashed_new_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.passwordUpdater" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.profile">
+<code class="descname">profile</code><span class="sig-paren">(</span><em>email</em>, <em>rate=1</em>, <em>is_my_profile=False</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.profile" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.recoverPassword">
+<code class="descname">recoverPassword</code><span class="sig-paren">(</span><em>email</em>, <em>hashed_code</em>, <em>hashed_new_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.recoverPassword" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.sendRecoveryCode">
+<code class="descname">sendRecoveryCode</code><span class="sig-paren">(</span><em>email</em>, <em>recovery_code</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.sendRecoveryCode" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -75,6 +110,51 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.userControl.UserControlAPI.changePassword">
+<code class="descname">changePassword</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.changePassword" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>비밀번호 변경</dt>
+<dd><ol class="first last arabic simple">
+<li>POST /api/v2/user/change_password</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;email&#8221;: String email</li>
+<li>&#8220;old_password&#8221;: sha256(old_password)</li>
+<li>&#8220;new_password&#8221;: sha256(new_password)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong>: 변경 성공
+<strong>405</strong>: 패스워드 필드 빈칸
+<strong>403</strong>: 이전 패스워드 불일치
+<strong>502</strong>: DB 에러</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.createRecoveryCode">
+<code class="descname">createRecoveryCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.createRecoveryCode" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>비밀번호 복구 코드</dt>
+<dd><ol class="first last arabic simple">
+<li>POST /api/v2/user/create_recovery_code</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;email&#8221;: String email</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong>: 복구 메일 발송 성공
+<strong>405</strong>: 복구 코드 생성 에러
+<strong>406</strong>: 메일 시스템 에러</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControlAPI.duplicateIdChecker">
 <code class="descname">duplicateIdChecker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.duplicateIdChecker" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
@@ -91,13 +171,23 @@
 <dt><strong>Response</strong></dt>
 <dd><dl class="first last docutils">
 <dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;email&quot;: &quot;blahblah@ciceron.me&quot;, // 테스트했던 유저 메일
-}
-</pre></div>
-</td></tr></table></div>
+<dd><p class="first">중복 ID 없음. 사용가능
+.. code-block:: json</p>
+<blockquote class="last">
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">linenos:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>{</dt>
+<dd>&#8220;email&#8221;: &#8220;<a class="reference external" href="mailto:blahblah&#37;&#52;&#48;ciceron&#46;me">blahblah<span>&#64;</span>ciceron<span>&#46;</span>me</a>&#8221;, // 테스트했던 유저 메일</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
 </dd>
 <dt><strong>417</strong></dt>
 <dd>해당 입력 email은 중복 ID</dd>
@@ -116,7 +206,6 @@
 </ol>
 <blockquote>
 <div><ol class="arabic simple">
-<li>GET /api/login</li>
 <li>GET /api/v2/login</li>
 </ol>
 </div></blockquote>
@@ -125,7 +214,6 @@
 </ol>
 <blockquote class="last">
 <div><ol class="arabic simple">
-<li>POST /api/login</li>
 <li>POST /api/v2/login</li>
 </ol>
 </div></blockquote>
@@ -195,7 +283,6 @@
 <dd><dl class="docutils">
 <dt>해당 API</dt>
 <dd><ol class="first last arabic simple">
-<li>GET /api</li>
 <li>GET /api/v2</li>
 </ol>
 </dd>
@@ -258,12 +345,126 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="app.userControl.UserControlAPI.profile">
+<code class="descname">profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.profile" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>프로필 열람</dt>
+<dd><ol class="first last arabic simple">
+<li>GET /api/v2/user/profile</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li>user_email: (OPTIONAL) 조회하고픈 유저의 메일.</li>
+</ol>
+<blockquote class="last">
+<div>(DEFAULT: 로그인 한 본인의 이메일)</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: 4, // Integer User Id
+  &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
+  &quot;name&quot;: &quot;Admin&quot;, // User Name
+  &quot;mother_language_id&quot;: 1, // User&#39;s mother language
+  &quot;is_translator&quot;: true, // Boolean, 번역가 여부
+  &quot;other_language_list_id&quot;: null, // 필요없음
+  &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
+  &quot;numofrequestpending&quot;: 0, // 번역 대기중인 의뢰수
+  &quot;numofrequestongoing&quot;: 0, // 번역 진행중인 의뢰수
+  &quot;numofrequestcompleted&quot;: 0, // 의뢰 완료 건수
+  &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
+  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
+  &quot;numoftranslationcompleted&quot;: 7, // 번역 완료한 수
+  &quot;badgelist_id&quot;: null, // (Useless) String 형태의 뱃지 ID 리스트들. &#39;,&#39;로 갈라 Array로 사용할 수 있다.
+  &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
+  &quot;trans_request_state&quot;: 2, // (Useless) 번역 권한 상태
+  &quot;nationality&quot;: null, // 국적
+  &quot;residence&quot;: null, // 거주지
+  &quot;translatableLang&quot;: &quot;2&quot;, // 번역 가능한 언어
+  &quot;badgeList&quot;: &quot;&quot;, // (Useless) 뱃지 리스느
+  &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트. 자신을 표현할 수 있는 키워드 추가/수정/삽입
+  &quot;user_point&quot;: 0 // 번역가에겐 출금할 수 있는 돈, 의뢰인에게는 사이버머니
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd>
+<dt>프로필 정보 수정</dt>
+<dd><ol class="first last arabic simple">
+<li>POST /api/v2/user/profile</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;profileText&#8221;: (OPTIONAL) 수정하고픈 프로필 문구</li>
+<li>&#8220;profilePic&#8221;: (OPTIONAL) 수정하고픈 프로필 사진 바이너리</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>405</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.recoverPassword">
+<code class="descname">recoverPassword</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.recoverPassword" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>비밀번호 복구하기</dt>
+<dd><ol class="first last arabic simple">
+<li>POST /api/v2/user/recover_password</li>
+</ol>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;email&#8221;: String email</li>
+<li>&#8220;code&#8221;: sha256(recovery_code)</li>
+<li>&#8220;new_password&#8221;: sha256(new_password)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong>: 복구 성공
+<strong>405</strong>: 패스워드 필드 빈칸
+<strong>403</strong>: 보안코드 불일치
+<strong>502</strong>: DB 에러</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControlAPI.signUp">
 <code class="descname">signUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.signUp" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
 <dt>회원가입 함수</dt>
 <dd><ol class="first last arabic simple">
-<li>POST /api/signup</li>
 <li>POST /api/v2/signup</li>
 </ol>
 </dd>
@@ -289,7 +490,8 @@
 </dl>
 <p><strong>400</strong>: 파라미터 빠뜨림</p>
 <p><strong>412</strong>: 중복가입</p>
-<p class="last"><strong>417</strong>: 올바른 이메일 형식이 아님</p>
+<p><strong>417</strong>: 올바른 이메일 형식이 아님</p>
+<p class="last"><strong>420</strong>: 어딘가의 이상</p>
 </dd>
 </dl>
 </dd></dl>

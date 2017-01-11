@@ -97,11 +97,23 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="app.ciceron_lib.dbToDict">
+<code class="descclassname">app.ciceron_lib.</code><code class="descname">dbToDict</code><span class="sig-paren">(</span><em>columns</em>, <em>ret</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.dbToDict" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="app.ciceron_lib.ddosCheckAndWriteLog">
 <code class="descclassname">app.ciceron_lib.</code><code class="descname">ddosCheckAndWriteLog</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.ddosCheckAndWriteLog" title="정의 주소">¶</a></dt>
 <dd><p>API 실행 전, 해당 IP에서 1초에 100번 이상 실행되면 30분동안 접속 차단한다.
 그리고 차단하지 않은 IP는 임시 테이블에 로그를 남겨 나중에 분석 자료로 이용한다.</p>
 <p>그리고 현재 로그를 쌓는 곳은 임시테이블이고, 30분에 한 번씩 Agent가 돌아 로그를 영구보관소로 옮긴다.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.ciceron_lib.doc_allowed_file">
+<code class="descclassname">app.ciceron_lib.</code><code class="descname">doc_allowed_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.doc_allowed_file" title="정의 주소">¶</a></dt>
+<dd><p>확장자를 보고 문서인지 아닌지 판별
+:param string filename: 파일 이름</p>
 </dd></dl>
 
 <dl class="function">
@@ -282,6 +294,13 @@ POST request를 python dict 형태로 나타낼 수 있게 만들어주는 라�
 </dd></dl>
 
 <dl class="function">
+<dt id="app.ciceron_lib.pic_allowed_file">
+<code class="descclassname">app.ciceron_lib.</code><code class="descname">pic_allowed_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.pic_allowed_file" title="정의 주소">¶</a></dt>
+<dd><p>확장자를 보고 사진(그림)인지 아닌지 판별
+:param string filename: 파일 이름</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="app.ciceron_lib.pick_random_translator">
 <code class="descclassname">app.ciceron_lib.</code><code class="descname">pick_random_translator</code><span class="sig-paren">(</span><em>conn</em>, <em>number</em>, <em>from_lang</em>, <em>to_lang</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.pick_random_translator" title="정의 주소">¶</a></dt>
 <dd><p>해당 언어쌍을 번역할 수 있는 번역가를 랜덤으로 number명만큼 추출하여 준다.</p>
@@ -330,6 +349,13 @@ POST request를 python dict 형태로 나타낼 수 있게 만들어주는 라�
 <code class="descclassname">app.ciceron_lib.</code><code class="descname">signUpQuick</code><span class="sig-paren">(</span><em>conn</em>, <em>email</em>, <em>hashed_password</em>, <em>name</em>, <em>mother_language_id</em>, <em>nationality_id=None</em>, <em>residence_id=None</em>, <em>external_service_provider=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.signUpQuick" title="정의 주소">¶</a></dt>
 <dd><p>회원 가입 함수이다.
 회원 테이블에 정보 밀어넣고, 그 밖에 비밀번호, 적립금 및 포인트를 넣는다.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.ciceron_lib.sound_allowed_file">
+<code class="descclassname">app.ciceron_lib.</code><code class="descname">sound_allowed_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.sound_allowed_file" title="정의 주소">¶</a></dt>
+<dd><p>확장자를 보고 음성인지 아닌지 판별
+:param string filename: 파일 이름</p>
 </dd></dl>
 
 <dl class="function">
