@@ -166,7 +166,10 @@
 <dd><p>프로모션 코드 유효성 체크. 이 API에서는 체크만 하고 적용은 결제 API에서 이루어짐.</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
-<dd><strong>&#8220;promoCode&#8221;</strong>: 프로모션 코드. 대소문자 가리지 않음.</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;promoCode&#8221;</strong>: 프로모션 코드. 대소문자 가리지 않음.</li>
+</ol>
+</dd>
 <dt><strong>Response</strong></dt>
 <dd><dl class="first docutils">
 <dt><strong>200</strong></dt>
@@ -197,18 +200,20 @@
 <dd><p>결제 진행 API</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
-<dd><p class="first"><strong>&#8220;payment_platform&#8221;</strong>: 지불 플랫폼 (&#8220;alipay&#8221;, &#8220;paypal&#8221;, &#8220;iamport&#8221;, &#8220;point&#8221;)
-<strong>&#8220;product&#8221;</strong>: 구매한 내부 플랫폼 이름 (&#8220;l10n&#8221;, &#8220;pretranslation&#8221;, &#8220;groupRequest&#8221;, &#8220;f2finterpreter&#8221;)
-<strong>&#8220;request_id&#8221;</strong>: 각 플랫폼에서의 의뢰 번호
-<strong>&#8220;amount&#8221;</strong>: 지불 금액 (단위: USD)
-<strong>&#8220;promo_type&#8221;</strong>: 쿠폰 타입 (&#8220;indiv&#8221;: 개인적용, &#8220;common&#8221;: 마구 뿌린 프로모션)
-<strong>&#8220;point_for_use&#8221;</strong>: 결제시 사용할 포인트. 사용한 만큼 결제금에서 차감</p>
-<p class="last"><strong>&#8220;card_number&#8221;</strong>: 카드번호 (iamport에서만 필요,&#8221;xxxx-xxxx-xxxx-xxxx&#8221; or &#8220;xxxx-xxxx-xxxx-xxx&#8221;[AMEX] )
-<strong>&#8220;expiry&#8221;</strong>: 유효기간 (iamport에서만 필요, &#8220;YYYY-MM&#8221;)
-<strong>&#8220;birth&#8221;</strong>: [개인] 생년월일 &#8220;YYMMDD&#8221;, [사업자] 사업자등록번호 &#8220;xxxxxxxxxx&#8221; (iamport 전용)
-<strong>&#8220;pwd_2digit&#8221;</strong>: 비밀번호 앞 2자리 (iamport 전용)
-<strong>&#8220;buyer_name&#8221;</strong>: 구매자 이름 (iamport 전용, OPTIONAL)
-<strong>&#8220;buyer_email&#8221;</strong>: 구매자 이메일 (iamport 전용, OPTIONAL)</p>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;payment_platform&#8221;</strong>: 지불 플랫폼 (&#8220;alipay&#8221;, &#8220;paypal&#8221;, &#8220;iamport&#8221;, &#8220;point&#8221;)</li>
+<li><strong>&#8220;product&#8221;</strong>: 구매한 내부 플랫폼 이름 (&#8220;l10n&#8221;, &#8220;pretranslation&#8221;, &#8220;groupRequest&#8221;, &#8220;f2finterpreter&#8221;)</li>
+<li><strong>&#8220;request_id&#8221;</strong>: 각 플랫폼에서의 의뢰 번호</li>
+<li><strong>&#8220;amount&#8221;</strong>: 지불 금액 (단위: USD)</li>
+<li><strong>&#8220;promo_type&#8221;</strong>: 쿠폰 타입 (&#8220;indiv&#8221;: 개인적용, &#8220;common&#8221;: 마구 뿌린 프로모션)</li>
+<li><strong>&#8220;point_for_use&#8221;</strong>: 결제시 사용할 포인트. 사용한 만큼 결제금에서 차감</li>
+<li><strong>&#8220;card_number&#8221;</strong>: 카드번호 (iamport에서만 필요,&#8221;xxxx-xxxx-xxxx-xxxx&#8221; or &#8220;xxxx-xxxx-xxxx-xxx&#8221;[AMEX] )</li>
+<li><strong>&#8220;expiry&#8221;</strong>: 유효기간 (iamport에서만 필요, &#8220;YYYY-MM&#8221;)</li>
+<li><strong>&#8220;birth&#8221;</strong>: [개인] 생년월일 &#8220;YYMMDD&#8221;, [사업자] 사업자등록번호 &#8220;xxxxxxxxxx&#8221; (iamport 전용)</li>
+<li><strong>&#8220;pwd_2digit&#8221;</strong>: 비밀번호 앞 2자리 (iamport 전용)</li>
+<li><strong>&#8220;buyer_name&#8221;</strong>: 구매자 이름 (iamport 전용, OPTIONAL)</li>
+<li><strong>&#8220;buyer_email&#8221;</strong>: 구매자 이메일 (iamport 전용, OPTIONAL)</li>
+</ol>
 </dd>
 <dt><strong>Response</strong></dt>
 <dd><dl class="first docutils">
