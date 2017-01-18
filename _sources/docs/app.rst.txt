@@ -18,7 +18,6 @@ Submodules
    app.logTransfer
    app.mailAgent
    app.mail_template
-   app.payment
    app.requestResell
    app.requestwarehouse
    app.translator
