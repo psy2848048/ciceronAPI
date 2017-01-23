@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>app.payment module &#8212; CICERON 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-app.pretranslated">
+<span id="app-payment-module"></span><h1>app.payment module<a class="headerlink" href="#module-app.pretranslated" title="제목 주소">¶</a></h1>
+<dl class="class">
+<dt id="app.pretranslated.Pretranslated">
+<em class="property">class </em><code class="descclassname">app.pretranslated.</code><code class="descname">Pretranslated</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated" title="정의 주소">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.addUserAsDownloader">
+<code class="descname">addUserAsDownloader</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.addUserAsDownloader" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.calcChecksumForEmailParams">
+<code class="descname">calcChecksumForEmailParams</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.calcChecksumForEmailParams" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.checkChecksumFromEmailParams">
+<code class="descname">checkChecksumFromEmailParams</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em>, <em>checksum_from_param</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.checkChecksumFromEmailParams" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.checkIsPaid">
+<code class="descname">checkIsPaid</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.checkIsPaid" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.generateDownloadableLink">
+<code class="descname">generateDownloadableLink</code><span class="sig-paren">(</span><em>endpoint</em>, <em>request_id</em>, <em>email</em>, <em>checksum</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.generateDownloadableLink" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.markAsDownloaded">
+<code class="descname">markAsDownloaded</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.markAsDownloaded" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.markAsPaid">
+<code class="descname">markAsPaid</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.markAsPaid" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.pretranslatedList">
+<code class="descname">pretranslatedList</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedList" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.provideBinary">
+<code class="descname">provideBinary</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.provideBinary" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.providePreviewBinary">
+<code class="descname">providePreviewBinary</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.providePreviewBinary" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.rateTranslatedResult">
+<code class="descname">rateTranslatedResult</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em>, <em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.rateTranslatedResult" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.uploadPretranslatedResult">
+<code class="descname">uploadPretranslatedResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.uploadPretranslatedResult" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.pretranslated.PretranslatedAPI">
+<em class="property">class </em><code class="descclassname">app.pretranslated.</code><code class="descname">PretranslatedAPI</code><span class="sig-paren">(</span><em>app</em>, <em>endpoints</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI" title="정의 주소">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>addUserForDownload -&gt; (markAsPaid) -&gt; provideLink -&gt; download</p>
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.addUserForDownload">
+<code class="descname">addUserForDownload</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.addUserForDownload" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: 이메일. 프론트에서는 로그인되어 있다면 세션의 &#8216;useremail&#8217;을 따 와서 자동으로 입력했으면 하는 소망이 있음.</li>
+<li><strong>&#8220;request_id&#8221;</strong>: 구매한 번역물의 ID. URL에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 성공</p>
+<p><strong>410</strong>: 똑같은 번역물 중복구매시도</p>
+<p class="last"><strong>411</strong>: DB Error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.add_api">
+<code class="descname">add_api</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.add_api" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.download" title="정의 주소">¶</a></dt>
+<dd><p>번역 파일 다운로드</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: 이메일</li>
+<li><strong>&#8220;request_id&#8221;</strong>: Request ID</li>
+<li><strong>&#8220;token&#8221;</strong>: 정당한 의뢰인지 알아보는 Token</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 다운로드 실행</p>
+<p><strong>410</strong>: Checksum 에러</p>
+<p class="last"><strong>411</strong>: 다운로드 완료 마킹 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.issueDownloadableLinkAndSendToMail">
+<code class="descname">issueDownloadableLinkAndSendToMail</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.issueDownloadableLinkAndSendToMail" title="정의 주소">¶</a></dt>
+<dd><p>구매한 번역 메일로 링크 전송</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: 이메일. 프론트에서는 로그인되어 있다면 세션의 &#8216;useremail&#8217;을 따 와서 자동으로 입력했으면 하는 소망이 있음.</li>
+<li><strong>&#8220;request_id&#8221;</strong>: 구매한 번역물의 ID. URL에 직접 입력</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 성공</p>
+<p><strong>411</strong>: 금액지불요함</p>
+<p><strong>412</strong>: 주어진 Request_id인 번역물이 존재하지 않음</p>
+<p class="last"><strong>413</strong>: 메일 전송 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedList">
+<code class="descname">pretranslatedList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedList" title="정의 주소">¶</a></dt>
+<dd><p>기 번역된 목록 리스트</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+      <span class="nt">&quot;translator_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;translator_email&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@ciceron.me&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;original_lang_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;original_lang&quot;</span><span class="p">:</span> <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;target_lang_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;target_lang&quot;</span><span class="p">:</span> <span class="s2">&quot;English(USA)&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;format_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;subject_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;subject&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;tone_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;tone&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;registered_time&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 22 Jan 2017 07:23:47 GMT&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;points&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;theme_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Mail test&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;전문연.pdf&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Mail test&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedMarkAsPaid">
+<code class="descname">pretranslatedMarkAsPaid</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedMarkAsPaid" title="정의 주소">¶</a></dt>
+<dd><p>유저 가격 지불 후 지불처리 하는 함수</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;request_id&#8221;</strong>: Request ID. URL에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>405</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedRateResult">
+<code class="descname">pretranslatedRateResult</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedRateResult" title="정의 주소">¶</a></dt>
+<dd><p>유저 가격 지불 후 지불처리 하는 함수</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;score&#8221;</strong>: 1-5점까지의 피드백 점수</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>405</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.providePreviewBinary">
+<code class="descname">providePreviewBinary</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.providePreviewBinary" title="정의 주소">¶</a></dt>
+<dd><p>번역 파일 다운로드</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><strong>&#8220;request_id&#8221;</strong>: Integer, URL에 직접 입력</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 다운로드 실행</p>
+<p><strong>410</strong>: Checksum 에러</p>
+<p class="last"><strong>411</strong>: 다운로드 완료 마킹 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.uploadPretranslation">
+<code class="descname">uploadPretranslation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.uploadPretranslation" title="정의 주소">¶</a></dt>
+<dd><p>미리 번역해놓은 결과물 업로드 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;translator_email&#8221;</strong>: 작업한 번역가 이메일</li>
+<li><strong>&#8220;original_lang_id&#8221;</strong>: 원 언어 ID</li>
+<li><strong>&#8220;target_lang_id&#8221;</strong>: 타겟 언어 ID</li>
+<li><strong>&#8220;format_id&#8221;</strong>: 포멧 ID</li>
+<li><strong>&#8220;subject_id&#8221;</strong>: 주제 ID</li>
+<li><strong>&#8220;points&#8221;</strong>: 판매할 가격. 0이면 프로모션</li>
+<li><strong>&#8220;file&#8221;</strong>: 업로드할 파일 파이너리</li>
+<li><strong>&#8220;previewFile&#8221;</strong>: 미리보기 파일 바이너리</li>
+<li><strong>&#8220;theme_text&#8221;</strong>: 제목</li>
+<li><strong>&#8220;description&#8221;</strong>: 번역물 설명</li>
+<li><strong>&#8220;tone_id&#8221;</strong>: 의뢰물의 대체적 톤 ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong>: 게시 성공</li>
+</ol>
+<blockquote class="last">
+<div><blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;request_id&quot;: 1 // Request ID
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>410</strong>: 게시 실패</li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.uploadPretranslationPage">
+<code class="descname">uploadPretranslationPage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.uploadPretranslationPage" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>현재 문서</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docs/app.pretranslated.rst.txt"
+            rel="nofollow">소스 코드를 보려면</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>빠른 검색</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="바로 가기" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, psy2848048.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="../_sources/docs/app.pretranslated.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

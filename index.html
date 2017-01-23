@@ -81,6 +81,218 @@
 <dd><p>번역 공동구매원 모집 리스트</p>
 </dd></dl>
 
+<dl class="post">
+<dt id="post--api-v2-admin-pretranslated-uploadPretranslated">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/pretranslated/uploadPretranslated</code><a class="headerlink" href="#post--api-v2-admin-pretranslated-uploadPretranslated" title="정의 주소">¶</a></dt>
+<dd><p>미리 번역해놓은 결과물 업로드 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;translator_email&#8221;</strong>: 작업한 번역가 이메일</li>
+<li><strong>&#8220;original_lang_id&#8221;</strong>: 원 언어 ID</li>
+<li><strong>&#8220;target_lang_id&#8221;</strong>: 타겟 언어 ID</li>
+<li><strong>&#8220;format_id&#8221;</strong>: 포멧 ID</li>
+<li><strong>&#8220;subject_id&#8221;</strong>: 주제 ID</li>
+<li><strong>&#8220;points&#8221;</strong>: 판매할 가격. 0이면 프로모션</li>
+<li><strong>&#8220;file&#8221;</strong>: 업로드할 파일 파이너리</li>
+<li><strong>&#8220;previewFile&#8221;</strong>: 미리보기 파일 바이너리</li>
+<li><strong>&#8220;theme_text&#8221;</strong>: 제목</li>
+<li><strong>&#8220;description&#8221;</strong>: 번역물 설명</li>
+<li><strong>&#8220;tone_id&#8221;</strong>: 의뢰물의 대체적 톤 ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong>: 게시 성공</li>
+</ol>
+<blockquote class="last">
+<div><blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;request_id&quot;: 1 // Request ID
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>410</strong>: 게시 실패</li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-pretranslated-download-">
+<code class="descname">GET </code><code class="descname">/api/v2/user/pretranslated/download/</code><a class="headerlink" href="#get--api-v2-user-pretranslated-download-" title="정의 주소">¶</a></dt>
+<dd><p>번역 파일 다운로드</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: 이메일</li>
+<li><strong>&#8220;request_id&#8221;</strong>: Request ID</li>
+<li><strong>&#8220;token&#8221;</strong>: 정당한 의뢰인지 알아보는 Token</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 다운로드 실행</p>
+<p><strong>410</strong>: Checksum 에러</p>
+<p class="last"><strong>411</strong>: 다운로드 완료 마킹 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-pretranslated-stoa">
+<code class="descname">GET </code><code class="descname">/api/v2/user/pretranslated/stoa</code><a class="headerlink" href="#get--api-v2-user-pretranslated-stoa" title="정의 주소">¶</a></dt>
+<dd><p>기 번역된 목록 리스트</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+      <span class="nt">&quot;translator_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;translator_email&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@ciceron.me&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;original_lang_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;original_lang&quot;</span><span class="p">:</span> <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;target_lang_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;target_lang&quot;</span><span class="p">:</span> <span class="s2">&quot;English(USA)&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;format_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;subject_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;subject&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;tone_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;tone&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;registered_time&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 22 Jan 2017 07:23:47 GMT&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;points&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;theme_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Mail test&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;전문연.pdf&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Mail test&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-user-payment-checkPromotionCode">
+<code class="descname">POST </code><code class="descname">/api/v2/user/payment/checkPromotionCode</code><a class="headerlink" href="#post--api-v2-user-payment-checkPromotionCode" title="정의 주소">¶</a></dt>
+<dd><p>프로모션 코드 유효성 체크. 이 API에서는 체크만 하고 적용은 결제 API에서 이루어짐.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;promoCode&#8221;</strong>: 프로모션 코드. 대소문자 가리지 않음.</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;promoType&quot;: &quot;indiv&quot;, // or &quot;common&quot;
+  &quot;point&quot;: 2, // 할인해주는 포인트
+}
+// &quot;common&quot; -&gt; 누구나 적용하는 캠페인
+// &quot;indiv&quot; -&gt; 개인한테만 제공
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+<p><strong>402</strong>: 존재는 하나 조건이 맞지 않는 코드</p>
+<p class="last"><strong>405</strong>: 존재하지 않는 코드</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-payment-postprocess">
+<code class="descname">GET </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#get--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
+<dd><p>결제 진행 이후 내부에서 결제 완료 처리하는 API.</p>
+<p>Paypal, Alipay같은 경우 결제 완료 후 Redirect할 주소를 넣어 결제 이후의 내부 쇼핑몰과 연결고리를 만들게 된다.</p>
+<p>Frontend에서 직접 call할 일은 없다.</p>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-user-payment-start">
+<code class="descname">POST </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#post--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
+<dd><p>결제 진행 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;payment_platform&#8221;</strong>: 지불 플랫폼 (&#8220;alipay&#8221;, &#8220;paypal&#8221;, &#8220;iamport&#8221;, &#8220;point&#8221;)</li>
+<li><strong>&#8220;product&#8221;</strong>: 구매한 내부 플랫폼 이름 (&#8220;l10n&#8221;, &#8220;pretranslation&#8221;, &#8220;groupRequest&#8221;, &#8220;f2finterpreter&#8221;)</li>
+<li><strong>&#8220;request_id&#8221;</strong>: 각 플랫폼에서의 의뢰 번호</li>
+<li><strong>&#8220;amount&#8221;</strong>: 지불 금액 (단위: USD)</li>
+<li><strong>&#8220;promo_type&#8221;</strong>: 쿠폰 타입 (&#8220;indiv&#8221;: 개인적용, &#8220;common&#8221;: 마구 뿌린 프로모션)</li>
+<li><strong>&#8220;point_for_use&#8221;</strong>: 결제시 사용할 포인트. 사용한 만큼 결제금에서 차감</li>
+<li><strong>&#8220;card_number&#8221;</strong>: 카드번호 (iamport에서만 필요,&#8221;xxxx-xxxx-xxxx-xxxx&#8221; or &#8220;xxxx-xxxx-xxxx-xxx&#8221;[AMEX] )</li>
+<li><strong>&#8220;expiry&#8221;</strong>: 유효기간 (iamport에서만 필요, &#8220;YYYY-MM&#8221;)</li>
+<li><strong>&#8220;birth&#8221;</strong>: [개인] 생년월일 &#8220;YYMMDD&#8221;, [사업자] 사업자등록번호 &#8220;xxxxxxxxxx&#8221; (iamport 전용)</li>
+<li><strong>&#8220;pwd_2digit&#8221;</strong>: 비밀번호 앞 2자리 (iamport 전용)</li>
+<li><strong>&#8220;buyer_name&#8221;</strong>: 구매자 이름 (iamport 전용, OPTIONAL)</li>
+<li><strong>&#8220;buyer_email&#8221;</strong>: 구매자 이메일 (iamport 전용, OPTIONAL)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;link&quot;: &quot;http://payment.paypalalipay.com/paymemnt/blahblah&quot; // 리다이렉팅 할 주소
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+<p class="last"><strong>410</strong>: 포인트 보유량이 사용할 포인트보다 적음
+<strong>411</strong>: 유효하지 않은 쿠폰 번호
+<strong>412</strong>: 결제준비 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="get">
 <dt id="get--api-user-translations-incomplete">
 <code class="descname">GET </code><code class="descname">/api/user/translations/incomplete</code><a class="headerlink" href="#get--api-user-translations-incomplete" title="정의 주소">¶</a></dt>
@@ -264,12 +476,8 @@ is_additional_points_paid: 추가결제 완료?</p>
 <dl class="post">
 <dt id="post--api-v2-user-create_recovery_code">
 <code class="descname">POST </code><code class="descname">/api/v2/user/create_recovery_code</code><a class="headerlink" href="#post--api-v2-user-create_recovery_code" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>비밀번호 복구 코드</dt>
-<dd><ol class="first last arabic simple">
-<li>POST /api/v2/user/create_recovery_code</li>
-</ol>
-</dd>
+<dd><p>비밀번호 복구 코드</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;email&#8221;: String email</li>
@@ -288,12 +496,8 @@ is_additional_points_paid: 추가결제 완료?</p>
 <dl class="post">
 <dt id="post--api-v2-user-recover_password">
 <code class="descname">POST </code><code class="descname">/api/v2/user/recover_password</code><a class="headerlink" href="#post--api-v2-user-recover_password" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>비밀번호 복구하기</dt>
-<dd><ol class="first last arabic simple">
-<li>POST /api/v2/user/recover_password</li>
-</ol>
-</dd>
+<dd><p>비밀번호 복구하기</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;email&#8221;: String email</li>
@@ -315,12 +519,8 @@ is_additional_points_paid: 추가결제 완료?</p>
 <dl class="post">
 <dt id="post--api-v2-user-change_password">
 <code class="descname">POST </code><code class="descname">/api/v2/user/change_password</code><a class="headerlink" href="#post--api-v2-user-change_password" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>비밀번호 변경</dt>
-<dd><ol class="first last arabic simple">
-<li>POST /api/v2/user/change_password</li>
-</ol>
-</dd>
+<dd><p>비밀번호 변경</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;email&#8221;: String email</li>
@@ -370,15 +570,11 @@ POST /api/v2/user/localizer</p>
 </dl>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-user-profile">
-<code class="descname">POST </code><code class="descname">/api/v2/user/profile</code><a class="headerlink" href="#post--api-v2-user-profile" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>프로필 열람</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/v2/user/profile</li>
-</ol>
-</dd>
+<dl class="get">
+<dt id="get--api-v2-user-profile">
+<code class="descname">GET </code><code class="descname">/api/v2/user/profile</code><a class="headerlink" href="#get--api-v2-user-profile" title="정의 주소">¶</a></dt>
+<dd><p>프로필 열람</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first arabic simple">
 <li>user_email: (OPTIONAL) 조회하고픈 유저의 메일.</li>
@@ -440,98 +636,14 @@ POST /api/v2/user/localizer</p>
 </td></tr></table></div>
 </dd>
 </dl>
-</dd>
-<dt>프로필 정보 수정</dt>
-<dd><ol class="first last arabic simple">
-<li>POST /api/v2/user/profile</li>
-</ol>
-</dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ol class="first last arabic simple">
-<li>&#8220;profileText&#8221;: (OPTIONAL) 수정하고픈 프로필 문구</li>
-<li>&#8220;profilePic&#8221;: (OPTIONAL) 수정하고픈 프로필 사진 바이너리</li>
-</ol>
-</dd>
-<dt><strong>Response</strong></dt>
-<dd><ol class="first last arabic simple">
-<li><strong>200</strong>: OK</li>
-<li><strong>405</strong>: Fail</li>
-</ol>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-v2-user-profile">
-<code class="descname">GET </code><code class="descname">/api/v2/user/profile</code><a class="headerlink" href="#get--api-v2-user-profile" title="정의 주소">¶</a></dt>
+<dl class="post">
+<dt id="post--api-v2-user-profile">
+<code class="descname">POST </code><code class="descname">/api/v2/user/profile</code><a class="headerlink" href="#post--api-v2-user-profile" title="정의 주소">¶</a></dt>
 <dd><dl class="docutils">
-<dt>프로필 열람</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/v2/user/profile</li>
-</ol>
-</dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ol class="first arabic simple">
-<li>user_email: (OPTIONAL) 조회하고픈 유저의 메일.</li>
-</ol>
-<blockquote class="last">
-<div>(DEFAULT: 로그인 한 본인의 이메일)</div></blockquote>
-</dd>
-<dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;id&quot;: 4, // Integer User Id
-  &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
-  &quot;name&quot;: &quot;Admin&quot;, // User Name
-  &quot;mother_language_id&quot;: 1, // User&#39;s mother language
-  &quot;is_translator&quot;: true, // Boolean, 번역가 여부
-  &quot;other_language_list_id&quot;: null, // 필요없음
-  &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
-  &quot;numofrequestpending&quot;: 0, // 번역 대기중인 의뢰수
-  &quot;numofrequestongoing&quot;: 0, // 번역 진행중인 의뢰수
-  &quot;numofrequestcompleted&quot;: 0, // 의뢰 완료 건수
-  &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
-  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
-  &quot;numoftranslationcompleted&quot;: 7, // 번역 완료한 수
-  &quot;badgelist_id&quot;: null, // (Useless) String 형태의 뱃지 ID 리스트들. &#39;,&#39;로 갈라 Array로 사용할 수 있다.
-  &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
-  &quot;trans_request_state&quot;: 2, // (Useless) 번역 권한 상태
-  &quot;nationality&quot;: null, // 국적
-  &quot;residence&quot;: null, // 거주지
-  &quot;translatableLang&quot;: &quot;2&quot;, // 번역 가능한 언어
-  &quot;badgeList&quot;: &quot;&quot;, // (Useless) 뱃지 리스느
-  &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트. 자신을 표현할 수 있는 키워드 추가/수정/삽입
-  &quot;user_point&quot;: 0 // 번역가에겐 출금할 수 있는 돈, 의뢰인에게는 사이버머니
-}
-</pre></div>
-</td></tr></table></div>
-</dd>
-</dl>
-</dd>
 <dt>프로필 정보 수정</dt>
 <dd><ol class="first last arabic simple">
 <li>POST /api/v2/user/profile</li>
@@ -726,12 +838,8 @@ API 경로랍시고 profile_pic_path에 스트링 넣긴 하지만, 의미없음
 <dl class="post">
 <dt id="post--api-v2-idCheck">
 <code class="descname">POST </code><code class="descname">/api/v2/idCheck</code><a class="headerlink" href="#post--api-v2-idCheck" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>중복 ID check</dt>
-<dd><ol class="first last arabic simple">
-<li>POST /api/v2/idCheck</li>
-</ol>
-</dd>
+<dd><p>중복 ID check</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;email&#8221;: String email</li>
@@ -759,13 +867,8 @@ API 경로랍시고 profile_pic_path에 스트링 넣긴 하지만, 의미없음
 <dl class="get">
 <dt id="get--api-v2-logout">
 <code class="descname">GET </code><code class="descname">/api/v2/logout</code><a class="headerlink" href="#get--api-v2-logout" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>로그아웃 함수</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/logout</li>
-<li>GET /api/v2/logout</li>
-</ol>
-</dd>
+<dd><p>로그아웃 함수</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd>Nothing</dd>
 <dt><strong>Response</strong></dt>
@@ -1216,15 +1319,106 @@ i18nHandler.updateTranslation() 사용</p>
 <dd><p>번역 완료된 i18n 의뢰 포멧별로 다운로드</p>
 </dd></dl>
 
-<dl class="put">
-<dt id="put--api-user-translations-complete-groups-(str_group_id)">
-<code class="descname">PUT </code><code class="descname">/api/user/translations/complete/groups/</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-translations-complete-groups-(str_group_id)" title="정의 주소">¶</a></dt>
-<dd><p>해당 그룹을 삭제한다. (DELETE) 해당 그룹 이름을 바꾼다. (PUT)</p>
+<dl class="post">
+<dt id="post--api-v2-user-pretranslated-request-(int-request_id)-addUserForDownload">
+<code class="descname">POST </code><code class="descname">/api/v2/user/pretranslated/request/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/addUserForDownload</code><a class="headerlink" href="#post--api-v2-user-pretranslated-request-(int-request_id)-addUserForDownload" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: 이메일. 프론트에서는 로그인되어 있다면 세션의 &#8216;useremail&#8217;을 따 와서 자동으로 입력했으면 하는 소망이 있음.</li>
+<li><strong>&#8220;request_id&#8221;</strong>: 구매한 번역물의 ID. URL에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 성공</p>
+<p><strong>410</strong>: 똑같은 번역물 중복구매시도</p>
+<p class="last"><strong>411</strong>: DB Error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-user-pretranslated-request-(int-request_id)-provideLink">
+<code class="descname">POST </code><code class="descname">/api/v2/user/pretranslated/request/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/provideLink</code><a class="headerlink" href="#post--api-v2-user-pretranslated-request-(int-request_id)-provideLink" title="정의 주소">¶</a></dt>
+<dd><p>구매한 번역 메일로 링크 전송</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: 이메일. 프론트에서는 로그인되어 있다면 세션의 &#8216;useremail&#8217;을 따 와서 자동으로 입력했으면 하는 소망이 있음.</li>
+<li><strong>&#8220;request_id&#8221;</strong>: 구매한 번역물의 ID. URL에 직접 입력</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 성공</p>
+<p><strong>411</strong>: 금액지불요함</p>
+<p><strong>412</strong>: 주어진 Request_id인 번역물이 존재하지 않음</p>
+<p class="last"><strong>413</strong>: 메일 전송 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-pretranslated-request-(int-request_id)-markAsPaid">
+<code class="descname">GET </code><code class="descname">/api/v2/user/pretranslated/request/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/markAsPaid</code><a class="headerlink" href="#get--api-v2-user-pretranslated-request-(int-request_id)-markAsPaid" title="정의 주소">¶</a></dt>
+<dd><p>유저 가격 지불 후 지불처리 하는 함수</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;request_id&#8221;</strong>: Request ID. URL에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>405</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-pretranslated-request-(int-request_id)-preview">
+<code class="descname">GET </code><code class="descname">/api/v2/user/pretranslated/request/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/preview</code><a class="headerlink" href="#get--api-v2-user-pretranslated-request-(int-request_id)-preview" title="정의 주소">¶</a></dt>
+<dd><p>번역 파일 다운로드</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><strong>&#8220;request_id&#8221;</strong>: Integer, URL에 직접 입력</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 다운로드 실행</p>
+<p><strong>410</strong>: Checksum 에러</p>
+<p class="last"><strong>411</strong>: 다운로드 완료 마킹 실패</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-user-pretranslated-request-(int-request_id)-rate">
+<code class="descname">POST </code><code class="descname">/api/v2/user/pretranslated/request/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/rate</code><a class="headerlink" href="#post--api-v2-user-pretranslated-request-(int-request_id)-rate" title="정의 주소">¶</a></dt>
+<dd><p>유저 가격 지불 후 지불처리 하는 함수</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;score&#8221;</strong>: 1-5점까지의 피드백 점수</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>405</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="delete">
 <dt id="delete--api-user-translations-complete-groups-(str_group_id)">
 <code class="descname">DELETE </code><code class="descname">/api/user/translations/complete/groups/</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-translations-complete-groups-(str_group_id)" title="정의 주소">¶</a></dt>
+<dd><p>해당 그룹을 삭제한다. (DELETE) 해당 그룹 이름을 바꾼다. (PUT)</p>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-user-translations-complete-groups-(str_group_id)">
+<code class="descname">PUT </code><code class="descname">/api/user/translations/complete/groups/</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-translations-complete-groups-(str_group_id)" title="정의 주소">¶</a></dt>
 <dd><p>해당 그룹을 삭제한다. (DELETE) 해당 그룹 이름을 바꾼다. (PUT)</p>
 </dd></dl>
 
@@ -1360,15 +1554,15 @@ i18nHandler.jsonResponse() 사용</p>
 <dd><p>해당 그룹에 속한 티켓 보기 (GET), 해당 그룹으로 티켓 옮기기 (POST)</p>
 </dd></dl>
 
-<dl class="put">
-<dt id="put--api-user-requests-complete-groups-(str_group_id)">
-<code class="descname">PUT </code><code class="descname">/api/user/requests/complete/groups/</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-requests-complete-groups-(str_group_id)" title="정의 주소">¶</a></dt>
-<dd><p>그룹명수정 (PUT), 그룹 지우기 (DELETE)</p>
-</dd></dl>
-
 <dl class="delete">
 <dt id="delete--api-user-requests-complete-groups-(str_group_id)">
 <code class="descname">DELETE </code><code class="descname">/api/user/requests/complete/groups/</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-requests-complete-groups-(str_group_id)" title="정의 주소">¶</a></dt>
+<dd><p>그룹명수정 (PUT), 그룹 지우기 (DELETE)</p>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-user-requests-complete-groups-(str_group_id)">
+<code class="descname">PUT </code><code class="descname">/api/user/requests/complete/groups/</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-requests-complete-groups-(str_group_id)" title="정의 주소">¶</a></dt>
 <dd><p>그룹명수정 (PUT), 그룹 지우기 (DELETE)</p>
 </dd></dl>
 
@@ -1492,16 +1686,16 @@ file을 직접 access하는 것이 아닌, DB에 저장된 Bianry를 파일로 �
 warehousing.restoreArray() 사용</p>
 </dd></dl>
 
-<dl class="put">
-<dt id="put--api-user-translations-pending-(int-request_id)">
-<code class="descname">PUT </code><code class="descname">/api/user/translations/pending/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-translations-pending-(int-request_id)" title="정의 주소">¶</a></dt>
+<dl class="delete">
+<dt id="delete--api-user-translations-pending-(int-request_id)">
+<code class="descname">DELETE </code><code class="descname">/api/user/translations/pending/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-translations-pending-(int-request_id)" title="정의 주소">¶</a></dt>
 <dd><p>네고를 걸었던 티켓 네고취소 (DELETE), 네고금액 수정 (PUT)
 네고 로직 돌아가는 원리는 바로 위 API의 설명 참고</p>
 </dd></dl>
 
-<dl class="delete">
-<dt id="delete--api-user-translations-pending-(int-request_id)">
-<code class="descname">DELETE </code><code class="descname">/api/user/translations/pending/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-translations-pending-(int-request_id)" title="정의 주소">¶</a></dt>
+<dl class="put">
+<dt id="put--api-user-translations-pending-(int-request_id)">
+<code class="descname">PUT </code><code class="descname">/api/user/translations/pending/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-translations-pending-(int-request_id)" title="정의 주소">¶</a></dt>
 <dd><p>네고를 걸었던 티켓 네고취소 (DELETE), 네고금액 수정 (PUT)
 네고 로직 돌아가는 원리는 바로 위 API의 설명 참고</p>
 </dd></dl>
@@ -1542,9 +1736,9 @@ warehousing.restoreArray() 사용</p>
 <p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
 </dd></dl>
 
-<dl class="put">
-<dt id="put--api-user-requests-incomplete-(int-request_id)">
-<code class="descname">PUT </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
+<dl class="get">
+<dt id="get--api-user-requests-incomplete-(int-request_id)">
+<code class="descname">GET </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
 <dd><p>자신이 의뢰한 티켓 처리
 조회 (GET),
 번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
@@ -1553,9 +1747,9 @@ warehousing.restoreArray() 사용</p>
 <p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-user-requests-incomplete-(int-request_id)">
-<code class="descname">GET </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
+<dl class="put">
+<dt id="put--api-user-requests-incomplete-(int-request_id)">
+<code class="descname">PUT </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
 <dd><p>자신이 의뢰한 티켓 처리
 조회 (GET),
 번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
@@ -1685,15 +1879,15 @@ Dimension table의 레코드는 건드리지 않고, Fact table에 적혀있는 
 </ol>
 </dd></dl>
 
-<dl class="put">
-<dt id="put--api-user-payback-(str_id)-(order_no)">
-<code class="descname">PUT </code><code class="descname">/api/user/payback/</code><span class="sig-paren">(</span><em>str_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>order_no</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-payback-(str_id)-(order_no)" title="정의 주소">¶</a></dt>
-<dd><p>환급 신청 수정 (PUT), 삭제 (DELETE)</p>
-</dd></dl>
-
 <dl class="delete">
 <dt id="delete--api-user-payback-(str_id)-(order_no)">
 <code class="descname">DELETE </code><code class="descname">/api/user/payback/</code><span class="sig-paren">(</span><em>str_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>order_no</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-payback-(str_id)-(order_no)" title="정의 주소">¶</a></dt>
+<dd><p>환급 신청 수정 (PUT), 삭제 (DELETE)</p>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-user-payback-(str_id)-(order_no)">
+<code class="descname">PUT </code><code class="descname">/api/user/payback/</code><span class="sig-paren">(</span><em>str_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>order_no</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-payback-(str_id)-(order_no)" title="정의 주소">¶</a></dt>
 <dd><p>환급 신청 수정 (PUT), 삭제 (DELETE)</p>
 </dd></dl>
 

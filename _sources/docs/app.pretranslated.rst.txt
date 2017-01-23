@@ -1,0 +1,7 @@
+app.payment module
+==================
+
+.. automodule:: app.pretranslated
+    :members:
+    :undoc-members:
+    :show-inheritance:

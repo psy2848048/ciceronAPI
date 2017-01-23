@@ -23,6 +23,9 @@ Submodules
    app.translator
    app.wikidic
    app.userControl
+   app.payment
+   app.pretranslated
+
 
 Module contents
 ---------------
