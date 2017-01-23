@@ -12,6 +12,15 @@ CICERON API doc v2.0
 
 .. automodule:: app
 
+
+CICERON API doc index
+==================================
+
+.. qrefflask:: app.application:app
+   :undoc-static:
+
+Content
+==================================
 .. autoflask:: app.application:app
    :undoc-static:
 

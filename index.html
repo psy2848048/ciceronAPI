@@ -49,6 +49,531 @@
 <span class="target" id="module-app"></span><p>CICERON ver2.0</p>
 <p>:copyright (c) 2015 by Bryan RHEE (psy2848048)
 :license: CICERON</p>
+</div>
+<div class="section" id="ciceron-api-doc-index">
+<h1>CICERON API doc index<a class="headerlink" href="#ciceron-api-doc-index" title="제목 주소">¶</a></h1>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="45%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Resource</th>
+<th class="head">Operation</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-complete-groups">POST /api/user/translations/complete/groups</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-complete-groups">GET /api/user/translations/complete/groups</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-complete-groups">POST /api/user/requests/complete/groups</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete-groups">GET /api/user/requests/complete/groups</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-pending-group_request">GET /api/user/requests/pending/group_request</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-pretranslated-uploadPretranslated">POST /api/v2/admin/pretranslated/uploadPretranslated</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-pretranslated-download-">GET /api/v2/user/pretranslated/download/</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-pretranslated-stoa">GET /api/v2/user/pretranslated/stoa</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-payment-checkPromotionCode">POST /api/v2/user/payment/checkPromotionCode</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-payment-postprocess">GET /api/v2/user/payment/postprocess</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-payment-start">POST /api/v2/user/payment/start</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-incomplete">GET /api/user/translations/incomplete</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-complete">POST /api/user/translations/complete</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-complete">GET /api/user/translations/complete</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-pending">POST /api/user/translations/pending</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-pending">GET /api/user/translations/pending</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-ongoing">POST /api/user/translations/ongoing</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-ongoing">GET /api/user/translations/ongoing</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-stoa">GET /api/user/translations/stoa</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-incomplete">GET /api/user/requests/incomplete</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete">GET /api/user/requests/complete</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-pending">POST /api/user/requests/pending</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-pending">GET /api/user/requests/pending</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-ongoing">GET /api/user/requests/ongoing</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-stoa">GET /api/user/requests/stoa</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-create_recovery_code">POST /api/v2/user/create_recovery_code</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-recover_password">POST /api/v2/user/recover_password</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-change_password">POST /api/v2/user/change_password</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-localizer">POST /api/v2/user/localizer</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-profile">GET /api/v2/user/profile</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-profile">POST /api/v2/user/profile</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-notification-read">GET /api/notification/read</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-admin-language_assigner">POST /api/admin/language_assigner</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-admin-language_rejector">POST /api/admin/language_rejector</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-admin-payback_list">POST /api/admin/payback_list</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-admin-payback_list">GET /api/admin/payback_list</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-create_recovery_code">POST /api/user/create_recovery_code</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-recover_password">POST /api/user/recover_password</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-change_password">POST /api/user/change_password</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-payback_email">GET /api/user/payback_email</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-point_detail">GET /api/user/point_detail</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-profile">POST /api/user/profile</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-profile">GET /api/user/profile</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-payback">POST /api/user/payback</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-payback">GET /api/user/payback</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-be_hero">POST /api/user/be_hero</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-device">POST /api/user/device</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-idCheck">POST /api/v2/idCheck</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-logout">GET /api/v2/logout</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-login">POST /api/v2/login</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-login">GET /api/v2/login</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-action_record">POST /api/action_record</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-notification">GET /api/notification</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-requests">POST /api/requests</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-idCheck">POST /api/idCheck</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-logout">GET /api/logout</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-signup">POST /api/signup</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-signup">GET /api/signup</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-login">POST /api/login</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-login">GET /api/login</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2">GET /api/v2</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api">GET /api</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-ongoing-i18n-(int-request_id)-variable-(int-variable_id)-paragraph-(int-paragraph_seq)-sentence-(int-sentence_seq)">PUT /api/user/translations/ongoing/i18n/(int:request_id)/variable/(int:variable_id)/paragraph/(int:paragraph_seq)/sentence/(int:sentence_seq)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-ongoing-i18n-(int-request_id)-variable-(int-variable_id)-comment">PUT /api/user/translations/ongoing/i18n/(int:request_id)/variable/(int:variable_id)/comment</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-ongoing-(int-request_id)-paragraph-(int-paragraph_id)-sentence-(int-sentence_id)">PUT /api/user/translations/ongoing/(int:request_id)/paragraph/(int:paragraph_id)/sentence/(int:sentence_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-ongoing-(int-request_id)-paragraph-(int-paragraph_id)-sentence-(int-sentence_id)">GET /api/user/translations/ongoing/(int:request_id)/paragraph/(int:paragraph_id)/sentence/(int:sentence_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-comment-(int-request_id)-paragraph-(int-paragraph_id)-sentence-(int-sentence_id)">PUT /api/user/translations/comment/(int:request_id)/paragraph/(int:paragraph_id)/sentence/(int:sentence_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-comment-(int-request_id)-paragraph-(int-paragraph_id)">PUT /api/user/translations/comment/(int:request_id)/paragraph/(int:paragraph_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete-i18n-(int-request_id)-download">GET /api/user/requests/complete/i18n/(int:request_id)/download</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-pretranslated-request-(int-request_id)-addUserForDownload">POST /api/v2/user/pretranslated/request/(int:request_id)/addUserForDownload</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-pretranslated-request-(int-request_id)-provideLink">POST /api/v2/user/pretranslated/request/(int:request_id)/provideLink</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-pretranslated-request-(int-request_id)-markAsPaid">GET /api/v2/user/pretranslated/request/(int:request_id)/markAsPaid</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-pretranslated-request-(int-request_id)-preview">GET /api/v2/user/pretranslated/request/(int:request_id)/preview</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-pretranslated-request-(int-request_id)-rate">POST /api/v2/user/pretranslated/request/(int:request_id)/rate</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-translations-complete-groups-(str_group_id)">DELETE /api/user/translations/complete/groups/(str_group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-complete-groups-(str_group_id)">PUT /api/user/translations/complete/groups/(str_group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-complete-groups-(str_group_id)">POST /api/user/translations/complete/groups/(str_group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-complete-groups-(str_group_id)">GET /api/user/translations/complete/groups/(str_group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-complete-i18n-(int-request_id)">GET /api/user/translations/complete/i18n/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-complete-(int-request_id)-insertPair">POST /api/user/translations/complete/(int:request_id)/insertPair</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-complete-(str_request_id)-title">POST /api/user/translations/complete/(str_request_id)/title</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-ongoing-i18n-(int-request_id)">GET /api/user/translations/ongoing/i18n/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-ongoing-(int-request_id)-expected">GET /api/user/translations/ongoing/(int:request_id)/expected</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-translations-ongoing-(int-request_id)-expected">DELETE /api/user/translations/ongoing/(int:request_id)/expected</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-translations-ongoing-(int-request_id)-expected">POST /api/user/translations/ongoing/(int:request_id)/expected</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-ongoing-(int-request_id)-file">PUT /api/user/translations/ongoing/(int:request_id)/file</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-ongoing-(int-request_id)-file">GET /api/user/translations/ongoing/(int:request_id)/file</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-complete-groups-(int-group_id)">POST /api/user/requests/complete/groups/(int:group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete-groups-(int-group_id)">GET /api/user/requests/complete/groups/(int:group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-requests-complete-groups-(str_group_id)">DELETE /api/user/requests/complete/groups/(str_group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-requests-complete-groups-(str_group_id)">PUT /api/user/requests/complete/groups/(str_group_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete-i18n-(int-request_id)">GET /api/user/requests/complete/i18n/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-complete-(int-request_id)-title">POST /api/user/requests/complete/(int:request_id)/title</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete-(int-request_id)-file">GET /api/user/requests/complete/(int:request_id)/file</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-complete-(int-request_id)-rate">POST /api/user/requests/complete/(int:request_id)/rate</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-pending-group_request-(int-request_id)">GET /api/user/requests/pending/group_request/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-pending-group_request-(int-request_id)">POST /api/user/requests/pending/group_request/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-ongoing-i18n-(int-request_id)">GET /api/user/requests/ongoing/i18n/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-(int-request_id)-payment-checkPromoCode">POST /api/user/requests/(int:request_id)/payment/checkPromoCode</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-(int-request_id)-payment-postprocess">GET /api/user/requests/(int:request_id)/payment/postprocess</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-(int-request_id)-payment-start">POST /api/user/requests/(int:request_id)/payment/start</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-access_file-request_sounds-(sound_id)-(fake_filename)">GET /api/access_file/request_sounds/(sound_id)/(fake_filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-access_file-profile_pic-(user_id)-(fake_filename)">GET /api/access_file/profile_pic/(user_id)/(fake_filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-access_file-request_pic-(photo_id)-(fake_filename)">GET /api/access_file/request_pic/(photo_id)/(fake_filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-access_file-request_doc-(doc_id)-(fake_filename)">GET /api/access_file/request_doc/(doc_id)/(fake_filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-incomplete-(int-request_id)">GET /api/user/translations/incomplete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-complete-(int-request_id)">GET /api/user/translations/complete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-translations-pending-(int-request_id)">DELETE /api/user/translations/pending/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-translations-pending-(int-request_id)">PUT /api/user/translations/pending/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-ongoing-(int-request_id)">GET /api/user/translations/ongoing/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-incomplete-(int-request_id)">GET /api/user/requests/incomplete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-requests-incomplete-(int-request_id)">DELETE /api/user/requests/incomplete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-requests-incomplete-(int-request_id)">PUT /api/user/requests/incomplete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-requests-incomplete-(int-request_id)">POST /api/user/requests/incomplete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-complete-(int-request_id)">GET /api/user/requests/complete/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-pending-(int-request_id)">GET /api/user/requests/pending/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-requests-pending-(int-request_id)">DELETE /api/user/requests/pending/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-ongoing-(int-request_id)">GET /api/user/requests/ongoing/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-profile-keywords-(keyword)">GET /api/user/profile/keywords/(keyword)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-profile-keywords-(keyword)">DELETE /api/user/profile/keywords/(keyword)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-user-profile-keywords-(keyword)">POST /api/user/profile/keywords/(keyword)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-user-payback-(str_id)-(order_no)">DELETE /api/user/payback/(str_id)/(order_no)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-user-payback-(str_id)-(order_no)">PUT /api/user/payback/(str_id)/(order_no)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-access_file-img-(filename)">GET /api/access_file/img/(filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-translations-(int-request_id)">GET /api/user/translations/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-user-requests-(int-request_id)">GET /api/user/requests/(int:request_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="content">
+<h1>Content<a class="headerlink" href="#content" title="제목 주소">¶</a></h1>
 <dl class="post">
 <dt id="post--api-user-translations-complete-groups">
 <code class="descname">POST </code><code class="descname">/api/user/translations/complete/groups</code><a class="headerlink" href="#post--api-user-translations-complete-groups" title="정의 주소">¶</a></dt>
@@ -1497,6 +2022,17 @@ i18nHandler.jsonResponse() 사용</p>
 i18nHandler.jsonResponse() 사용</p>
 </dd></dl>
 
+<dl class="get">
+<dt id="get--api-user-translations-ongoing-(int-request_id)-expected">
+<code class="descname">GET </code><code class="descname">/api/user/translations/ongoing/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/expected</code><a class="headerlink" href="#get--api-user-translations-ongoing-(int-request_id)-expected" title="정의 주소">¶</a></dt>
+<dd><p>(현재 사용하지 않음)
+예상완료시간 보기 (GET), 입력(POST), 번역포기 (DELETE)</p>
+<p>번역가가 번역을 하겠다고 마킹을 하면 바로 번역을 진행하는 것이 아니라, 먼저 본문을 한 번 열람을 하고,
+언제까지 번역이 가능한지 예상 시간을 입력한다. (혹은 번역 포기를 한다.)
+만약 번역하겠다고 한 시간에서 1/3 시점까지 예상시간을 입력하지 않으면 자동으로 번역불가로 간주하고 도로 스토아로 되돌려놓는다.
+주가 되는 column은 CICERON.F_REQUESTS.expected_time이다.</p>
+</dd></dl>
+
 <dl class="delete">
 <dt id="delete--api-user-translations-ongoing-(int-request_id)-expected">
 <code class="descname">DELETE </code><code class="descname">/api/user/translations/ongoing/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/expected</code><a class="headerlink" href="#delete--api-user-translations-ongoing-(int-request_id)-expected" title="정의 주소">¶</a></dt>
@@ -1511,17 +2047,6 @@ i18nHandler.jsonResponse() 사용</p>
 <dl class="post">
 <dt id="post--api-user-translations-ongoing-(int-request_id)-expected">
 <code class="descname">POST </code><code class="descname">/api/user/translations/ongoing/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/expected</code><a class="headerlink" href="#post--api-user-translations-ongoing-(int-request_id)-expected" title="정의 주소">¶</a></dt>
-<dd><p>(현재 사용하지 않음)
-예상완료시간 보기 (GET), 입력(POST), 번역포기 (DELETE)</p>
-<p>번역가가 번역을 하겠다고 마킹을 하면 바로 번역을 진행하는 것이 아니라, 먼저 본문을 한 번 열람을 하고,
-언제까지 번역이 가능한지 예상 시간을 입력한다. (혹은 번역 포기를 한다.)
-만약 번역하겠다고 한 시간에서 1/3 시점까지 예상시간을 입력하지 않으면 자동으로 번역불가로 간주하고 도로 스토아로 되돌려놓는다.
-주가 되는 column은 CICERON.F_REQUESTS.expected_time이다.</p>
-</dd></dl>
-
-<dl class="get">
-<dt id="get--api-user-translations-ongoing-(int-request_id)-expected">
-<code class="descname">GET </code><code class="descname">/api/user/translations/ongoing/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/expected</code><a class="headerlink" href="#get--api-user-translations-ongoing-(int-request_id)-expected" title="정의 주소">¶</a></dt>
 <dd><p>(현재 사용하지 않음)
 예상완료시간 보기 (GET), 입력(POST), 번역포기 (DELETE)</p>
 <p>번역가가 번역을 하겠다고 마킹을 하면 바로 번역을 진행하는 것이 아니라, 먼저 본문을 한 번 열람을 하고,
@@ -1714,28 +2239,6 @@ warehousing.restoreArray() 사용</p>
 </dl>
 </dd></dl>
 
-<dl class="delete">
-<dt id="delete--api-user-requests-incomplete-(int-request_id)">
-<code class="descname">DELETE </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
-<dd><p>자신이 의뢰한 티켓 처리
-조회 (GET),
-번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
-번역하다가 마감시간 초과시 번역가 변경하고 스토아로 보낸 후 마감시간 및 금액 수정 (POST),
-마감시간 경과한 티켓 삭제 (DELETE)</p>
-<p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
-</dd></dl>
-
-<dl class="post">
-<dt id="post--api-user-requests-incomplete-(int-request_id)">
-<code class="descname">POST </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#post--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
-<dd><p>자신이 의뢰한 티켓 처리
-조회 (GET),
-번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
-번역하다가 마감시간 초과시 번역가 변경하고 스토아로 보낸 후 마감시간 및 금액 수정 (POST),
-마감시간 경과한 티켓 삭제 (DELETE)</p>
-<p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
-</dd></dl>
-
 <dl class="get">
 <dt id="get--api-user-requests-incomplete-(int-request_id)">
 <code class="descname">GET </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
@@ -1747,9 +2250,31 @@ warehousing.restoreArray() 사용</p>
 <p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
 </dd></dl>
 
+<dl class="delete">
+<dt id="delete--api-user-requests-incomplete-(int-request_id)">
+<code class="descname">DELETE </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
+<dd><p>자신이 의뢰한 티켓 처리
+조회 (GET),
+번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
+번역하다가 마감시간 초과시 번역가 변경하고 스토아로 보낸 후 마감시간 및 금액 수정 (POST),
+마감시간 경과한 티켓 삭제 (DELETE)</p>
+<p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
+</dd></dl>
+
 <dl class="put">
 <dt id="put--api-user-requests-incomplete-(int-request_id)">
 <code class="descname">PUT </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
+<dd><p>자신이 의뢰한 티켓 처리
+조회 (GET),
+번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
+번역하다가 마감시간 초과시 번역가 변경하고 스토아로 보낸 후 마감시간 및 금액 수정 (POST),
+마감시간 경과한 티켓 삭제 (DELETE)</p>
+<p>결제가 필요하면 결제로 이어지는 API 주소 제공, is_paid = false로 마킹</p>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-user-requests-incomplete-(int-request_id)">
+<code class="descname">POST </code><code class="descname">/api/user/requests/incomplete/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#post--api-user-requests-incomplete-(int-request_id)" title="정의 주소">¶</a></dt>
 <dd><p>자신이 의뢰한 티켓 처리
 조회 (GET),
 번역하다가 마감시간 초과시 번역가 변경 없이 마감시간 및 금액 수정(PUT),
@@ -1792,6 +2317,35 @@ warehousing.restoreArray() 사용</p>
 <dd><p>자신이 의뢰한 티켓 중 개별 티켓 확인</p>
 </dd></dl>
 
+<dl class="get">
+<dt id="get--api-user-profile-keywords-(keyword)">
+<code class="descname">GET </code><code class="descname">/api/user/profile/keywords/</code><span class="sig-paren">(</span><em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-user-profile-keywords-(keyword)" title="정의 주소">¶</a></dt>
+<dd><p>프로파일에서 자신을 표현할 수 있는 키워드 기 입력된 키워드에서 검색(GET), 추가(POST), 및 삭제(DELETE)
+1) GET</p>
+<blockquote>
+<div>&lt;keyword&gt;에 집어 넣은 글자를 처음으로 하는, 기 입력된 키워드를 조회하여 후보를 보여준다.
+키워드 입력시, 연관검색어를 제공하고자 함이다.</div></blockquote>
+<ol class="arabic" start="2">
+<li><dl class="first docutils">
+<dt>POST</dt>
+<dd><p class="first">&lt;keyword&gt;를 입력한다.
+Keyword Dimension table: CICERON.D_KEYWORDS
+Keyword Fact table: CICERON.D_USER_KEYWORDS</p>
+<p class="last">기 입력된 키워드면 키워드ID를 찾아서 유저별로 Mapping한다.
+기존에 입력된 키워드가 아니라면 Dimension table에 INSERT한다.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>DELETE</dt>
+<dd><p class="first last">해당 유저의 키워드에서 입력된 &lt;keyword&gt;를 삭제한다.
+Dimension table의 레코드는 건드리지 않고, Fact table에 적혀있는 mapping만 지운다.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd></dl>
+
 <dl class="delete">
 <dt id="delete--api-user-profile-keywords-(keyword)">
 <code class="descname">DELETE </code><code class="descname">/api/user/profile/keywords/</code><span class="sig-paren">(</span><em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-user-profile-keywords-(keyword)" title="정의 주소">¶</a></dt>
@@ -1824,35 +2378,6 @@ Dimension table의 레코드는 건드리지 않고, Fact table에 적혀있는 
 <dl class="post">
 <dt id="post--api-user-profile-keywords-(keyword)">
 <code class="descname">POST </code><code class="descname">/api/user/profile/keywords/</code><span class="sig-paren">(</span><em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#post--api-user-profile-keywords-(keyword)" title="정의 주소">¶</a></dt>
-<dd><p>프로파일에서 자신을 표현할 수 있는 키워드 기 입력된 키워드에서 검색(GET), 추가(POST), 및 삭제(DELETE)
-1) GET</p>
-<blockquote>
-<div>&lt;keyword&gt;에 집어 넣은 글자를 처음으로 하는, 기 입력된 키워드를 조회하여 후보를 보여준다.
-키워드 입력시, 연관검색어를 제공하고자 함이다.</div></blockquote>
-<ol class="arabic" start="2">
-<li><dl class="first docutils">
-<dt>POST</dt>
-<dd><p class="first">&lt;keyword&gt;를 입력한다.
-Keyword Dimension table: CICERON.D_KEYWORDS
-Keyword Fact table: CICERON.D_USER_KEYWORDS</p>
-<p class="last">기 입력된 키워드면 키워드ID를 찾아서 유저별로 Mapping한다.
-기존에 입력된 키워드가 아니라면 Dimension table에 INSERT한다.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>DELETE</dt>
-<dd><p class="first last">해당 유저의 키워드에서 입력된 &lt;keyword&gt;를 삭제한다.
-Dimension table의 레코드는 건드리지 않고, Fact table에 적혀있는 mapping만 지운다.</p>
-</dd>
-</dl>
-</li>
-</ol>
-</dd></dl>
-
-<dl class="get">
-<dt id="get--api-user-profile-keywords-(keyword)">
-<code class="descname">GET </code><code class="descname">/api/user/profile/keywords/</code><span class="sig-paren">(</span><em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-user-profile-keywords-(keyword)" title="정의 주소">¶</a></dt>
 <dd><p>프로파일에서 자신을 표현할 수 있는 키워드 기 입력된 키워드에서 검색(GET), 추가(POST), 및 삭제(DELETE)
 1) GET</p>
 <blockquote>
@@ -1930,6 +2455,8 @@ Dimension table의 레코드는 건드리지 않고, Fact table에 적혀있는 
   <h3><a href="#">목차</a></h3>
   <ul>
 <li><a class="reference internal" href="#">CICERON API doc v2.0</a></li>
+<li><a class="reference internal" href="#ciceron-api-doc-index">CICERON API doc index</a></li>
+<li><a class="reference internal" href="#content">Content</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 <div class="relations">
