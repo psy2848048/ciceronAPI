@@ -197,56 +197,40 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControlAPI.login">
-<code class="descname">login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.login" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>해당 API</dt>
-<dd><ol class="first arabic simple">
-<li>토큰 따기</li>
-</ol>
-<blockquote>
-<div><ol class="arabic simple">
-<li>GET /api/v2/login</li>
-</ol>
-</div></blockquote>
-<ol class="arabic simple">
-<li>로그인하기</li>
-</ol>
-<blockquote class="last">
-<div><ol class="arabic simple">
-<li>POST /api/v2/login</li>
-</ol>
-</div></blockquote>
-</dd>
-<dt>로그인 로직</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/v2/login에 접속</li>
-<li>로그인 Salt를 받는다.</li>
-<li>클라이언트에서는 sha256(salt + sha256(password) + salt) 값을 만들어 서버에 전송한다.</li>
-<li>Password 테이블 값과 비교하여 일치하면 session 값들을 고쳐준다.</li>
-</ol>
-</dd>
-<dt>GET /api/login or /api/v2/login</dt>
-<dd><dl class="first last docutils">
+<dt id="app.userControl.UserControlAPI.getLoginToken">
+<code class="descname">getLoginToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.getLoginToken" title="정의 주소">¶</a></dt>
+<dd><p>로그인 토큰 발급</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd>Nothing</dd>
 <dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;identifier&quot;: &quot;a3Bd1g&quot;, // Password Salt
 }
 </pre></div>
 </td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
-</dd>
-</dl>
-</dd>
-<dt>POST /api/login or /api/v2/login</dt>
-<dd><dl class="first last docutils">
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.login">
+<code class="descname">login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.login" title="정의 주소">¶</a></dt>
+<dd><p>로그인하기</p>
+<dl class="docutils">
+<dt>로그인 로직</dt>
+<dd><ol class="first arabic simple">
+<li>GET /api/v2/login에 접속</li>
+<li>로그인 Salt를 받는다.</li>
+<li>클라이언트에서는 sha256(salt + sha256(password) + salt) 값을 만들어 서버에 전송한다.</li>
+<li>Password 테이블 값과 비교하여 일치하면 session 값들을 고쳐준다.</li>
+</ol>
+<dl class="last docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;email&#8221;: 유저 email 주소 (ciceron_lib.get_user_id를 통하여 email에서 user_id를 추출할 수 있다.)</li>
@@ -280,13 +264,7 @@
 <dl class="method">
 <dt id="app.userControl.UserControlAPI.loginCheck">
 <code class="descname">loginCheck</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.loginCheck" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>해당 API</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/v2</li>
-</ol>
-</dd>
-</dl>
+<dd><p>해당 API</p>
 <p>해당 세션의 상태를 보여준다.
 아래 return값은 session[var_name]으로 접근 가능하다</p>
 <dl class="docutils">
@@ -352,9 +330,9 @@
 <div>(DEFAULT: 로그인 한 본인의 이메일)</div></blockquote>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -403,8 +381,7 @@
 }
 </pre></div>
 </td></tr></table></div>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
