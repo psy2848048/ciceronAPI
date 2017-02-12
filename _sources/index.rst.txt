@@ -17,12 +17,14 @@ CICERON API doc index
 ==================================
 
 .. qrefflask:: app.application:app
-   :undoc-static:
+   :endpoints:
+   :order: path
 
 Content
 ==================================
 .. autoflask:: app.application:app
-   :undoc-static:
+   :endpoints:
+   :order: path
 
 Indices and tables
 ==================
