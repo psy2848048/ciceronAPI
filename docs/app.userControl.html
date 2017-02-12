@@ -84,6 +84,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.userControl.UserControl.profilePic">
+<code class="descname">profilePic</code><span class="sig-paren">(</span><em>user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.profilePic" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControl.recoverPassword">
 <code class="descname">recoverPassword</code><span class="sig-paren">(</span><em>email</em>, <em>hashed_code</em>, <em>hashed_new_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.recoverPassword" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -180,6 +185,16 @@
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.fakeLoginAdmin">
+<code class="descname">fakeLoginAdmin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.fakeLoginAdmin" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.fakeLoginUser">
+<code class="descname">fakeLoginUser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.fakeLoginUser" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="app.userControl.UserControlAPI.login">
@@ -395,14 +410,28 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControlAPI.profileRevise">
-<code class="descname">profileRevise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.profileRevise" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>프로필 정보 수정</dt>
+<dt id="app.userControl.UserControlAPI.profilePic">
+<code class="descname">profilePic</code><span class="sig-paren">(</span><em>user_id</em>, <em>fake_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.profilePic" title="정의 주소">¶</a></dt>
+<dd><p>프로필 사진 받기</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
-<li>POST /api/v2/user/profile</li>
+<li><strong>&#8220;user_id&#8221;</strong>: User ID (Integer), URL에 직접 삽입</li>
+<li><strong>&#8220;fake_filename&#8221;</strong>: 프로필 사진 이름</li>
 </ol>
 </dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 프로필 사진 전송</p>
+<p class="last"><strong>404</strong>: 등록된 사진 없음</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.profileRevise">
+<code class="descname">profileRevise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.profileRevise" title="정의 주소">¶</a></dt>
+<dd><p>프로필 정보 수정</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;profileText&#8221;: (OPTIONAL) 수정하고픈 프로필 문구</li>
