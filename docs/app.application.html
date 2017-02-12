@@ -42,8 +42,496 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="app-application-module">
-<h1>app.application module<a class="headerlink" href="#app-application-module" title="제목 주소">¶</a></h1>
+  <div class="section" id="module-app.application">
+<span id="app-application-module"></span><h1>app.application module<a class="headerlink" href="#module-app.application" title="제목 주소">¶</a></h1>
+<p>어플리케이션 서버 본 코드
+URL rule과 Response가 정의되어 있음.</p>
+<p>TODO: 이 파일에서는 Function call만 하고, Query 날리는 것은 모두 라이브러리화 시켜 서버 갈아타기 쉽게 하기</p>
+<dl class="data">
+<dt id="app.application.DATABASE">
+<code class="descclassname">app.application.</code><code class="descname">DATABASE</code><em class="property"> = 'host=aristoteles.ciceron.xyz port=5432 dbname=ciceron user=ciceron_web password=noSecret01!'</em><a class="headerlink" href="#app.application.DATABASE" title="정의 주소">¶</a></dt>
+<dd><p>Execute following first!!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.access_profile_pic">
+<code class="descclassname">app.application.</code><code class="descname">access_profile_pic</code><span class="sig-paren">(</span><em>user_id</em>, <em>fake_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.access_profile_pic" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.access_request_file">
+<code class="descclassname">app.application.</code><code class="descname">access_request_file</code><span class="sig-paren">(</span><em>doc_id</em>, <em>fake_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.access_request_file" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.access_request_pic">
+<code class="descclassname">app.application.</code><code class="descname">access_request_pic</code><span class="sig-paren">(</span><em>photo_id</em>, <em>fake_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.access_request_pic" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.access_request_sound">
+<code class="descclassname">app.application.</code><code class="descname">access_request_sound</code><span class="sig-paren">(</span><em>sound_id</em>, <em>fake_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.access_request_sound" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.addUser_groupRequest">
+<code class="descclassname">app.application.</code><code class="descname">addUser_groupRequest</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.addUser_groupRequest" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.be_hero">
+<code class="descclassname">app.application.</code><code class="descname">be_hero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.be_hero" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.before_request">
+<code class="descclassname">app.application.</code><code class="descname">before_request</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.before_request" title="정의 주소">¶</a></dt>
+<dd><p>모든 API 실행 전 실행하는 부분. 여기서는 DB 연결.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.change_password_old">
+<code class="descclassname">app.application.</code><code class="descname">change_password_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.change_password_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.check_promotionCode">
+<code class="descclassname">app.application.</code><code class="descname">check_promotionCode</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.check_promotionCode" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_complete_groups">
+<code class="descclassname">app.application.</code><code class="descname">client_complete_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_complete_groups" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_completed_items">
+<code class="descclassname">app.application.</code><code class="descname">client_completed_items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_completed_items" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_completed_items_detail">
+<code class="descclassname">app.application.</code><code class="descname">client_completed_items_detail</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_completed_items_detail" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_completed_items_in_group">
+<code class="descclassname">app.application.</code><code class="descname">client_completed_items_in_group</code><span class="sig-paren">(</span><em>group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_completed_items_in_group" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_incompleted_item_control">
+<code class="descclassname">app.application.</code><code class="descname">client_incompleted_item_control</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_incompleted_item_control" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_incompleted_items">
+<code class="descclassname">app.application.</code><code class="descname">client_incompleted_items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_incompleted_items" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.client_rate_request">
+<code class="descclassname">app.application.</code><code class="descname">client_rate_request</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.client_rate_request" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.connect_db">
+<code class="descclassname">app.application.</code><code class="descname">connect_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.connect_db" title="정의 주소">¶</a></dt>
+<dd><p>DB connector 함수</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.create_recovery_code_old">
+<code class="descclassname">app.application.</code><code class="descname">create_recovery_code_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.create_recovery_code_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.deleteUser_groupRequest">
+<code class="descclassname">app.application.</code><code class="descname">deleteUser_groupRequest</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.deleteUser_groupRequest" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.delete_item_client">
+<code class="descclassname">app.application.</code><code class="descname">delete_item_client</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.delete_item_client" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.doc_allowed_file">
+<code class="descclassname">app.application.</code><code class="descname">doc_allowed_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.doc_allowed_file" title="정의 주소">¶</a></dt>
+<dd><p>확장자를 보고 문서인지 아닌지 판별
+:param string filename: 파일 이름</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.expected_time">
+<code class="descclassname">app.application.</code><code class="descname">expected_time</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.expected_time" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.getFileForClient">
+<code class="descclassname">app.application.</code><code class="descname">getFileForClient</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.getFileForClient" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.getOneTicketOfClient">
+<code class="descclassname">app.application.</code><code class="descname">getOneTicketOfClient</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.getOneTicketOfClient" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.getOneTicketOfHero">
+<code class="descclassname">app.application.</code><code class="descname">getOneTicketOfHero</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.getOneTicketOfHero" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.getOrUpdateFile">
+<code class="descclassname">app.application.</code><code class="descname">getOrUpdateFile</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.getOrUpdateFile" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.get_groupRequest_list">
+<code class="descclassname">app.application.</code><code class="descname">get_groupRequest_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.get_groupRequest_list" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.get_notification">
+<code class="descclassname">app.application.</code><code class="descname">get_notification</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.get_notification" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.get_oneGroupRequest">
+<code class="descclassname">app.application.</code><code class="descname">get_oneGroupRequest</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.get_oneGroupRequest" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_checkSourceAndTranslation">
+<code class="descclassname">app.application.</code><code class="descname">i18n_checkSourceAndTranslation</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_checkSourceAndTranslation" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_completedCheckSourceAndTranslation">
+<code class="descclassname">app.application.</code><code class="descname">i18n_completedCheckSourceAndTranslation</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_completedCheckSourceAndTranslation" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_download">
+<code class="descclassname">app.application.</code><code class="descname">i18n_download</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_download" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_getData_complete">
+<code class="descclassname">app.application.</code><code class="descname">i18n_getData_complete</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_getData_complete" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_getData_ongoing">
+<code class="descclassname">app.application.</code><code class="descname">i18n_getData_ongoing</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_getData_ongoing" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_parsing">
+<code class="descclassname">app.application.</code><code class="descname">i18n_parsing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_parsing" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_updateComment">
+<code class="descclassname">app.application.</code><code class="descname">i18n_updateComment</code><span class="sig-paren">(</span><em>request_id</em>, <em>variable_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_updateComment" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.i18n_updateSentence">
+<code class="descclassname">app.application.</code><code class="descname">i18n_updateSentence</code><span class="sig-paren">(</span><em>request_id</em>, <em>variable_id</em>, <em>paragraph_seq</em>, <em>sentence_seq</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.i18n_updateSentence" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.idChecker_old">
+<code class="descclassname">app.application.</code><code class="descname">idChecker_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.idChecker_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.initial_translate">
+<code class="descclassname">app.application.</code><code class="descname">initial_translate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.initial_translate" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.language_assigner">
+<code class="descclassname">app.application.</code><code class="descname">language_assigner</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.language_assigner" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.language_rejector">
+<code class="descclassname">app.application.</code><code class="descname">language_rejector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.language_rejector" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.loginCheck_old">
+<code class="descclassname">app.application.</code><code class="descname">loginCheck_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.loginCheck_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.login_old">
+<code class="descclassname">app.application.</code><code class="descname">login_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.login_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.logout_old">
+<code class="descclassname">app.application.</code><code class="descname">logout_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.logout_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.mail_img">
+<code class="descclassname">app.application.</code><code class="descname">mail_img</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.mail_img" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.modify_client_completed_groups">
+<code class="descclassname">app.application.</code><code class="descname">modify_client_completed_groups</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.modify_client_completed_groups" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.modify_translators_complete_groups">
+<code class="descclassname">app.application.</code><code class="descname">modify_translators_complete_groups</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.modify_translators_complete_groups" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.pay_for_request">
+<code class="descclassname">app.application.</code><code class="descname">pay_for_request</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.pay_for_request" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.pay_for_request_process">
+<code class="descclassname">app.application.</code><code class="descname">pay_for_request_process</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.pay_for_request_process" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.pic_allowed_file">
+<code class="descclassname">app.application.</code><code class="descname">pic_allowed_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.pic_allowed_file" title="정의 주소">¶</a></dt>
+<dd><p>확장자를 보고 사진(그림)인지 아닌지 판별
+:param string filename: 파일 이름</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.pick_request">
+<code class="descclassname">app.application.</code><code class="descname">pick_request</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.pick_request" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.ping">
+<code class="descclassname">app.application.</code><code class="descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.ping" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.point_detail">
+<code class="descclassname">app.application.</code><code class="descname">point_detail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.point_detail" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.post_translate_item">
+<code class="descclassname">app.application.</code><code class="descname">post_translate_item</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.post_translate_item" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.public_list">
+<code class="descclassname">app.application.</code><code class="descname">public_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.public_list" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.public_list_random">
+<code class="descclassname">app.application.</code><code class="descname">public_list_random</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.public_list_random" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.public_oneTicket">
+<code class="descclassname">app.application.</code><code class="descname">public_oneTicket</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.public_oneTicket" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.public_payment">
+<code class="descclassname">app.application.</code><code class="descname">public_payment</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.public_payment" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.read_notification">
+<code class="descclassname">app.application.</code><code class="descname">read_notification</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.read_notification" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.record_user_location">
+<code class="descclassname">app.application.</code><code class="descname">record_user_location</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.record_user_location" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.recover_password_old">
+<code class="descclassname">app.application.</code><code class="descname">recover_password_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.recover_password_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.register_or_update_register_id">
+<code class="descclassname">app.application.</code><code class="descname">register_or_update_register_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.register_or_update_register_id" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.register_payback">
+<code class="descclassname">app.application.</code><code class="descname">register_payback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.register_payback" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.register_payback_email">
+<code class="descclassname">app.application.</code><code class="descname">register_payback_email</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.register_payback_email" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.requests">
+<code class="descclassname">app.application.</code><code class="descname">requests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.requests" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.return_money">
+<code class="descclassname">app.application.</code><code class="descname">return_money</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.return_money" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.reviseTranslatedItemByEachLine">
+<code class="descclassname">app.application.</code><code class="descname">reviseTranslatedItemByEachLine</code><span class="sig-paren">(</span><em>request_id</em>, <em>paragraph_id</em>, <em>sentence_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.reviseTranslatedItemByEachLine" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.revise_payback">
+<code class="descclassname">app.application.</code><code class="descname">revise_payback</code><span class="sig-paren">(</span><em>str_id</em>, <em>order_no</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.revise_payback" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.savePair">
+<code class="descclassname">app.application.</code><code class="descname">savePair</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.savePair" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.sentence_tokenize">
+<code class="descclassname">app.application.</code><code class="descname">sentence_tokenize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.sentence_tokenize" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.set_title_client">
+<code class="descclassname">app.application.</code><code class="descname">set_title_client</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.set_title_client" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.set_title_translator">
+<code class="descclassname">app.application.</code><code class="descname">set_title_translator</code><span class="sig-paren">(</span><em>str_request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.set_title_translator" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.show_ongoing_item_client">
+<code class="descclassname">app.application.</code><code class="descname">show_ongoing_item_client</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.show_ongoing_item_client" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.show_ongoing_list_client">
+<code class="descclassname">app.application.</code><code class="descname">show_ongoing_list_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.show_ongoing_list_client" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.show_pending_item_client">
+<code class="descclassname">app.application.</code><code class="descname">show_pending_item_client</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.show_pending_item_client" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.show_pending_list_client">
+<code class="descclassname">app.application.</code><code class="descname">show_pending_list_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.show_pending_list_client" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.show_queue">
+<code class="descclassname">app.application.</code><code class="descname">show_queue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.show_queue" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.signup_old">
+<code class="descclassname">app.application.</code><code class="descname">signup_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.signup_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.sound_allowed_file">
+<code class="descclassname">app.application.</code><code class="descname">sound_allowed_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.sound_allowed_file" title="정의 주소">¶</a></dt>
+<dd><p>확장자를 보고 음성인지 아닌지 판별
+:param string filename: 파일 이름</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.teardown_request">
+<code class="descclassname">app.application.</code><code class="descname">teardown_request</code><span class="sig-paren">(</span><em>exception</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.teardown_request" title="정의 주소">¶</a></dt>
+<dd><p>모든 API 실행 후 실행하는 부분. 여기서는 DB 연결종료.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.application.translation_completed_items_all">
+<code class="descclassname">app.application.</code><code class="descname">translation_completed_items_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translation_completed_items_all" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.translation_completed_items_detail">
+<code class="descclassname">app.application.</code><code class="descname">translation_completed_items_detail</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translation_completed_items_detail" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.translation_completed_items_in_group">
+<code class="descclassname">app.application.</code><code class="descname">translation_completed_items_in_group</code><span class="sig-paren">(</span><em>str_group_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translation_completed_items_in_group" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.translation_incompleted_items_all">
+<code class="descclassname">app.application.</code><code class="descname">translation_incompleted_items_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translation_incompleted_items_all" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.translation_incompleted_items_each">
+<code class="descclassname">app.application.</code><code class="descname">translation_incompleted_items_each</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translation_incompleted_items_each" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.translator_stoa">
+<code class="descclassname">app.application.</code><code class="descname">translator_stoa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translator_stoa" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.translators_complete_groups">
+<code class="descclassname">app.application.</code><code class="descname">translators_complete_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.translators_complete_groups" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.updateParagraphComment">
+<code class="descclassname">app.application.</code><code class="descname">updateParagraphComment</code><span class="sig-paren">(</span><em>request_id</em>, <em>paragraph_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.updateParagraphComment" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.updateSentenceComment">
+<code class="descclassname">app.application.</code><code class="descname">updateSentenceComment</code><span class="sig-paren">(</span><em>request_id</em>, <em>paragraph_id</em>, <em>sentence_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.updateSentenceComment" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.user_keywords_control">
+<code class="descclassname">app.application.</code><code class="descname">user_keywords_control</code><span class="sig-paren">(</span><em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.user_keywords_control" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.user_profile_old">
+<code class="descclassname">app.application.</code><code class="descname">user_profile_old</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.user_profile_old" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.user_stoa">
+<code class="descclassname">app.application.</code><code class="descname">user_stoa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.application.user_stoa" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.work_in_queue">
+<code class="descclassname">app.application.</code><code class="descname">work_in_queue</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.work_in_queue" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="app.application.working_translate_item">
+<code class="descclassname">app.application.</code><code class="descname">working_translate_item</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.application.working_translate_item" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 
 

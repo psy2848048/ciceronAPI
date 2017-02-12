@@ -14,7 +14,6 @@ Submodules
    app.groupRequest
    app.i18nHandler
    app.localizer
-   app.locustfile
    app.logTransfer
    app.mailAgent
    app.mail_template
