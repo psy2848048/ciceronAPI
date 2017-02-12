@@ -16,15 +16,47 @@ CICERON API doc v2.0
 CICERON API doc index
 ==================================
 
-.. qrefflask:: app.application:app
-   :endpoints:
-   :order: path
-
-Content
+회원관리
 ==================================
-.. autoflask:: app.application:app
-   :endpoints:
-   :order: path
+
+  .. qrefflask:: app.application:app
+     :modules: app.userControl
+     :endpoints:
+     :order: path
+
+  .. autoflask:: app.application:app
+     :modules: app.userControl
+     :endpoints:
+     :order: path
+
+
+결제관리
+================================
+
+  .. qrefflask:: app.application:app
+     :modules: app.payment
+     :endpoints:
+     :order: path
+
+  .. autoflask:: app.application:app
+     :modules: app.payment
+     :endpoints:
+     :order: path
+
+
+번역공동구매
+=================================
+
+  .. qrefflask:: app.application:app
+     :modules: app.pretranslated
+     :endpoints:
+     :order: path
+
+  .. autoflask:: app.application:app
+     :modules: app.pretranslated
+     :endpoints:
+     :order: path
+
 
 Indices and tables
 ==================
