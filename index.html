@@ -73,15 +73,31 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-v2-admin-user-(int-user_id)-activity-(status)">PUT /api/v2/admin/user/(int:user_id)/activity/(status)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-user-(int-user_id)-assignLanguage">POST /api/v2/admin/user/(int:user_id)/assignLanguage</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-v2-admin-user-(int-user_id)-permission-(status)">PUT /api/v2/admin/user/(int:user_id)/permission/(status)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-userLists">GET /api/v2/admin/userLists</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-idCheck">POST /api/v2/idCheck</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-login">POST /api/v2/login</a></td>
+<td><a class="reference external" href="#get--api-v2-login">GET /api/v2/login</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-login">GET /api/v2/login</a></td>
+<td><a class="reference external" href="#post--api-v2-login">POST /api/v2/login</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -117,13 +133,7 @@
 <dl class="get">
 <dt id="get--api-v2">
 <code class="descname">GET </code><code class="descname">/api/v2</code><a class="headerlink" href="#get--api-v2" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>해당 API</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/v2</li>
-</ol>
-</dd>
-</dl>
+<dd><p>해당 API</p>
 <p>해당 세션의 상태를 보여준다.
 아래 return값은 session[var_name]으로 접근 가능하다</p>
 <dl class="docutils">
@@ -147,6 +157,126 @@
 <dt><strong>403</strong></dt>
 <dd>로그인되지 않았음</dd>
 </dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-v2-admin-user-(int-user_id)-activity-(status)">
+<code class="descname">PUT </code><code class="descname">/api/v2/admin/user/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/activity/</code><span class="sig-paren">(</span><em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-v2-admin-user-(int-user_id)-activity-(status)" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 회원 권한 설정</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;status&#8221;</strong>: URL에 삽입, 활동여부</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>&#8220;active&#8221;: 활동으로 설정</li>
+<li>&#8220;deactive&#8221;: 중단으로 설정</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong>: OK
+<strong>410</strong>: Fail</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-admin-user-(int-user_id)-assignLanguage">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/user/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/assignLanguage</code><a class="headerlink" href="#post--api-v2-admin-user-(int-user_id)-assignLanguage" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 회원 권한 설정</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;language_id[]&#8221;</strong>: Integer array</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>1: 한국어</li>
+<li>2: 영어/미국</li>
+<li>3: 영어/영국</li>
+<li>4: 중국/보통어</li>
+<li>5: 중국/광동어</li>
+<li>6: 태국어</li>
+<li>7: 중국/대만어</li>
+<li>8: 일본어</li>
+<li>9: 스페인어</li>
+<li>10: 포르투갈어</li>
+<li>11: 독일어</li>
+<li>12: 프랑스어</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong>: OK
+<strong>410</strong>: Fail</dd>
+</dl>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-v2-admin-user-(int-user_id)-permission-(status)">
+<code class="descname">PUT </code><code class="descname">/api/v2/admin/user/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/permission/</code><span class="sig-paren">(</span><em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-v2-admin-user-(int-user_id)-permission-(status)" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 회원 권한 설정</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;status&#8221;</strong>: URL에 삽입, 활동여부</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>&#8220;normal&#8221;: 보통 회원</li>
+<li>&#8220;admin&#8221;: Admin(관리자)</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><strong>200</strong>: OK
+<strong>410</strong>: Fail</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-userLists">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/userLists</code><a class="headerlink" href="#get--api-v2-admin-userLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리를 위한 유저 리스트</p>
+<p><strong>Parameters</strong>: Nothing</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 4, // Integer User Id
+      &quot;name&quot;: &quot;Mark&quot;, // 이름
+      &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
+      &quot;permission_id&quot;: 0, // 권한 레벨 0: 회원 1: 번역가 2: 관리자
+      &quot;recent_work_timestamp&quot;: &quot;Tue 24.07.2017 ...&quot;, // 최근 작업 시간
+      &quot;activity_id&quot;: 0 // 활동상황 0: 활동중 1: 중단
+    },
+    ...
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -180,138 +310,41 @@
 </dl>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-login">
-<code class="descname">POST </code><code class="descname">/api/v2/login</code><a class="headerlink" href="#post--api-v2-login" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>해당 API</dt>
-<dd><ol class="first arabic simple">
-<li>토큰 따기</li>
-</ol>
-<blockquote>
-<div><ol class="arabic simple">
-<li>GET /api/v2/login</li>
-</ol>
-</div></blockquote>
-<ol class="arabic simple">
-<li>로그인하기</li>
-</ol>
-<blockquote class="last">
-<div><ol class="arabic simple">
-<li>POST /api/v2/login</li>
-</ol>
-</div></blockquote>
-</dd>
-<dt>로그인 로직</dt>
-<dd><ol class="first last arabic simple">
-<li>GET /api/v2/login에 접속</li>
-<li>로그인 Salt를 받는다.</li>
-<li>클라이언트에서는 sha256(salt + sha256(password) + salt) 값을 만들어 서버에 전송한다.</li>
-<li>Password 테이블 값과 비교하여 일치하면 session 값들을 고쳐준다.</li>
-</ol>
-</dd>
-<dt>GET /api/login or /api/v2/login</dt>
-<dd><dl class="first last docutils">
+<dl class="get">
+<dt id="get--api-v2-login">
+<code class="descname">GET </code><code class="descname">/api/v2/login</code><a class="headerlink" href="#get--api-v2-login" title="정의 주소">¶</a></dt>
+<dd><p>로그인 토큰 발급</p>
+<dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd>Nothing</dd>
 <dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;identifier&quot;: &quot;a3Bd1g&quot;, // Password Salt
 }
 </pre></div>
 </td></tr></table></div>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-<dt>POST /api/login or /api/v2/login</dt>
-<dd><dl class="first last docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ol class="first last arabic simple">
-<li>&#8220;email&#8221;: 유저 email 주소 (ciceron_lib.get_user_id를 통하여 email에서 user_id를 추출할 수 있다.)</li>
-<li>&#8220;password&#8221;: 3번 참조</li>
-</ol>
-</dd>
-<dt><strong>Response</strong></dt>
-<dd><dl class="first docutils">
-<dt><strong>200</strong> 로그인 성공</dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;logged_in&quot;: true, // 로그인 상태
-  &quot;useremail&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인한 유저 메일
-  &quot;isTranslator&quot;: true // 번역가 계정인지 아닌지 확인
-}
-</pre></div>
-</td></tr></table></div>
-</dd>
-</dl>
-<p><strong>403</strong>: 로그인 실패</p>
-<p class="last"><strong>501</strong>: 1유저 2 패스워드 (있을 수 없는 동작)</p>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-v2-login">
-<code class="descname">GET </code><code class="descname">/api/v2/login</code><a class="headerlink" href="#get--api-v2-login" title="정의 주소">¶</a></dt>
-<dd><dl class="docutils">
-<dt>해당 API</dt>
-<dd><ol class="first arabic simple">
-<li>토큰 따기</li>
-</ol>
-<blockquote>
-<div><ol class="arabic simple">
-<li>GET /api/v2/login</li>
-</ol>
-</div></blockquote>
-<ol class="arabic simple">
-<li>로그인하기</li>
-</ol>
-<blockquote class="last">
-<div><ol class="arabic simple">
-<li>POST /api/v2/login</li>
-</ol>
-</div></blockquote>
-</dd>
+<dl class="post">
+<dt id="post--api-v2-login">
+<code class="descname">POST </code><code class="descname">/api/v2/login</code><a class="headerlink" href="#post--api-v2-login" title="정의 주소">¶</a></dt>
+<dd><p>로그인하기</p>
+<dl class="docutils">
 <dt>로그인 로직</dt>
-<dd><ol class="first last arabic simple">
+<dd><ol class="first arabic simple">
 <li>GET /api/v2/login에 접속</li>
 <li>로그인 Salt를 받는다.</li>
 <li>클라이언트에서는 sha256(salt + sha256(password) + salt) 값을 만들어 서버에 전송한다.</li>
 <li>Password 테이블 값과 비교하여 일치하면 session 값들을 고쳐준다.</li>
 </ol>
-</dd>
-<dt>GET /api/login or /api/v2/login</dt>
-<dd><dl class="first last docutils">
-<dt><strong>Parameters</strong></dt>
-<dd>Nothing</dd>
-<dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;identifier&quot;: &quot;a3Bd1g&quot;, // Password Salt
-}
-</pre></div>
-</td></tr></table></div>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-<dt>POST /api/login or /api/v2/login</dt>
-<dd><dl class="first last docutils">
+<dl class="last docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li>&#8220;email&#8221;: 유저 email 주소 (ciceron_lib.get_user_id를 통하여 email에서 user_id를 추출할 수 있다.)</li>
@@ -423,9 +456,9 @@
 <div>(DEFAULT: 로그인 한 본인의 이메일)</div></blockquote>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -474,8 +507,7 @@
 }
 </pre></div>
 </td></tr></table></div>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -730,18 +762,22 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file-(int-file_id)-(filename)">GET /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/file/(int:file_id)/(filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-markAsPaid">GET /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/markAsPaid</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-rate">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/rate</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-request">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/request</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-sendMail">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/sendMail</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -1243,7 +1279,9 @@
 76
 77
 78
-79</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+79
+80</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+    <span class="nt">&quot;cover_photo_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/user/pretranslated/project/2/coverPhoto/preview.png&quot;</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -1256,13 +1294,13 @@
         <span class="nt">&quot;read_permission_level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="nt">&quot;register_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 12 Feb 2017 09:10:04 GMT&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;resorce_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nt">&quot;resource_info&quot;</span><span class="p">:</span> <span class="p">[</span>
           <span class="p">{</span>
             <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="nt">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
             <span class="nt">&quot;resource_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
             <span class="nt">&quot;preview_permission&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;file_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/pretranslated/project/2/resources/4/file/1/swsx.png&quot;</span>
+            <span class="nt">&quot;file_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/user/pretranslated/project/2/resources/4/file/1/swsx.png&quot;</span>
           <span class="p">}</span>
         <span class="p">],</span>
         <span class="nt">&quot;requester_list&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1326,6 +1364,26 @@
 </td></tr></table></div>
 </div></blockquote>
 </dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file-(int-file_id)-(filename)">
+<code class="descname">GET </code><code class="descname">/api/v2/user/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/resource/</code><span class="sig-paren">(</span><em class="property">int: </em><em>resource_id</em><span class="sig-paren">)</span><code class="descname">/file/</code><span class="sig-paren">(</span><em class="property">int: </em><em>file_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file-(int-file_id)-(filename)" title="정의 주소">¶</a></dt>
+<dd><p>파일 보기
+<strong>Parameters</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>&#8220;project_id&#8221;</strong>: URL</li>
+<li><strong>&#8220;resource_id&#8221;</strong>: URL</li>
+<li><strong>&#8220;file_id&#8221;</strong>: URL</li>
+<li><strong>&#8220;filename&#8221;</strong>: URL</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd># <strong>200</strong>: 바이너리 제공
+# <strong>404</strong>: 없음</dd>
 </dl>
 </dd></dl>
 
@@ -1412,6 +1470,189 @@
 
 </div></blockquote>
 </div>
+<div class="section" id="admin-page-stats">
+<h2>Admin page stats<a class="headerlink" href="#admin-page-stats" title="제목 주소">¶</a></h2>
+<blockquote>
+<div><table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="45%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Resource</th>
+<th class="head">Operation</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-requests">GET /api/v2/admin/requests</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-v2-admin-requests-(int-request_id)-status-(status_name)">PUT /api/v2/admin/requests/(int:request_id)/status/(status_name)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-stats-aboutDeadline">GET /api/v2/admin/stats/aboutDeadline</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-stats-overview">GET /api/v2/admin/stats/overview</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<dl class="get">
+<dt id="get--api-v2-admin-requests">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/requests</code><a class="headerlink" href="#get--api-v2-admin-requests" title="정의 주소">¶</a></dt>
+<dd><p>Admin 페이지: 의뢰 목록 열람</p>
+<p><strong>Parameters</strong>: Nothing</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 4, // ID
+      &quot;requester_name&quot;: &quot;Otto&quot;, // 의뢰건수
+      &quot;requester_email&quot;: &quot;Otto@naver.com&quot;, // 의뢰인 E-mail
+      &quot;subject_id&quot;: 1, // 종류
+      &quot;original_lang_id&quot;: 1, // 원 언어
+      &quot;target_lang_id&quot;: 2, // 타겟 언어
+      &quot;request_time&quot;: &quot;2017. 11. 12. 08:00 KST&quot;, // 요청일
+      &quot;order_number&quot;: &quot;2017HQ20301&quot; // 주문번호
+      &quot;status&quot;: 0 // 상태 := 0 -&gt; 진행 1 -&gt; 완료 2 -&gt; 중지 3 -&gt; 숨김
+    },
+    ...
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-v2-admin-requests-(int-request_id)-status-(status_name)">
+<code class="descname">PUT </code><code class="descname">/api/v2/admin/requests/</code><span class="sig-paren">(</span><em class="property">int: </em><em>request_id</em><span class="sig-paren">)</span><code class="descname">/status/</code><span class="sig-paren">(</span><em>status_name</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-v2-admin-requests-(int-request_id)-status-(status_name)" title="정의 주소">¶</a></dt>
+<dd><p>Admin 페이지: 의뢰물 상태변경</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;request_id&#8221;</strong>: URL 직접삽입, 의뢰물 ID</li>
+<li><strong>&#8220;status_name&#8221;</strong>: URL 직접삽입</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>&#8220;ongoing&#8221;: 진행</li>
+<li>&#8220;complete&#8221;: 완료</li>
+<li>&#8220;hide&#8221;: 숨기기</li>
+<li>&#8220;stop&#8221;: 중지</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-stats-aboutDeadline">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/stats/aboutDeadline</code><a class="headerlink" href="#get--api-v2-admin-stats-aboutDeadline" title="정의 주소">¶</a></dt>
+<dd><p>Admin 첫 페이지 마감임박에 보여주는 통계자료</p>
+<p><strong>Parameters</strong>: Nothing</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 4, // ID
+      &quot;theme&quot;: &quot;블라블라&quot;, // 의뢰명
+      &quot;requester_name&quot;: &quot;Otto&quot;, // 의뢰인명
+      &quot;translator_name&quot;: &quot;mdo&quot;, // 번역가명
+      &quot;deadline&quot;: &quot;2017. 11. 12. 08:00 KST&quot; // 마감시간
+    },
+    ...
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-stats-overview">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/stats/overview</code><a class="headerlink" href="#get--api-v2-admin-stats-overview" title="정의 주소">¶</a></dt>
+<dd><p>Admin 첫 페이지 Dashboard에 보여주는 통계자료</p>
+<p><strong>Parameters</strong>: Nothing</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;total_requests&quot;: 3, // 총 건수
+  &quot;pendings&quot;: 1, // 의뢰건수
+  &quot;ongoings&quot;: 1, // 진행중
+  &quot;completes&quot;: 1 // 완료
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="제목 주소">¶</a></h1>
@@ -1435,6 +1676,7 @@
 <li><a class="reference internal" href="#id1">회원관리</a></li>
 <li><a class="reference internal" href="#id2">결제관리</a></li>
 <li><a class="reference internal" href="#id3">번역공동구매</a></li>
+<li><a class="reference internal" href="#admin-page-stats">Admin page stats</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>

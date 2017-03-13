@@ -64,6 +64,22 @@ CICERON API doc index
      :order: path
 
 
+Admin page stats
+-------------------
+
+  .. qrefflask:: app.application:app
+     :modules: app.adminStats
+     :endpoints:
+     :order: path
+
+
+
+  .. autoflask:: app.application:app
+     :modules: app.adminStats
+     :endpoints:
+     :order: path
+
+
 Indices and tables
 ==================
 
