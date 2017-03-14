@@ -12,6 +12,9 @@ CICERON API doc v2.0
 
 .. automodule:: app
 
+  #. URL main address
+    #. Test: http://ciceron.xyz:5000
+    #. Production: http://ciceron.me:5000
 
   #. 자주 쓰는 상수
     #. 언어 ID
@@ -127,7 +130,7 @@ Stats
      :order: path
 
 
-Stats
+Kangaroo
 -------------------
 
   .. qrefflask:: app.application:app
