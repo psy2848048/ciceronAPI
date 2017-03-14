@@ -111,7 +111,7 @@ CICERON API doc index
      :order: path
 
 
-Admin page stats
+Stats
 -------------------
 
   .. qrefflask:: app.application:app
@@ -123,6 +123,22 @@ Admin page stats
 
   .. autoflask:: app.application:app
      :modules: app.adminStats
+     :endpoints:
+     :order: path
+
+
+Stats
+-------------------
+
+  .. qrefflask:: app.application:app
+     :modules: app.adminKangaroo
+     :endpoints:
+     :order: path
+
+
+
+  .. autoflask:: app.application:app
+     :modules: app.adminKangaroo
      :endpoints:
      :order: path
 
