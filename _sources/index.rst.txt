@@ -146,6 +146,22 @@ Kangaroo
      :order: path
 
 
+언어데이터 관리도구
+-------------------
+
+  .. qrefflask:: app.application:app
+     :modules: app.sentenceExporter
+     :endpoints:
+     :order: path
+
+
+
+  .. autoflask:: app.application:app
+     :modules: app.sentenceExporter
+     :endpoints:
+     :order: path
+
+
 Indices and tables
 ==================
 
