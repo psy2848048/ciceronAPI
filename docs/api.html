@@ -62,6 +62,30 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-dataManager-parseSentence">POST /api/v2/admin/dataManager/parseSentence</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-dataManager-dataCounter">GET /api/v2/admin/dataManager/dataCounter</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-dataManager-import">POST /api/v2/admin/dataManager/import</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-dataManager-export">POST /api/v2/admin/dataManager/export</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-kangaroo-tag">GET /api/v2/admin/kangaroo/tag</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-kangaroo-tag">POST /api/v2/admin/kangaroo/tag</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-admin-stats-aboutDeadline">GET /api/v2/admin/stats/aboutDeadline</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -162,35 +186,51 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)">GET /api/v2/admin/kangaroo/tag/(int:tag_id)/img/(int:img_id)/(filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)">PUT /api/v2/admin/kangaroo/tag/(int:tag_id)/img/(int:img_id)/(filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)">DELETE /api/v2/admin/kangaroo/tag/(int:tag_id)/img/(int:img_id)/(filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-markAsPaid">GET /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/markAsPaid</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-sendMail">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/sendMail</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-request">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/request</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-rate">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/rate</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)">PUT /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)">DELETE /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-pretranslated-project-(int-project_id)-coverPhoto-(filename)">GET /api/v2/user/pretranslated/project/(int:project_id)/coverPhoto/(filename)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-admin-pretranslated-project-(int-project_id)-resource">POST /api/v2/admin/pretranslated/project/(int:project_id)/resource</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-kangaroo-tag-category1-(int-category1)">GET /api/v2/admin/kangaroo/tag/category1/(int:category1)</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -219,6 +259,14 @@
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--api-v2-admin-pretranslated-project-(int-project_id)">DELETE /api/v2/admin/pretranslated/project/(int:project_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-v2-admin-kangaroo-tag-(int-tag_id)">DELETE /api/v2/admin/kangaroo/tag/(int:tag_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-kangaroo-tag-(int-tag_id)">GET /api/v2/admin/kangaroo/tag/(int:tag_id)</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
@@ -259,6 +307,389 @@
 <ol class="last arabic simple">
 <li><strong>410</strong>: 추가 실패</li>
 </ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-admin-dataManager-parseSentence">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/dataManager/parseSentence</code><a class="headerlink" href="#post--api-v2-admin-dataManager-parseSentence" title="정의 주소">¶</a></dt>
+<dd><p>문장 분해 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;original_string&#8221;</strong>: String. 원문의 문장쌍</li>
+<li><strong>&#8220;translated_string&#8221;</strong>: String, 번역문의 문장쌍</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+    <span class="nt">&quot;original_string&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;우앙 ㅋ 굿 ㅋ&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;파싱이 잘 됩니다!~&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;그냥 그렇다&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+
+    <span class="nt">&quot;translated_string&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;Wow, fuck yeh!&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;Parser works well!&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;So so&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-dataManager-dataCounter">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/dataManager/dataCounter</code><a class="headerlink" href="#get--api-v2-admin-dataManager-dataCounter" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>데이터 통계 파악</dt>
+<dd><ol class="first arabic simple">
+<li><strong>Parameters</strong></li>
+</ol>
+<blockquote>
+<div>#. <strong>&#8220;original_language_id&#8221;</strong>: OPTIONAL, Int, 원어 ID
+#, <strong>&#8220;target_language_id&#8221;</strong>: OPTIONAL, Int, 번역문 ID
+#. <strong>&#8220;subject_id&#8221;</strong>: OPTIONAL, Int
+#. <strong>&#8220;format_id&#8221;</strong>: OPTIONAL, Int
+#. <strong>&#8220;tone_id&#8221;</strong>: OPTIONAL, Int</div></blockquote>
+<ol class="arabic simple">
+<li><strong>Response</strong></li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;number&quot;</span><span class="p">:</span> <span class="mi">1234</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>410</strong>: Fail</li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-admin-dataManager-import">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/dataManager/import</code><a class="headerlink" href="#post--api-v2-admin-dataManager-import" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>데이터 입력</dt>
+<dd><ol class="first arabic simple">
+<li><strong>이 정보는 formdata로 넣기에는 구조가 매우 복잡하니 여기만은 Content-Type: application/json으로 넣도록 한다!</strong></li>
+<li><strong>Parameters</strong></li>
+</ol>
+<blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+    <span class="nt">&quot;original_language_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;target_language_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;subject_id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;format_id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;tone_id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;original_sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;우앙 ㅋ 굿 ㅋ&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;translated_sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;Wow, fuck yeh!&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;original_sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;파싱이 잘 됩니다!~&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;translated_sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;Wow, fuck yeh!&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;original_sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;그냥 그렇다&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;translated_sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;So so&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>Response</strong></li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>210</strong>: Fail, pair missmatch</li>
+</ol>
+<blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>410</strong>: Fail, DB Error</li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-admin-dataManager-export">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/dataManager/export</code><a class="headerlink" href="#post--api-v2-admin-dataManager-export" title="정의 주소">¶</a></dt>
+<dd><dl class="docutils">
+<dt>데이터 다운로드</dt>
+<dd><ol class="first arabic simple">
+<li><strong>Parameters</strong></li>
+</ol>
+<blockquote>
+<div>#. <strong>&#8220;original_language_id&#8221;</strong>: OPTIONAL, Int, 원어 ID
+#, <strong>&#8220;target_language_id&#8221;</strong>: OPTIONAL, Int, 번역문 ID
+#. <strong>&#8220;subject_id&#8221;</strong>: OPTIONAL, Int
+#. <strong>&#8220;format_id&#8221;</strong>: OPTIONAL, Int
+#. <strong>&#8220;tone_id&#8221;</strong>: OPTIONAL, Int</div></blockquote>
+<ol class="arabic simple">
+<li><strong>Response</strong></li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li><strong>200</strong>: 해당 CSV 다운로드</li>
+<li><strong>410</strong>: 실패</li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-kangaroo-tag">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/kangaroo/tag</code><a class="headerlink" href="#get--api-v2-admin-kangaroo-tag" title="정의 주소">¶</a></dt>
+<dd><p>새로 들어온 태그 리스팅</p>
+<p><strong>Parameters</strong>: Nothing</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;blah&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;haha&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-admin-kangaroo-tag">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/kangaroo/tag</code><a class="headerlink" href="#post--api-v2-admin-kangaroo-tag" title="정의 주소">¶</a></dt>
+<dd><p>태그에 정보 넣기</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;tag_id&#8221;</strong>: Int, Tag ID</li>
+<li><strong>&#8220;category_level_1&#8221;</strong>: Int</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>1 - 장소</li>
+<li>2 - 활동</li>
+<li>3 - 요리</li>
+<li>4 - 재료</li>
+<li>5 - Others</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>&#8220;category_level_2&#8221;</strong>: Int</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>1 - 장소</li>
+<li>2 - 활동</li>
+<li>3 - 한식</li>
+<li>4 - 중식</li>
+<li>5 - 일식</li>
+<li>6 - 요리/Others</li>
+<li>7 - 육류</li>
+<li>8 - 어류</li>
+<li>9 - 조류</li>
+<li>10 - 채소</li>
+<li>11 - 과일</li>
+<li>12 - 공산품</li>
+<li>13 - 동물</li>
+<li>14 - 식물</li>
+<li>15 - 물건</li>
+<li>16 - 자연경관</li>
+</ol>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -957,9 +1388,11 @@ POST /api/v2/user/localizer</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;useremail&quot;: &quot;blahblah@gmail.com&quot;, // 로그인한 유저의 이메일주소. 로그인 상태 아니면 null
   &quot;isLoggedIn&quot;: true, // 로그인 여부 True/False
+  &quot;isAdmin&quot;: true, // 관리자 여부 True/False
   &quot;isTranslator&quot; : false  //로그인한 유저의 번역가여부 True/False
 }
 </pre></div>
@@ -1071,6 +1504,69 @@ POST /api/v2/user/localizer</p>
 </div></blockquote>
 <ol class="last arabic simple">
 <li><strong>410</strong>: 게시 실패</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/kangaroo/tag/</code><span class="sig-paren">(</span><em class="property">int: </em><em>tag_id</em><span class="sig-paren">)</span><code class="descname">/img/</code><span class="sig-paren">(</span><em class="property">int: </em><em>img_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)" title="정의 주소">¶</a></dt>
+<dd><p>이미지 제공 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag_id&#8221;</strong>: URL에 직접 삽입, Tag ID</li>
+<li><strong>&#8220;img_id&#8221;</strong>: URL에 직접 삽입. Image ID</li>
+<li><strong>&#8220;filename&#8221;</strong>: URL에 직접 삽입. 파일 이름</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 파일 제공</li>
+<li><strong>404</strong>: 파일 없음</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)">
+<code class="descname">PUT </code><code class="descname">/api/v2/admin/kangaroo/tag/</code><span class="sig-paren">(</span><em class="property">int: </em><em>tag_id</em><span class="sig-paren">)</span><code class="descname">/img/</code><span class="sig-paren">(</span><em class="property">int: </em><em>img_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#put--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)" title="정의 주소">¶</a></dt>
+<dd><p>이미지 업데이트 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag_id&#8221;</strong>: URL에 직접 삽입, Tag ID</li>
+<li><strong>&#8220;img_id&#8221;</strong>: URL에 직접 삽입. Image ID</li>
+<li><strong>&#8220;photo_bin&#8221;</strong>: 사진 Binary</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 업데이트 성공</li>
+<li><strong>410</strong>: 실패</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)">
+<code class="descname">DELETE </code><code class="descname">/api/v2/admin/kangaroo/tag/</code><span class="sig-paren">(</span><em class="property">int: </em><em>tag_id</em><span class="sig-paren">)</span><code class="descname">/img/</code><span class="sig-paren">(</span><em class="property">int: </em><em>img_id</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-v2-admin-kangaroo-tag-(int-tag_id)-img-(int-img_id)-(filename)" title="정의 주소">¶</a></dt>
+<dd><p>이미지 삭제 API</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag_id&#8221;</strong>: URL에 직접 삽입, Tag ID</li>
+<li><strong>&#8220;img_id&#8221;</strong>: URL에 직접 삽입. Image ID</li>
+<li><strong>&#8220;filename&#8221;</strong>: URL에 직접 삽입. 파일명</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 삭제 성공</li>
+<li><strong>410</strong>: 실패</li>
 </ol>
 </dd>
 </dl>
@@ -1259,6 +1755,33 @@ POST /api/v2/user/localizer</p>
 <ol class="last arabic simple">
 <li><strong>410</strong>: 게시 실패</li>
 </ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-kangaroo-tag-category1-(int-category1)">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/kangaroo/tag/category1/</code><span class="sig-paren">(</span><em class="property">int: </em><em>category1</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-admin-kangaroo-tag-category1-(int-category1)" title="정의 주소">¶</a></dt>
+<dd><p>태그 상위 카테고리로 하위 카테고리 주기</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;category1&#8221;</strong>: URL에 삽입, Integer</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -1580,6 +2103,59 @@ POST /api/v2/user/localizer</p>
 <li><strong>200</strong>: OK</li>
 <li><strong>410</strong>: Fail</li>
 </ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--api-v2-admin-kangaroo-tag-(int-tag_id)">
+<code class="descname">DELETE </code><code class="descname">/api/v2/admin/kangaroo/tag/</code><span class="sig-paren">(</span><em class="property">int: </em><em>tag_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--api-v2-admin-kangaroo-tag-(int-tag_id)" title="정의 주소">¶</a></dt>
+<dd><p>태그 지우기</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><strong>&#8220;tag_id&#8221;</strong>: URL에 직접 삽입, Tag ID</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-kangaroo-tag-(int-tag_id)">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/kangaroo/tag/</code><span class="sig-paren">(</span><em class="property">int: </em><em>tag_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-admin-kangaroo-tag-(int-tag_id)" title="정의 주소">¶</a></dt>
+<dd><p>태그를 통하여 불러온 이미지 리스팅</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: Paging int, OPTIONAL</li>
+</ol>
+</dd>
+<dt><strong>&#8220;Response&#8221;</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;image_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/admin/kangaroo/tag/1/img/4/img.jpg&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
