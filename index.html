@@ -148,15 +148,23 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#put--api-v2-admin-user-(int-user_id)-activity-(status)">PUT /api/v2/admin/user/(int:user_id)/activity/(status)</a></td>
+<td><a class="reference external" href="#get--api-v2-admin-translatorLists">GET /api/v2/admin/translatorLists</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-admin-user-(int-user_id)-assignLanguage">POST /api/v2/admin/user/(int:user_id)/assignLanguage</a></td>
+<td><a class="reference external" href="#put--api-v2-admin-user-(int-user_id)-activity-(status)">PUT /api/v2/admin/user/(int:user_id)/activity/(status)</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-user-(int-user_id)-assignLanguage">POST /api/v2/admin/user/(int:user_id)/assignLanguage</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--api-v2-admin-user-(int-user_id)-permission-(status)">PUT /api/v2/admin/user/(int:user_id)/permission/(status)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-admin-user-(int-user_id)-permission-page-(page)-(action)">POST /api/v2/admin/user/(int:user_id)/permission/page/(page)/(action)</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -215,9 +223,11 @@
 <dt><strong>Parameters</strong></dt>
 <dd>Nothing</dd>
 <dt><strong>Response</strong></dt>
-<dd><dl class="first last docutils">
-<dt><strong>200</strong></dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -230,10 +240,61 @@
 }
 </pre></div>
 </td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>403</strong></li>
+</ol>
+<blockquote class="last">
+<div>로그인되지 않았음</div></blockquote>
 </dd>
-<dt><strong>403</strong></dt>
-<dd>로그인되지 않았음</dd>
 </dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-admin-translatorLists">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/translatorLists</code><a class="headerlink" href="#get--api-v2-admin-translatorLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리를 위한 번역가 리스트</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: 4, // Integer User Id
+  &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
+  &quot;name&quot;: &quot;Admin&quot;, // User Name
+  &quot;mother_language_id&quot;: 1, // User&#39;s mother language
+  &quot;is_translator&quot;: true, // Boolean, 번역가 여부
+  &quot;other_language_list_id&quot;: null, // 필요없음
+  &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
+  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
+  &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
+  &quot;translatableLang&quot;: &quot;2&quot;, // 번역 가능한 언어
+  &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
+  &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
+  &quot;is_working&quot;: true // 작업여부
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -256,8 +317,11 @@
 </div></blockquote>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: OK
-<strong>410</strong>: Fail</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd></dl>
 
@@ -269,7 +333,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first arabic simple">
 <li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
-<li><strong>&#8220;language_id[]&#8221;</strong>: Integer array</li>
+<li><strong>&#8220;language_id&#8221;</strong>: Integer, 아래 참고</li>
 </ol>
 <blockquote class="last">
 <div><ol class="arabic simple">
@@ -289,8 +353,11 @@
 </div></blockquote>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: OK
-<strong>410</strong>: Fail</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd></dl>
 
@@ -307,13 +374,55 @@
 <blockquote class="last">
 <div><ol class="arabic simple">
 <li>&#8220;normal&#8221;: 보통 회원</li>
+<li>&#8220;translator&#8221;: 번역가</li>
 <li>&#8220;admin&#8221;: Admin(관리자)</li>
 </ol>
 </div></blockquote>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: OK
-<strong>410</strong>: Fail</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-admin-user-(int-user_id)-permission-page-(page)-(action)">
+<code class="descname">POST </code><code class="descname">/api/v2/admin/user/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/permission/page/</code><span class="sig-paren">(</span><em>page</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#post--api-v2-admin-user-(int-user_id)-permission-page-(page)-(action)" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리인 페이지 엑세스 권한 설정</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;page_name&#8221;</strong>: URL에 삽입, String, 페이지 이름</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>&#8220;ciceron&#8221;</li>
+<li>&#8220;kangaroo&#8221;</li>
+<li>&#8220;pretranslated&#8221;</li>
+<li>&#8220;expense&#8221;</li>
+<li>&#8220;sentences&#8221;</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>&#8220;action&#8221;</strong>: URL에 삽입, String, 엑세스 권한</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>&#8220;grant&#8221;</li>
+<li>&#8220;revoke&#8221;</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>200: OK</li>
+<li>410: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd></dl>
 
@@ -321,8 +430,12 @@
 <dt id="get--api-v2-admin-userLists">
 <code class="descname">GET </code><code class="descname">/api/v2/admin/userLists</code><a class="headerlink" href="#get--api-v2-admin-userLists" title="정의 주소">¶</a></dt>
 <dd><p>Admin: 관리를 위한 유저 리스트</p>
-<p><strong>Parameters</strong>: Nothing</p>
 <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+</ol>
+</dd>
 <dt><strong>Response</strong></dt>
 <dd><p class="first"><strong>200</strong></p>
 <blockquote class="last">
@@ -429,9 +542,11 @@
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><dl class="first docutils">
-<dt><strong>200</strong> 로그인 성공</dt>
-<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<dd><ol class="first arabic simple">
+<li><strong>200</strong> 로그인 성공</li>
+</ol>
+<blockquote>
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -442,10 +557,11 @@
 }
 </pre></div>
 </td></tr></table></div>
-</dd>
-</dl>
-<p><strong>403</strong>: 로그인 실패</p>
-<p class="last"><strong>501</strong>: 1유저 2 패스워드 (있을 수 없는 동작)</p>
+</div></blockquote>
+<ol class="last arabic simple">
+<li><strong>403</strong>: 로그인 실패</li>
+<li><strong>501</strong>: 1유저 2 패스워드 (있을 수 없는 동작)</li>
+</ol>
 </dd>
 </dl>
 </dd>
@@ -2055,11 +2171,14 @@
 <li><strong>Parameters</strong></li>
 </ol>
 <blockquote>
-<div>#. <strong>&#8220;original_language_id&#8221;</strong>: OPTIONAL, Int, 원어 ID
-#, <strong>&#8220;target_language_id&#8221;</strong>: OPTIONAL, Int, 번역문 ID
-#. <strong>&#8220;subject_id&#8221;</strong>: OPTIONAL, Int
-#. <strong>&#8220;format_id&#8221;</strong>: OPTIONAL, Int
-#. <strong>&#8220;tone_id&#8221;</strong>: OPTIONAL, Int</div></blockquote>
+<div><ol class="arabic simple">
+<li><strong>&#8220;original_language_id&#8221;</strong>: OPTIONAL, Int, 원어 ID</li>
+<li><strong>&#8220;target_language_id&#8221;</strong>: OPTIONAL, Int, 번역문 ID</li>
+<li><strong>&#8220;subject_id&#8221;</strong>: OPTIONAL, Int</li>
+<li><strong>&#8220;format_id&#8221;</strong>: OPTIONAL, Int</li>
+<li><strong>&#8220;tone_id&#8221;</strong>: OPTIONAL, Int</li>
+</ol>
+</div></blockquote>
 <ol class="arabic simple">
 <li><strong>Response</strong></li>
 </ol>
@@ -2093,11 +2212,14 @@
 <li><strong>Parameters</strong></li>
 </ol>
 <blockquote>
-<div>#. <strong>&#8220;original_language_id&#8221;</strong>: OPTIONAL, Int, 원어 ID
-#, <strong>&#8220;target_language_id&#8221;</strong>: OPTIONAL, Int, 번역문 ID
-#. <strong>&#8220;subject_id&#8221;</strong>: OPTIONAL, Int
-#. <strong>&#8220;format_id&#8221;</strong>: OPTIONAL, Int
-#. <strong>&#8220;tone_id&#8221;</strong>: OPTIONAL, Int</div></blockquote>
+<div><ol class="arabic simple">
+<li><strong>&#8220;original_language_id&#8221;</strong>: OPTIONAL, Int, 원어 ID</li>
+<li><strong>&#8220;target_language_id&#8221;</strong>: OPTIONAL, Int, 번역문 ID</li>
+<li><strong>&#8220;subject_id&#8221;</strong>: OPTIONAL, Int</li>
+<li><strong>&#8220;format_id&#8221;</strong>: OPTIONAL, Int</li>
+<li><strong>&#8220;tone_id&#8221;</strong>: OPTIONAL, Int</li>
+</ol>
+</div></blockquote>
 <ol class="arabic simple">
 <li><strong>Response</strong></li>
 </ol>
