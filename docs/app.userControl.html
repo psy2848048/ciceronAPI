@@ -339,7 +339,9 @@
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;id&quot;: 4, // Integer User Id
   &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
   &quot;name&quot;: &quot;Admin&quot;, // User Name
@@ -347,12 +349,14 @@
   &quot;is_translator&quot;: true, // Boolean, 번역가 여부
   &quot;other_language_list_id&quot;: null, // 필요없음
   &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
-  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
   &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
-  &quot;translatableLang&quot;: &quot;2&quot;, // 번역 가능한 언어
+  &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
   &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
   &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
-  &quot;is_working&quot;: true // 작업여부
+  &quot;is_working&quot;: true, // 작업여부
+  &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
+  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
+  &quot;numoftranslationcompleted&quot;: 7 // 번역 완료한 수
 }
 </pre></div>
 </td></tr></table></div>
@@ -675,7 +679,7 @@
   &quot;trans_request_state&quot;: 2, // (Useless) 번역 권한 상태
   &quot;nationality&quot;: null, // 국적
   &quot;residence&quot;: null, // 거주지
-  &quot;translatableLang&quot;: &quot;2&quot;, // 번역 가능한 언어
+  &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
   &quot;badgeList&quot;: &quot;&quot;, // (Useless) 뱃지 리스느
   &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트. 자신을 표현할 수 있는 키워드 추가/수정/삽입
   &quot;user_point&quot;: 0 // 번역가에겐 출금할 수 있는 돈, 의뢰인에게는 사이버머니
