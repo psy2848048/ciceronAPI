@@ -79,8 +79,8 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControl.langaugeAssigner">
-<code class="descname">langaugeAssigner</code><span class="sig-paren">(</span><em>user_id</em>, <em>language_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.langaugeAssigner" title="정의 주소">¶</a></dt>
+<dt id="app.userControl.UserControl.languageAssigner">
+<code class="descname">languageAssigner</code><span class="sig-paren">(</span><em>user_id</em>, <em>language_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.languageAssigner" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -178,7 +178,7 @@
 <dl class="method">
 <dt id="app.userControl.UserControlAPI.adminAssignLanguage">
 <code class="descname">adminAssignLanguage</code><span class="sig-paren">(</span><em>user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminAssignLanguage" title="정의 주소">¶</a></dt>
-<dd><p>Admin: 회원 권한 설정</p>
+<dd><p>Admin: 번역가 언어 설정</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first arabic simple">
@@ -244,6 +244,42 @@
 <dd><ol class="first last arabic simple">
 <li>200: OK</li>
 <li>410: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.adminDeassignLanguage">
+<code class="descname">adminDeassignLanguage</code><span class="sig-paren">(</span><em>user_id</em>, <em>language_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminDeassignLanguage" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 번역가 언어 제거</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;language_id&#8221;</strong>: URL에 삽입, Integer, 아래 참고</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>1: 한국어</li>
+<li>2: 영어/미국</li>
+<li>3: 영어/영국</li>
+<li>4: 중국/보통어</li>
+<li>5: 중국/광동어</li>
+<li>6: 태국어</li>
+<li>7: 중국/대만어</li>
+<li>8: 일본어</li>
+<li>9: 스페인어</li>
+<li>10: 포르투갈어</li>
+<li>11: 독일어</li>
+<li>12: 프랑스어</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
 </ol>
 </dd>
 </dl>

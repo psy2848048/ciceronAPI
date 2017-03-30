@@ -160,54 +160,58 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--api-v2-admin-user-(int-user_id)-deassignLanguage">DELETE /api/v2/admin/user/(int:user_id)/deassignLanguage</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--api-v2-admin-user-(int-user_id)-permission-(status)">PUT /api/v2/admin/user/(int:user_id)/permission/(status)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-admin-user-(int-user_id)-permission-page-(page)-(action)">POST /api/v2/admin/user/(int:user_id)/permission/page/(page)/(action)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-admin-userLists">GET /api/v2/admin/userLists</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-idCheck">POST /api/v2/idCheck</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-login">GET /api/v2/login</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-login">POST /api/v2/login</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-logout">GET /api/v2/logout</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-change_password">POST /api/v2/user/change_password</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-create_recovery_code">POST /api/v2/user/create_recovery_code</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-profile">GET /api/v2/user/profile</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-profile">POST /api/v2/user/profile</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-profile-(int-user_id)-profilePic-(fake_filename)">GET /api/v2/user/profile/(int:user_id)/profilePic/(fake_filename)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-recover_password">POST /api/v2/user/recover_password</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -328,12 +332,48 @@
 <dl class="post">
 <dt id="post--api-v2-admin-user-(int-user_id)-assignLanguage">
 <code class="descname">POST </code><code class="descname">/api/v2/admin/user/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/assignLanguage</code><a class="headerlink" href="#post--api-v2-admin-user-(int-user_id)-assignLanguage" title="정의 주소">¶</a></dt>
-<dd><p>Admin: 회원 권한 설정</p>
+<dd><p>Admin: 번역가 언어 설정</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first arabic simple">
 <li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
 <li><strong>&#8220;language_id&#8221;</strong>: Integer, 아래 참고</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>1: 한국어</li>
+<li>2: 영어/미국</li>
+<li>3: 영어/영국</li>
+<li>4: 중국/보통어</li>
+<li>5: 중국/광동어</li>
+<li>6: 태국어</li>
+<li>7: 중국/대만어</li>
+<li>8: 일본어</li>
+<li>9: 스페인어</li>
+<li>10: 포르투갈어</li>
+<li>11: 독일어</li>
+<li>12: 프랑스어</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--api-v2-admin-user-(int-user_id)-deassignLanguage">
+<code class="descname">DELETE </code><code class="descname">/api/v2/admin/user/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/deassignLanguage</code><a class="headerlink" href="#delete--api-v2-admin-user-(int-user_id)-deassignLanguage" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 번역가 언어 제거</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;language_id&#8221;</strong>: URL에 삽입, Integer, 아래 참고</li>
 </ol>
 <blockquote class="last">
 <div><ol class="arabic simple">
