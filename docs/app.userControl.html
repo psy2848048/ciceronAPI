@@ -50,7 +50,12 @@
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="app.userControl.UserControl.activeStatusChange">
-<code class="descname">activeStatusChange</code><span class="sig-paren">(</span><em>user_id</em>, <em>activeStatus_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.activeStatusChange" title="정의 주소">¶</a></dt>
+<code class="descname">activeStatusChange</code><span class="sig-paren">(</span><em>user_id</em>, <em>activeStatus</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.activeStatusChange" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.assignPageAccessPermission">
+<code class="descname">assignPageAccessPermission</code><span class="sig-paren">(</span><em>user_id</em>, <em>page_name</em>, <em>to_active=False</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.assignPageAccessPermission" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -74,6 +79,16 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.userControl.UserControl.langaugeAssigner">
+<code class="descname">langaugeAssigner</code><span class="sig-paren">(</span><em>user_id</em>, <em>language_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.langaugeAssigner" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.languageDeassign">
+<code class="descname">languageDeassign</code><span class="sig-paren">(</span><em>user_id</em>, <em>language_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.languageDeassign" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControl.passwordCheck">
 <code class="descname">passwordCheck</code><span class="sig-paren">(</span><em>email</em>, <em>salt</em>, <em>hashed_password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.passwordCheck" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -85,7 +100,7 @@
 
 <dl class="method">
 <dt id="app.userControl.UserControl.permissionChange">
-<code class="descname">permissionChange</code><span class="sig-paren">(</span><em>user_id</em>, <em>permission_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.permissionChange" title="정의 주소">¶</a></dt>
+<code class="descname">permissionChange</code><span class="sig-paren">(</span><em>user_id</em>, <em>permission</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.permissionChange" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -111,6 +126,11 @@
 <dl class="method">
 <dt id="app.userControl.UserControl.signUp">
 <code class="descname">signUp</code><span class="sig-paren">(</span><em>email</em>, <em>hashed_password</em>, <em>name</em>, <em>mother_language_id</em>, <em>nationality_id=None</em>, <em>residence_id=None</em>, <em>external_service_provider=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.signUp" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.translatorLists">
+<code class="descname">translatorLists</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.translatorLists" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -160,7 +180,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first arabic simple">
 <li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
-<li><strong>&#8220;language_id[]&#8221;</strong>: Integer array</li>
+<li><strong>&#8220;language_id&#8221;</strong>: Integer, 아래 참고</li>
 </ol>
 <blockquote class="last">
 <div><ol class="arabic simple">
@@ -186,6 +206,44 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="app.userControl.UserControlAPI.adminAssignPageAccessPermission">
+<code class="descname">adminAssignPageAccessPermission</code><span class="sig-paren">(</span><em>user_id</em>, <em>page_name</em>, <em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminAssignPageAccessPermission" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리인 페이지 엑세스 권한 설정</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL에 삽입, User ID</li>
+<li><strong>&#8220;page_name&#8221;</strong>: URL에 삽입, String, 페이지 이름</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>&#8220;ciceron&#8221;</li>
+<li>&#8220;kangaroo&#8221;</li>
+<li>&#8220;pretranslated&#8221;</li>
+<li>&#8220;expense&#8221;</li>
+<li>&#8220;sentences&#8221;</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li><strong>&#8220;action&#8221;</strong>: URL에 삽입, String, 엑세스 권한</li>
+</ol>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>&#8220;grant&#8221;</li>
+<li>&#8220;revoke&#8221;</li>
+</ol>
+</div></blockquote>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>200: OK</li>
+<li>410: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControlAPI.adminPermissionChange">
 <code class="descname">adminPermissionChange</code><span class="sig-paren">(</span><em>user_id</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminPermissionChange" title="정의 주소">¶</a></dt>
 <dd><p>Admin: 회원 권한 설정</p>
@@ -198,13 +256,66 @@
 <blockquote class="last">
 <div><ol class="arabic simple">
 <li>&#8220;normal&#8221;: 보통 회원</li>
+<li>&#8220;translator&#8221;: 번역가</li>
 <li>&#8220;admin&#8221;: Admin(관리자)</li>
 </ol>
 </div></blockquote>
 </dd>
 <dt><strong>Response</strong></dt>
-<dd><strong>200</strong>: OK
-<strong>410</strong>: Fail</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.adminTranslatorLists">
+<code class="descname">adminTranslatorLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminTranslatorLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리를 위한 번역가 리스트</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: 4, // Integer User Id
+  &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
+  &quot;name&quot;: &quot;Admin&quot;, // User Name
+  &quot;mother_language_id&quot;: 1, // User&#39;s mother language
+  &quot;is_translator&quot;: true, // Boolean, 번역가 여부
+  &quot;other_language_list_id&quot;: null, // 필요없음
+  &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
+  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
+  &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
+  &quot;translatableLang&quot;: &quot;2&quot;, // 번역 가능한 언어
+  &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
+  &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
+  &quot;is_working&quot;: true // 작업여부
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
 </dl>
 </dd></dl>
 
@@ -212,8 +323,12 @@
 <dt id="app.userControl.UserControlAPI.adminUserLists">
 <code class="descname">adminUserLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminUserLists" title="정의 주소">¶</a></dt>
 <dd><p>Admin: 관리를 위한 유저 리스트</p>
-<p><strong>Parameters</strong>: Nothing</p>
 <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+</ol>
+</dd>
 <dt><strong>Response</strong></dt>
 <dd><p class="first"><strong>200</strong></p>
 <blockquote class="last">
