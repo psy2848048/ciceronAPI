@@ -46,11 +46,16 @@
 <span id="app-translator-module"></span><h1>app.translator module<a class="headerlink" href="#module-app.userControl" title="제목 주소">¶</a></h1>
 <dl class="class">
 <dt id="app.userControl.UserControl">
-<em class="property">class </em><code class="descclassname">app.userControl.</code><code class="descname">UserControl</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl" title="정의 주소">¶</a></dt>
+<em class="property">class </em><code class="descclassname">app.userControl.</code><code class="descname">UserControl</code><span class="sig-paren">(</span><em>conn</em>, <em>baogaoConn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl" title="정의 주소">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="app.userControl.UserControl.activeStatusChange">
 <code class="descname">activeStatusChange</code><span class="sig-paren">(</span><em>user_id</em>, <em>activeStatus</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.activeStatusChange" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControl.adminLists">
+<code class="descname">adminLists</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.adminLists" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -171,6 +176,67 @@
 <li><strong>200</strong>: OK</li>
 <li><strong>410</strong>: Fail</li>
 </ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.adminAdminLists">
+<code class="descname">adminAdminLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminAdminLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: Admin 리스트</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 4, // Integer User Id
+      &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
+      &quot;name&quot;: &quot;Admin&quot;, // User Name
+      &quot;mother_language_id&quot;: 1, // User&#39;s mother language
+      &quot;is_translator&quot;: true, // Boolean, 번역가 여부
+      &quot;other_language_list_id&quot;: null, // 필요없음
+      &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
+      &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
+      &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
+      &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
+      &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
+      &quot;is_working&quot;: true, // 작업여부
+      &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
+      &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
+      &quot;numoftranslationcompleted&quot;: 7 // 번역 완료한 수
+    }
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -341,22 +407,30 @@
 14
 15
 16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
-  &quot;id&quot;: 4, // Integer User Id
-  &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
-  &quot;name&quot;: &quot;Admin&quot;, // User Name
-  &quot;mother_language_id&quot;: 1, // User&#39;s mother language
-  &quot;is_translator&quot;: true, // Boolean, 번역가 여부
-  &quot;other_language_list_id&quot;: null, // 필요없음
-  &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
-  &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
-  &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
-  &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
-  &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
-  &quot;is_working&quot;: true, // 작업여부
-  &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
-  &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
-  &quot;numoftranslationcompleted&quot;: 7 // 번역 완료한 수
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 4, // Integer User Id
+      &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
+      &quot;name&quot;: &quot;Admin&quot;, // User Name
+      &quot;mother_language_id&quot;: 1, // User&#39;s mother language
+      &quot;is_translator&quot;: true, // Boolean, 번역가 여부
+      &quot;other_language_list_id&quot;: null, // 필요없음
+      &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
+      &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
+      &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
+      &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
+      &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
+      &quot;is_working&quot;: true, // 작업여부
+      &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
+      &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
+      &quot;numoftranslationcompleted&quot;: 7 // 번역 완료한 수
+    }
+  ]
 }
 </pre></div>
 </td></tr></table></div>
@@ -538,14 +612,28 @@
 <li><strong>200</strong> 로그인 성공</li>
 </ol>
 <blockquote>
-<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;logged_in&quot;: true, // 로그인 상태
   &quot;useremail&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인한 유저 메일
-  &quot;isTranslator&quot;: true // 번역가 계정인지 아닌지 확인
+  &quot;isTranslator&quot;: true, // 번역가 계정인지 아닌지 확인
+  &quot;isAdmin&quot;: false,
+  &quot;adminAccessablePage&quot;: [
+     {
+       &quot;id&quot;: 1,
+       &quot;text&quot;: &quot;kangaroo&quot;
+     }
+  ]
 }
 </pre></div>
 </td></tr></table></div>
@@ -574,16 +662,28 @@
 <li><strong>200</strong></li>
 </ol>
 <blockquote>
-<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;useremail&quot;: &quot;blahblah@gmail.com&quot;, // 로그인한 유저의 이메일주소. 로그인 상태 아니면 null
   &quot;isLoggedIn&quot;: true, // 로그인 여부 True/False
   &quot;isAdmin&quot;: true, // 관리자 여부 True/False
   &quot;isTranslator&quot; : false  //로그인한 유저의 번역가여부 True/False
+  &quot;adminAccessablePage&quot;: [
+     {
+       &quot;id&quot;: 1,
+       &quot;text&quot;: &quot;kangaroo&quot;
+     }
+  ]
 }
 </pre></div>
 </td></tr></table></div>
