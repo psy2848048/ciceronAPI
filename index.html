@@ -2378,7 +2378,8 @@
 </td></tr></table></div>
 </div></blockquote>
 <ol class="arabic simple">
-<li><strong>410</strong>: Fail</li>
+<li><strong>410</strong>: Fail, DB error</li>
+<li><strong>412</strong>: SOme Parameter is null</li>
 </ol>
 </div></blockquote>
 </dd>
@@ -2555,90 +2556,24 @@
 15
 16
 17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
-    <span class="nt">&quot;original_string&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="p">{</span>
+    <span class="nt">&quot;original_string&quot;</span><span class="p">:</span> 
+    <span class="p">{</span>
         <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;우앙 ㅋ 굿 ㅋ&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;파싱이 잘 됩니다!~&quot;</span>
-          <span class="p">}</span>
+          <span class="s2">&quot;우앙 ㅋ굳.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;굿파싱이 잘 됩니다!&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;그냥 그렇다&quot;</span>
         <span class="p">]</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;translated_string&quot;</span><span class="p">:</span> 
+    <span class="p">{</span>
         <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;그냥 그렇다&quot;</span>
-          <span class="p">}</span>
+          <span class="s2">&quot;Wow, fuck yeh!.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Parser works well!&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;So so&quot;</span>
         <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">],</span>
-
-    <span class="nt">&quot;translated_string&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;Wow, fuck yeh!&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;Parser works well!&quot;</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;paragraph_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="nt">&quot;sentences&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;sentence_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="s2">&quot;So so&quot;</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div></blockquote>
