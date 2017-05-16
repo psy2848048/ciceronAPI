@@ -196,26 +196,30 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-signUp">POST /api/v2/signUp</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-change_password">POST /api/v2/user/change_password</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-create_recovery_code">POST /api/v2/user/create_recovery_code</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-profile">GET /api/v2/user/profile</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-profile">POST /api/v2/user/profile</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-profile-(int-user_id)-profilePic-(fake_filename)">GET /api/v2/user/profile/(int:user_id)/profilePic/(fake_filename)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-recover_password">POST /api/v2/user/recover_password</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -732,6 +736,39 @@
 <dt><strong>403</strong></dt>
 <dd>로그인한 적이 없을 때</dd>
 </dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-signUp">
+<code class="descname">POST </code><code class="descname">/api/v2/signUp</code><a class="headerlink" href="#post--api-v2-signUp" title="정의 주소">¶</a></dt>
+<dd><p>회원가입 함수</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>&#8220;email&#8221;: String, 회원 E-mail</li>
+<li>&#8220;password&#8221;: sha256(password) 전송. Salt 적용 안 함.</li>
+<li>&#8220;name&#8221;: String, 이름</li>
+<li>&#8220;mother_tongue_id&#8221;: Int, 모국어 ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><dl class="first docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;email&quot;: &quot;blahblah@ciceron.me&quot;, // 로그인했던 유저 메일
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+<p><strong>400</strong>: 파라미터 빠뜨림</p>
+<p><strong>412</strong>: 중복가입</p>
+<p><strong>417</strong>: 올바른 이메일 형식이 아님</p>
+<p class="last"><strong>420</strong>: 어딘가의 이상</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1406,6 +1443,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지 당 아이템 수, OPTIONAL (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -1453,6 +1491,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지 당 아이템 수, OPTIONAL (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -1530,6 +1569,8 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;project_id&#8221;</strong>: 프로젝트 ID (URL)</li>
+<li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지 당 아이템 수, OPTIONAL (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -2113,6 +2154,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: Paging int, OPTIONAL</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지에 보여줄 아이템 수, OPTIONAL (기본 20개)</li>
 </ol>
 </dd>
 <dt><strong>&#8220;Response&#8221;</strong></dt>
@@ -2268,12 +2310,16 @@
 <dd><ol class="first arabic simple">
 <li><strong>&#8220;status&#8221;</strong>: Int, URL에 직접 삽입</li>
 </ol>
-<blockquote class="last">
+<blockquote>
 <div><ol class="arabic simple">
 <li>0: 새로 들어온 태그 리스트 출력</li>
 <li>1: 분류된, 사용중인 태그 리스트 출력</li>
 </ol>
 </div></blockquote>
+<ol class="last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: Paging int, OPTIONAL</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지에 보여줄 아이템 수, OPTIONAL (기본 20개)</li>
+</ol>
 </dd>
 <dt><strong>Response</strong></dt>
 <dd><ol class="first arabic simple">
@@ -2412,6 +2458,7 @@
 <div><ol class="arabic simple">
 <li><strong>200</strong>: 해당 CSV 다운로드</li>
 <li><strong>410</strong>: 실패</li>
+<li><strong>450</strong>: 해당 옵션에 데이타가 없습니다</li>
 </ol>
 </div></blockquote>
 </dd>
