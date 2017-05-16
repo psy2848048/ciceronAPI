@@ -110,7 +110,7 @@
 
 <dl class="method">
 <dt id="app.pretranslated.Pretranslated.getMyDownloadList">
-<code class="descname">getMyDownloadList</code><span class="sig-paren">(</span><em>user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.getMyDownloadList" title="정의 주소">¶</a></dt>
+<code class="descname">getMyDownloadList</code><span class="sig-paren">(</span><em>user_id</em>, <em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.getMyDownloadList" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -135,12 +135,12 @@
 
 <dl class="method">
 <dt id="app.pretranslated.Pretranslated.pretranslatedProjectList">
-<code class="descname">pretranslatedProjectList</code><span class="sig-paren">(</span><em>endpoint</em>, <em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedProjectList" title="정의 주소">¶</a></dt>
+<code class="descname">pretranslatedProjectList</code><span class="sig-paren">(</span><em>endpoint</em>, <em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedProjectList" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="app.pretranslated.Pretranslated.pretranslatedResourceList">
-<code class="descname">pretranslatedResourceList</code><span class="sig-paren">(</span><em>project_id</em>, <em>endpoint</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedResourceList" title="정의 주소">¶</a></dt>
+<code class="descname">pretranslatedResourceList</code><span class="sig-paren">(</span><em>project_id</em>, <em>endpoint</em>, <em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedResourceList" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -425,6 +425,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지 당 아이템 수, OPTIONAL (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -507,6 +508,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지 당 아이템 수, OPTIONAL (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -568,6 +570,8 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;project_id&#8221;</strong>: 프로젝트 ID (URL)</li>
+<li><strong>&#8220;page&#8221;</strong>: 페이지 (OPTIONAL)</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: 1페이지 당 아이템 수, OPTIONAL (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
