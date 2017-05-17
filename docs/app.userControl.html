@@ -55,7 +55,7 @@
 
 <dl class="method">
 <dt id="app.userControl.UserControl.adminLists">
-<code class="descname">adminLists</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.adminLists" title="정의 주소">¶</a></dt>
+<code class="descname">adminLists</code><span class="sig-paren">(</span><em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.adminLists" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -109,6 +109,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.userControl.UserControl.permissionControlUserList">
+<code class="descname">permissionControlUserList</code><span class="sig-paren">(</span><em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.permissionControlUserList" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.userControl.UserControl.profile">
 <code class="descname">profile</code><span class="sig-paren">(</span><em>email</em>, <em>rate=1</em>, <em>is_my_profile=False</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.profile" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -135,12 +140,12 @@
 
 <dl class="method">
 <dt id="app.userControl.UserControl.translatorLists">
-<code class="descname">translatorLists</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.translatorLists" title="정의 주소">¶</a></dt>
+<code class="descname">translatorLists</code><span class="sig-paren">(</span><em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.translatorLists" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="app.userControl.UserControl.userLists">
-<code class="descname">userLists</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.userLists" title="정의 주소">¶</a></dt>
+<code class="descname">userLists</code><span class="sig-paren">(</span><em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControl.userLists" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -188,6 +193,7 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: (OPTIONAL) 한 페이지에 보여줄 아이템 수 (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -213,26 +219,56 @@
 18
 19
 20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: 4, // Integer User Id
-      &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
-      &quot;name&quot;: &quot;Admin&quot;, // User Name
-      &quot;mother_language_id&quot;: 1, // User&#39;s mother language
-      &quot;is_translator&quot;: true, // Boolean, 번역가 여부
-      &quot;other_language_list_id&quot;: null, // 필요없음
-      &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
-      &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
-      &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
-      &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
-      &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
-      &quot;is_working&quot;: true, // 작업여부
-      &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
-      &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
-      &quot;numoftranslationcompleted&quot;: 7 // 번역 완료한 수
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Bryan&quot;,
+      &quot;email&quot;: &quot;psy2848048@gmail.com&quot;,
+      &quot;is_admin&quot;: true,
+      &quot;is_active&quot;: true,
+      &quot;adminAccessablePage&quot;: [
+        {
+          &quot;id&quot;: 2,
+          &quot;text&quot;: &quot;kangaroo&quot;
+        },
+        {
+          &quot;id&quot;: 3,
+          &quot;text&quot;: &quot;pretranslated&quot;
+        },
+        {
+          &quot;id&quot;: 4,
+          &quot;text&quot;: &quot;expense&quot;
+        },
+        {
+          &quot;id&quot;: 5,
+          &quot;text&quot;: &quot;sentences&quot;
+        },
+        {
+          &quot;id&quot;: 1,
+          &quot;text&quot;: &quot;ciceron&quot;
+        }
+      ],
+      &quot;permission_level&quot;: 2,
+      &quot;activity_id&quot;: 0,
+      &quot;recent_work_timestamp&quot;: null,
+      &quot;translatableLang&quot;: []
     }
-  ]
 }
 </pre></div>
 </td></tr></table></div>
@@ -379,13 +415,14 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControlAPI.adminTranslatorLists">
-<code class="descname">adminTranslatorLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminTranslatorLists" title="정의 주소">¶</a></dt>
-<dd><p>Admin: 관리를 위한 번역가 리스트</p>
+<dt id="app.userControl.UserControlAPI.adminPermissionControlUserLists">
+<code class="descname">adminPermissionControlUserLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminPermissionControlUserLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 권한 관리를 위한 유저 리스트</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: (OPTIONAL) 한 페이지에 보여줄 아이템 수 (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -411,26 +448,28 @@
 18
 19
 20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: 4, // Integer User Id
-      &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
-      &quot;name&quot;: &quot;Admin&quot;, // User Name
-      &quot;mother_language_id&quot;: 1, // User&#39;s mother language
-      &quot;is_translator&quot;: true, // Boolean, 번역가 여부
-      &quot;other_language_list_id&quot;: null, // 필요없음
-      &quot;profile_pic_path&quot;: &quot;profile_pic/4/20160426033806110457.png&quot;, // 프로필사진 주소
-      &quot;profile_text&quot;: &quot;Admin of CICERON&quot;, // 프로필 글귀
-      &quot;translatableLang&quot;: [1, 2, 5], // 번역 가능한 언어
-      &quot;keywords&quot;: &quot;&quot;, // String 형태의 리스트.
-      &quot;recent_work_timestamp&quot;: &quot;&quot;, // 최근 작업
-      &quot;is_working&quot;: true, // 작업여부
-      &quot;numoftranslationpending&quot;: 0, // (Useless) 번역 장바구니에 넣은 수
-      &quot;numoftranslationongoing&quot;: 5, // 진행중인 번역 작업물 수
-      &quot;numoftranslationcompleted&quot;: 7 // 번역 완료한 수
+      &quot;id&quot;: 39,
+      &quot;name&quot;: &quot;\x706570706572&quot;,
+      &quot;email&quot;: &quot;pepper@ciceron.me&quot;,
+      &quot;is_admin&quot;: true,
+      &quot;is_translator&quot;: true,
+      &quot;is_active&quot;: true,
+      &quot;permission_level&quot;: 2,
+      &quot;recent_work_timestamp&quot;: null
+    },
+    {
+      &quot;id&quot;: 38,
+      &quot;name&quot;: &quot;\x506570706572&quot;,
+      &quot;email&quot;: &quot;pepper@ciceron.co&quot;,
+      &quot;is_admin&quot;: null,
+      &quot;is_translator&quot;: false,
+      &quot;is_active&quot;: null,
+      &quot;recent_work_timestamp&quot;: null
     }
-  ]
 }
 </pre></div>
 </td></tr></table></div>
@@ -440,13 +479,14 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.userControl.UserControlAPI.adminUserLists">
-<code class="descname">adminUserLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminUserLists" title="정의 주소">¶</a></dt>
-<dd><p>Admin: 관리를 위한 유저 리스트</p>
+<dt id="app.userControl.UserControlAPI.adminTranslatorLists">
+<code class="descname">adminTranslatorLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminTranslatorLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리를 위한 번역가 리스트</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: (OPTIONAL) 한 페이지에 보여줄 아이템 수 (Default: 20)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -464,18 +504,142 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: 4, // Integer User Id
-      &quot;name&quot;: &quot;Mark&quot;, // 이름
-      &quot;email&quot;: &quot;admin@ciceron.me&quot;, // E-Mail
-      &quot;permission_id&quot;: 0, // 권한 레벨 0: 회원 1: 번역가 2: 관리자
-      &quot;recent_work_timestamp&quot;: &quot;Tue 24.07.2017 ...&quot;, // 최근 작업 시간
-      &quot;activity_id&quot;: 0 // 활동상황 0: 활동중 1: 중단
+      &quot;id&quot;: 25,
+      &quot;name&quot;: &quot;amadeus&quot;,
+      &quot;email&quot;: &quot;amadeus@ciceron.me&quot;,
+      &quot;numoftranslationpending&quot;: 0,
+      &quot;numoftranslationongoing&quot;: 1,
+      &quot;numoftranslationcompleted&quot;: 3,
+      &quot;is_admin&quot;: true,
+      &quot;is_translator&quot;: true,
+      &quot;is_active&quot;: true,
+      &quot;permission_level&quot;: 2,
+      &quot;translatableLang&quot;: [
+        2,
+        3
+      ],
+      &quot;keywords&quot;: [],
+      &quot;recent_work_timestamp&quot;: null
     },
-    ...
-  ]
+    {
+      &quot;id&quot;: 32,
+      &quot;name&quot;: &quot;Scotch&quot;,
+      &quot;email&quot;: &quot;scotch@ciceron.me&quot;,
+      &quot;numoftranslationpending&quot;: 0,
+      &quot;numoftranslationongoing&quot;: 0,
+      &quot;numoftranslationcompleted&quot;: 0,
+      &quot;is_admin&quot;: true,
+      &quot;is_translator&quot;: true,
+      &quot;is_active&quot;: true,
+      &quot;permission_level&quot;: 2,
+      &quot;translatableLang&quot;: [
+        2,
+        6,
+        10
+      ],
+      &quot;keywords&quot;: [],
+      &quot;recent_work_timestamp&quot;: null
+    }
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.userControl.UserControlAPI.adminUserLists">
+<code class="descname">adminUserLists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.userControl.UserControlAPI.adminUserLists" title="정의 주소">¶</a></dt>
+<dd><p>Admin: 관리를 위한 유저 리스트</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: (OPTIONAL) 다음 페이지</li>
+<li><strong>&#8220;itemPerPage&#8221;</strong>: (OPTIONAL) 한 페이지에 보여줄 아이템 수 (Default: 20)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong></p>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 38,
+      &quot;email&quot;: &quot;pepper@ciceron.co&quot;,
+      &quot;name&quot;: &quot;\x506570706572&quot;,
+      &quot;numofrequestpending&quot;: 0,
+      &quot;numofrequestongoing&quot;: 0,
+      &quot;numofrequestcompleted&quot;: 0,
+      &quot;is_active&quot;: null,
+      &quot;recent_work_timestamp&quot;: null,
+      &quot;keywords&quot;: []
+    },
+    {
+      &quot;id&quot;: 30,
+      &quot;email&quot;: &quot;mkkoh2002@naver.com&quot;,
+      &quot;name&quot;: &quot;comink&quot;,
+      &quot;numofrequestpending&quot;: 0,
+      &quot;numofrequestongoing&quot;: 0,
+      &quot;numofrequestcompleted&quot;: 0,
+      &quot;is_active&quot;: true,
+      &quot;recent_work_timestamp&quot;: null,
+      &quot;keywords&quot;: []
+    }
 }
 </pre></div>
 </td></tr></table></div>
