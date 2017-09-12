@@ -49,11 +49,6 @@
 <em class="property">class </em><code class="descclassname">app.payment.</code><code class="descname">Payment</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment" title="정의 주소">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
-<dt id="app.payment.Payment.alipayPayment">
-<code class="descname">alipayPayment</code><span class="sig-paren">(</span><em>is_prod_server</em>, <em>request_id</em>, <em>user_email</em>, <em>amount</em>, <em>point_for_use=0</em>, <em>promo_type=''</em>, <em>promo_code=''</em>, <em>is_additional=False</em>, <em>is_groupRequest=False</em>, <em>is_public=False</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.alipayPayment" title="정의 주소">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="app.payment.Payment.alipayPayment2">
 <code class="descname">alipayPayment2</code><span class="sig-paren">(</span><em>is_prod_server</em>, <em>request_id</em>, <em>user_email</em>, <em>amount</em>, <em>product</em>, <em>point_for_use=0</em>, <em>promo_type=''</em>, <em>promo_code=''</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.alipayPayment2" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -78,12 +73,20 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.payment.Payment.iamportPayment">
-<code class="descname">iamportPayment</code><span class="sig-paren">(</span><em>is_prod_server</em>, <em>request_id</em>, <em>user_email</em>, <em>amount</em>, <em>point_for_use=0</em>, <em>promo_type=None</em>, <em>promo_code=None</em>, <em>is_additional=False</em>, <em>is_groupRequest=False</em>, <em>is_public=False</em>, <em>**payload</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.iamportPayment" title="정의 주소">¶</a></dt>
-<dd><p>아임포트 No-ActiveX 결제 시스템이다.</p>
-<p>직접 카드번호 및 유효기간 등의 정보를 물러와서 결제를 바로 한다.
-그리고 이 자리에서 바로 결제를 하기 때문에 postprocessing 과정을 거쳐서 할 작업을 여기서 다 한다.</p>
+<dt id="app.payment.Payment.couponCheck">
+<code class="descname">couponCheck</code><span class="sig-paren">(</span><em>coupon_text</em>, <em>user_email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.couponCheck" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.payment.Payment.couponGenerate">
+<code class="descname">couponGenerate</code><span class="sig-paren">(</span><em>shop_name</em>, <em>user_email</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.couponGenerate" title="정의 주소">¶</a></dt>
+<dd><p>프로모션 코드 생성기</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="app.payment.Payment.couponList">
+<code class="descname">couponList</code><span class="sig-paren">(</span><em>page=1</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.couponList" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="app.payment.Payment.iamportPayment2">
@@ -107,22 +110,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.payment.Payment.paypalPayment">
-<code class="descname">paypalPayment</code><span class="sig-paren">(</span><em>is_prod_server</em>, <em>request_id</em>, <em>user_email</em>, <em>amount</em>, <em>point_for_use=0</em>, <em>promo_type=''</em>, <em>promo_code=''</em>, <em>is_additional=False</em>, <em>is_groupRequest=False</em>, <em>is_public=False</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.paypalPayment" title="정의 주소">¶</a></dt>
-<dd><p>페이팔은 그냥 모든 정보를 URL에 박아서 페이팔에 넘겨주면 된다.
-결제는 페이팔에서 한 후 콜백으로 postprocessing을 불러오기때문에, 여기서는 페이팔로의 링크만 제공해주면 된다.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="app.payment.Payment.paypalPayment2">
 <code class="descname">paypalPayment2</code><span class="sig-paren">(</span><em>is_prod_server</em>, <em>request_id</em>, <em>user_email</em>, <em>amount</em>, <em>product</em>, <em>point_for_use=0</em>, <em>promo_type=''</em>, <em>promo_code=''</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.paypalPayment2" title="정의 주소">¶</a></dt>
-<dd><p>페이팔은 그냥 모든 정보를 URL에 박아서 페이팔에 넘겨주면 된다.
-결제는 페이팔에서 한 후 콜백으로 postprocessing을 불러오기때문에, 여기서는 페이팔로의 링크만 제공해주면 된다.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="app.payment.Payment.pointPayment">
-<code class="descname">pointPayment</code><span class="sig-paren">(</span><em>is_prod_server</em>, <em>request_id</em>, <em>user_email</em>, <em>amount</em>, <em>point_for_use=0</em>, <em>promo_type=''</em>, <em>promo_code=''</em>, <em>is_additional=False</em>, <em>is_groupRequest=False</em>, <em>is_public=False</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.pointPayment" title="정의 주소">¶</a></dt>
 <dd><p>페이팔은 그냥 모든 정보를 URL에 박아서 페이팔에 넘겨주면 된다.
 결제는 페이팔에서 한 후 콜백으로 postprocessing을 불러오기때문에, 여기서는 페이팔로의 링크만 제공해주면 된다.</p>
 </dd></dl>
@@ -133,11 +122,6 @@
 <dd><p>페이팔은 그냥 모든 정보를 URL에 박아서 페이팔에 넘겨주면 된다.
 결제는 페이팔에서 한 후 콜백으로 postprocessing을 불러오기때문에, 여기서는 페이팔로의 링크만 제공해주면 된다.</p>
 </dd></dl>
-
-<dl class="method">
-<dt id="app.payment.Payment.postProcess">
-<code class="descname">postProcess</code><span class="sig-paren">(</span><em>user_email=None</em>, <em>request_id=None</em>, <em>pay_via=None</em>, <em>pay_by=None</em>, <em>is_succeeded=None</em>, <em>amount=0</em>, <em>use_point=0</em>, <em>promo_type=None</em>, <em>promo_code=None</em>, <em>is_additional=None</em>, <em>is_groupRequest=None</em>, <em>is_public=None</em>, <em>paymentId=None</em>, <em>PayerID=None</em>, <em>ciceron_order_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.Payment.postProcess" title="정의 주소">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="method">
 <dt id="app.payment.Payment.postProcess2">
@@ -195,12 +179,135 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="app.payment.PaymentAPI.couponCheck">
+<code class="descname">couponCheck</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.PaymentAPI.couponCheck" title="정의 주소">¶</a></dt>
+<dd><p>쿠폰 체크 API
+<strong>Parameters</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>&#8220;shop&#8221;</strong>: String, G마켓, 11st....</li>
+<li><strong>&#8220;benefitpoint&#8221;</strong>: Integer</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;shop&quot;</span><span class="p">:</span> <span class="s2">&quot;11st&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;benefitPoint&quot;</span><span class="p">:</span> <span class="mi">16000</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.payment.PaymentAPI.couponGenerate">
+<code class="descname">couponGenerate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.PaymentAPI.couponGenerate" title="정의 주소">¶</a></dt>
+<dd><p>쿠폰 생성 API
+<strong>Parameters</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>&#8220;shop_name&#8221;</strong>: String, 샵 이름</li>
+<li><strong>&#8220;user_email&#8221;</strong>: String, 유저 Email 혹은 상점 내 ID</li>
+<li><strong>&#8220;point&#8221;</strong>: Integer, 포인트</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;shop&quot;: &quot;11st&quot;,
+      &quot;text&quot;: &quot;aeufehfalierfgha&quot;,
+      &quot;benefitpoint&quot;: 16000,
+      is_used: false
+    },
+    ...
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.payment.PaymentAPI.couponList">
+<code class="descname">couponList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.PaymentAPI.couponList" title="정의 주소">¶</a></dt>
+<dd><p>쿠폰 리스트 API (20개씩)
+<strong>Parameters</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>&#8220;page&#8221;</strong>: Integer, OPTIONAL, 페이징</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><dl class="first last docutils">
+<dt><strong>200</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;shop&quot;: &quot;11st&quot;,
+      &quot;text&quot;: &quot;aeufehfalierfgha&quot;,
+      &quot;benefitpoint&quot;: 16000,
+      is_used: false
+    },
+    ...
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.payment.PaymentAPI.payment">
 <code class="descname">payment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.payment.PaymentAPI.payment" title="정의 주소">¶</a></dt>
 <dd><p>결제 진행 API</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
+<li><strong>&#8220;user_email&#8221;</strong>: 유저 이메일</li>
 <li><strong>&#8220;payment_platform&#8221;</strong>: 지불 플랫폼 (&#8220;alipay&#8221;, &#8220;paypal&#8221;, &#8220;iamport&#8221;, &#8220;point&#8221;)</li>
 <li><strong>&#8220;product&#8221;</strong>: 구매한 내부 플랫폼 이름 (&#8220;l10n&#8221;, &#8220;pretranslation&#8221;, &#8220;groupRequest&#8221;, &#8220;f2finterpreter&#8221;)</li>
 <li><strong>&#8220;request_id&#8221;</strong>: 각 플랫폼에서의 의뢰 번호</li>
@@ -222,6 +329,17 @@
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
   &quot;link&quot;: &quot;http://payment.paypalalipay.com/paymemnt/blahblah&quot; // 리다이렉팅 할 주소
+}
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt><strong>203</strong></dt>
+<dd><div class="first last highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;message&quot;: &quot;Fail&quot;, // 리다이렉팅 할 주소
+  &quot;err_msg&quot;: &quot;카드를 갈아끼세요&quot; // 결제 에러 메시지
 }
 </pre></div>
 </td></tr></table></div>

@@ -44,6 +44,25 @@
             
   <div class="section" id="module-app.ciceron_lib">
 <span id="app-ciceron-lib-module"></span><h1>app.ciceron_lib module<a class="headerlink" href="#module-app.ciceron_lib" title="제목 주소">¶</a></h1>
+<dl class="class">
+<dt id="app.ciceron_lib.AzureAuthClient">
+<em class="property">class </em><code class="descclassname">app.ciceron_lib.</code><code class="descname">AzureAuthClient</code><span class="sig-paren">(</span><em>client_secret</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.AzureAuthClient" title="정의 주소">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Provides a client for obtaining an OAuth token from the authentication service
+for Microsoft Translator in Azure Cognitive Services.</p>
+<dl class="method">
+<dt id="app.ciceron_lib.AzureAuthClient.get_access_token">
+<code class="descname">get_access_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.AzureAuthClient.get_access_token" title="정의 주소">¶</a></dt>
+<dd><p>Returns an access token for the specified subscription.</p>
+<p>This method uses a cache to limit the number of requests to the token service.
+A fresh token can be re-used during its lifetime of 10 minutes. After a successful
+request to the token service, this method caches the access token. Subsequent
+invocations of the method return the cached token for the next 5 minutes. After
+5 minutes, a new token is fetched from the token service and the cache is updated.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="app.ciceron_lib.admin_required">
 <code class="descclassname">app.ciceron_lib.</code><code class="descname">admin_required</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#app.ciceron_lib.admin_required" title="정의 주소">¶</a></dt>
