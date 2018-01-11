@@ -69,8 +69,18 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.Pretranslated.checkFormatKeywords">
+<code class="descname">checkFormatKeywords</code><span class="sig-paren">(</span><em>project_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.checkFormatKeywords" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.Pretranslated.checkIsPaid">
 <code class="descname">checkIsPaid</code><span class="sig-paren">(</span><em>resource_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.checkIsPaid" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.checkSubjectKeywords">
+<code class="descname">checkSubjectKeywords</code><span class="sig-paren">(</span><em>project_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.checkSubjectKeywords" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -89,6 +99,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.Pretranslated.deleteFormatKeywords">
+<code class="descname">deleteFormatKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.deleteFormatKeywords" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.Pretranslated.deleteProject">
 <code class="descname">deleteProject</code><span class="sig-paren">(</span><em>project_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.deleteProject" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -104,6 +119,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.Pretranslated.deleteSubjectKeywords">
+<code class="descname">deleteSubjectKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.deleteSubjectKeywords" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.Pretranslated.generateDownloadableLink">
 <code class="descname">generateDownloadableLink</code><span class="sig-paren">(</span><em>endpoint</em>, <em>resource_id</em>, <em>file_id</em>, <em>email</em>, <em>checksum</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.generateDownloadableLink" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -114,8 +134,28 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.Pretranslated.inputFormatKeywords">
+<code class="descname">inputFormatKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.inputFormatKeywords" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.inputSubjectKeywords">
+<code class="descname">inputSubjectKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.inputSubjectKeywords" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.Pretranslated.linkResourceToProject">
 <code class="descname">linkResourceToProject</code><span class="sig-paren">(</span><em>project_id</em>, <em>resource_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.linkResourceToProject" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.listingFormatCandidate">
+<code class="descname">listingFormatCandidate</code><span class="sig-paren">(</span><em>partial_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.listingFormatCandidate" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.listingSubjectCandidate">
+<code class="descname">listingSubjectCandidate</code><span class="sig-paren">(</span><em>partial_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.listingSubjectCandidate" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -242,6 +282,44 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedAddFormatTags">
+<code class="descname">pretranslatedAddFormatTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedAddFormatTags" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 포맷 태그 삽입</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 추가 성공</li>
+<li><strong>410</strong>: 추가 실패</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedAddSubjectTags">
+<code class="descname">pretranslatedAddSubjectTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedAddSubjectTags" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 Subject 태그 삽입</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 추가 성공</li>
+<li><strong>410</strong>: 추가 실패</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.PretranslatedAPI.pretranslatedControlFileWeb">
 <code class="descname">pretranslatedControlFileWeb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedControlFileWeb" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -292,7 +370,7 @@
 <dl class="method">
 <dt id="app.pretranslated.PretranslatedAPI.pretranslatedCreateProject">
 <code class="descname">pretranslatedCreateProject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedCreateProject" title="정의 주소">¶</a></dt>
-<dd><p>프로젝트 열기</p>
+<dd><p>프로젝트 생성</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
@@ -301,6 +379,7 @@
 <li><strong>&#8220;subject_id&#8221;</strong>: 주제 ID</li>
 <li><strong>&#8220;author&#8221;</strong>: 원작자</li>
 <li><strong>&#8220;cover_photo&#8221;</strong>: 사진파일</li>
+<li><strong>&#8220;quote_url&#8221;</strong>: 원문 URL (original: 자체 원본, http...: 원문 링크)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -380,6 +459,25 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedDeleteFormatTags">
+<code class="descname">pretranslatedDeleteFormatTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedDeleteFormatTags" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 포맷 태그 삭제</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 추가 성공</li>
+<li><strong>410</strong>: 추가 실패</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.PretranslatedAPI.pretranslatedDeleteProject">
 <code class="descname">pretranslatedDeleteProject</code><span class="sig-paren">(</span><em>project_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedDeleteProject" title="정의 주소">¶</a></dt>
 <dd><p>프로젝트 삭제</p>
@@ -412,6 +510,25 @@
 <dd><ol class="first last arabic simple">
 <li><strong>200</strong>: OK</li>
 <li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedDeleteSubjectTags">
+<code class="descname">pretranslatedDeleteSubjectTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedDeleteSubjectTags" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 Subject 태그 삭제</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 추가 성공</li>
+<li><strong>410</strong>: 추가 실패</li>
 </ol>
 </dd>
 </dl>
@@ -451,8 +568,7 @@
 18
 19
 20
-21
-22</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -461,14 +577,13 @@
         <span class="nt">&quot;original_lang&quot;</span><span class="p">:</span> <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
         <span class="nt">&quot;target_language_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="nt">&quot;target_language&quot;</span><span class="p">:</span> <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;format_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;subject_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;subject&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;format_tags&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf,asdf,asdf&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subject_tags&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf,asdf,asdf&quot;</span><span class="p">,</span>
         <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;이준행&quot;</span><span class="p">,</span>
         <span class="nt">&quot;project_register_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 12 Feb 2017 08:58:34 GMT&quot;</span><span class="p">,</span>
         <span class="nt">&quot;original_theme&quot;</span><span class="p">:</span> <span class="s2">&quot;테스트&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;테스트의 한 일환입니다&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;정말제목&quot;</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;테스트의 한 일환입니다&quot;</span><span class="p">,</span>
         <span class="nt">&quot;resource_register_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 12 Feb 2017 09:10:04 GMT&quot;</span><span class="p">,</span>
         <span class="nt">&quot;cover_photo_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/user/pretranslated/project/2/coverPhoto/preview.png&quot;</span>
       <span class="p">}</span>
@@ -477,6 +592,44 @@
 </pre></div>
 </td></tr></table></div>
 </div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedListingFormatTag">
+<code class="descname">pretranslatedListingFormatTag</code><span class="sig-paren">(</span><em>project_id</em>, <em>partial_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedListingFormatTag" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 포맷 태그 자동완성</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;partial_tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 추가 성공</li>
+<li><strong>410</strong>: 추가 실패</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedListingSubjectTag">
+<code class="descname">pretranslatedListingSubjectTag</code><span class="sig-paren">(</span><em>project_id</em>, <em>partial_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedListingSubjectTag" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 Subject 태그 자동완성</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;partial_tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 추가 성공</li>
+<li><strong>410</strong>: 추가 실패</li>
+</ol>
 </dd>
 </dl>
 </dd></dl>
@@ -837,6 +990,7 @@
 <li><strong>&#8220;description&#8221;</strong>: 설명</li>
 <li><strong>&#8220;tone_id&#8221;</strong>: 톤 ID</li>
 <li><strong>&#8220;read_permission_level&#8221;</strong>: 권한 ID</li>
+<li><strong>&#8220;quote_url&#8221;</strong>: 원문 URL (original: 자체 원본, http...: 원문 링크)</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
