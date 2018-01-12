@@ -79,11 +79,6 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="app.pretranslated.Pretranslated.checkSubjectKeywords">
-<code class="descname">checkSubjectKeywords</code><span class="sig-paren">(</span><em>project_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.checkSubjectKeywords" title="정의 주소">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="app.pretranslated.Pretranslated.createFile">
 <code class="descname">createFile</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.createFile" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -119,11 +114,6 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="app.pretranslated.Pretranslated.deleteSubjectKeywords">
-<code class="descname">deleteSubjectKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.deleteSubjectKeywords" title="정의 주소">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="app.pretranslated.Pretranslated.generateDownloadableLink">
 <code class="descname">generateDownloadableLink</code><span class="sig-paren">(</span><em>endpoint</em>, <em>resource_id</em>, <em>file_id</em>, <em>email</em>, <em>checksum</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.generateDownloadableLink" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -136,11 +126,6 @@
 <dl class="method">
 <dt id="app.pretranslated.Pretranslated.inputFormatKeywords">
 <code class="descname">inputFormatKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.inputFormatKeywords" title="정의 주소">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="app.pretranslated.Pretranslated.inputSubjectKeywords">
-<code class="descname">inputSubjectKeywords</code><span class="sig-paren">(</span><em>project_id</em>, <em>keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.inputSubjectKeywords" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -171,6 +156,11 @@
 <dl class="method">
 <dt id="app.pretranslated.Pretranslated.markAsSent">
 <code class="descname">markAsSent</code><span class="sig-paren">(</span><em>request_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.markAsSent" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.Pretranslated.pretranslatedCuratedList">
+<code class="descname">pretranslatedCuratedList</code><span class="sig-paren">(</span><em>endpoint</em>, <em>project_id</em>, <em>project_list</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedCuratedList" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -285,25 +275,6 @@
 <dt id="app.pretranslated.PretranslatedAPI.pretranslatedAddFormatTags">
 <code class="descname">pretranslatedAddFormatTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedAddFormatTags" title="정의 주소">¶</a></dt>
 <dd><p>프로젝트 포맷 태그 삽입</p>
-<dl class="docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ol class="first last arabic simple">
-<li><strong>&#8220;tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
-</ol>
-</dd>
-<dt><strong>Response</strong></dt>
-<dd><ol class="first last arabic simple">
-<li><strong>200</strong>: 추가 성공</li>
-<li><strong>410</strong>: 추가 실패</li>
-</ol>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="app.pretranslated.PretranslatedAPI.pretranslatedAddSubjectTags">
-<code class="descname">pretranslatedAddSubjectTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedAddSubjectTags" title="정의 주소">¶</a></dt>
-<dd><p>프로젝트 Subject 태그 삽입</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
@@ -440,6 +411,107 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedCuratedList">
+<code class="descname">pretranslatedCuratedList</code><span class="sig-paren">(</span><em>project_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedCuratedList" title="정의 주소">¶</a></dt>
+<dd><p>추천 게시물</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;project_id&#8221;</strong>: 프로젝트 ID (URL)</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="p">{</span>
+      <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+         <span class="p">{</span>
+           <span class="nt">&quot;cover_photo_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/user/pretranslated/project/2/coverPhoto/preview.png&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+             <span class="p">{</span>
+               <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+               <span class="nt">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+               <span class="nt">&quot;target_language_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="nt">&quot;target_language&quot;</span><span class="p">:</span> <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;테스트&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;테스트의 한 일환입니다&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;tone_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="nt">&quot;read_permission_level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+               <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+               <span class="nt">&quot;register_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 12 Feb 2017 09:10:04 GMT&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;resource_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+                 <span class="p">{</span>
+                   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                   <span class="nt">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                   <span class="nt">&quot;resource_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                   <span class="nt">&quot;preview_permission&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                   <span class="nt">&quot;file_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/user/pretranslated/project/2/resources/4/file/1/swsx.png&quot;</span>
+                 <span class="p">}</span>
+               <span class="p">],</span>
+               <span class="nt">&quot;requester_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+                 <span class="p">{</span>
+                   <span class="nt">&quot;requester_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                 <span class="p">}</span>
+               <span class="p">],</span>
+               <span class="nt">&quot;translator_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+                 <span class="p">{</span>
+                   <span class="nt">&quot;translator_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="p">}</span>
+               <span class="p">]</span>
+             <span class="p">}</span>
+           <span class="p">]</span>
+         <span class="p">}</span>
+       <span class="p">]</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.PretranslatedAPI.pretranslatedDeleteFile">
 <code class="descname">pretranslatedDeleteFile</code><span class="sig-paren">(</span><em>project_id</em>, <em>resource_id</em>, <em>file_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedDeleteFile" title="정의 주소">¶</a></dt>
 <dd><p>파일 삭제</p>
@@ -516,25 +588,6 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="app.pretranslated.PretranslatedAPI.pretranslatedDeleteSubjectTags">
-<code class="descname">pretranslatedDeleteSubjectTags</code><span class="sig-paren">(</span><em>project_id</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedDeleteSubjectTags" title="정의 주소">¶</a></dt>
-<dd><p>프로젝트 Subject 태그 삭제</p>
-<dl class="docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ol class="first last arabic simple">
-<li><strong>&#8220;tag&#8221;</strong>: String, 태그, 주소에 직접 삽입</li>
-</ol>
-</dd>
-<dt><strong>Response</strong></dt>
-<dd><ol class="first last arabic simple">
-<li><strong>200</strong>: 추가 성공</li>
-<li><strong>410</strong>: 추가 실패</li>
-</ol>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="app.pretranslated.PretranslatedAPI.pretranslatedList">
 <code class="descname">pretranslatedList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedList" title="정의 주소">¶</a></dt>
 <dd><p>기 번역된 목록 리스트</p>
@@ -578,7 +631,7 @@
         <span class="nt">&quot;target_language_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="nt">&quot;target_language&quot;</span><span class="p">:</span> <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
         <span class="nt">&quot;format_tags&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf,asdf,asdf&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;subject_tags&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf,asdf,asdf&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subject_tags&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf&quot;</span><span class="p">,</span>
         <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;이준행&quot;</span><span class="p">,</span>
         <span class="nt">&quot;project_register_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 12 Feb 2017 08:58:34 GMT&quot;</span><span class="p">,</span>
         <span class="nt">&quot;original_theme&quot;</span><span class="p">:</span> <span class="s2">&quot;테스트&quot;</span><span class="p">,</span>
