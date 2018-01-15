@@ -220,8 +220,6 @@
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.checkChecksumFromEmailParams">checkChecksumFromEmailParams() (app.pretranslated.Pretranslated method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.checkFormatKeywords">checkFormatKeywords() (app.pretranslated.Pretranslated method)</a>
-</li>
       <li><a href="docs/app.groupRequest.html#app.groupRequest.GroupRequest.checkGroupMembers">checkGroupMembers() (app.groupRequest.GroupRequest method)</a>
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.checkIsPaid">checkIsPaid() (app.pretranslated.Pretranslated method)</a>
@@ -229,6 +227,8 @@
       <li><a href="docs/app.payment.html#app.payment.Payment.checkPoint">checkPoint() (app.payment.Payment method)</a>
 </li>
       <li><a href="docs/app.payment.html#app.payment.PaymentAPI.checkPromotionCode">checkPromotionCode() (app.payment.PaymentAPI method)</a>
+</li>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.checkTags">checkTags() (app.pretranslated.Pretranslated method)</a>
 </li>
       <li><a href="docs/app.groupRequest.html#app.groupRequest.GroupRequest.checkUnpaidMembers">checkUnpaidMembers() (app.groupRequest.GroupRequest method)</a>
 </li>
@@ -372,13 +372,13 @@
 </li>
       <li><a href="docs/app.mailAgent.html#app.mailAgent.MailAgent.delete_sos">delete_sos() (app.mailAgent.MailAgent method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.deleteFormatKeywords">deleteFormatKeywords() (app.pretranslated.Pretranslated method)</a>
-</li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.deleteProject">deleteProject() (app.pretranslated.Pretranslated method)</a>
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.deleteResource">deleteResource() (app.pretranslated.Pretranslated method)</a>
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.deleteResultFile">deleteResultFile() (app.pretranslated.Pretranslated method)</a>
+</li>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.deleteTags">deleteTags() (app.pretranslated.Pretranslated method)</a>
 </li>
       <li><a href="docs/app.application.html#app.application.deleteUser_groupRequest">deleteUser_groupRequest() (app.application 모듈)</a>
 </li>
@@ -584,7 +584,7 @@
 </li>
       <li><a href="docs/app.requestwarehouse.html#app.requestwarehouse.Warehousing.initTest">initTest() (app.requestwarehouse.Warehousing class method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.inputFormatKeywords">inputFormatKeywords() (app.pretranslated.Pretranslated method)</a>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.inputTags">inputTags() (app.pretranslated.Pretranslated method)</a>
 </li>
       <li><a href="docs/app.groupRequest.html#app.groupRequest.GroupRequest.insertTitle">insertTitle() (app.groupRequest.GroupRequest method)</a>
 
@@ -628,9 +628,9 @@
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.linkResourceToProject">linkResourceToProject() (app.pretranslated.Pretranslated method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.listingFormatCandidate">listingFormatCandidate() (app.pretranslated.Pretranslated method)</a>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.listingPlatformCandidate">listingPlatformCandidate() (app.pretranslated.Pretranslated method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.listingSubjectCandidate">listingSubjectCandidate() (app.pretranslated.Pretranslated method)</a>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated.listingTagsCandidate">listingTagsCandidate() (app.pretranslated.Pretranslated method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -746,7 +746,7 @@
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.Pretranslated">Pretranslated (app.pretranslated 종류)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedAddFormatTags">pretranslatedAddFormatTags() (app.pretranslated.PretranslatedAPI method)</a>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedAddTags">pretranslatedAddTags() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI">PretranslatedAPI (app.pretranslated 종류)</a>
 </li>
@@ -772,17 +772,17 @@
       </ul></li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedDeleteFile">pretranslatedDeleteFile() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedDeleteFormatTags">pretranslatedDeleteFormatTags() (app.pretranslated.PretranslatedAPI method)</a>
-</li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedDeleteProject">pretranslatedDeleteProject() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedDeleteResource">pretranslatedDeleteResource() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedDeleteTags">pretranslatedDeleteTags() (app.pretranslated.PretranslatedAPI method)</a>
+</li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedList">pretranslatedList() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedListingFormatTag">pretranslatedListingFormatTag() (app.pretranslated.PretranslatedAPI method)</a>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedListingPlatform">pretranslatedListingPlatform() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
-      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedListingSubjectTag">pretranslatedListingSubjectTag() (app.pretranslated.PretranslatedAPI method)</a>
+      <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedListingTags">pretranslatedListingTags() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
       <li><a href="docs/app.pretranslated.html#app.pretranslated.PretranslatedAPI.pretranslatedMarkAsPaid">pretranslatedMarkAsPaid() (app.pretranslated.PretranslatedAPI method)</a>
 </li>
