@@ -1136,11 +1136,11 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-payment-eximbay-returnurl">GET /api/v2/payment/eximbay/returnurl</a></td>
+<td><a class="reference external" href="#post--api-v2-payment-eximbay-returnurl">POST /api/v2/payment/eximbay/returnurl</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-payment-eximbay-returnurl">POST /api/v2/payment/eximbay/returnurl</a></td>
+<td><a class="reference external" href="#get--api-v2-payment-eximbay-returnurl">GET /api/v2/payment/eximbay/returnurl</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -1152,19 +1152,19 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-user-payment-postprocess">GET /api/v2/user/payment/postprocess</a></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-payment-postprocess">POST /api/v2/user/payment/postprocess</a></td>
 <td>&nbsp;</td>
 </tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-user-payment-postprocess">GET /api/v2/user/payment/postprocess</a></td>
+<td>&nbsp;</td>
+</tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-user-payment-start">GET /api/v2/user/payment/start</a></td>
+<td><a class="reference external" href="#post--api-v2-user-payment-start">POST /api/v2/user/payment/start</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-user-payment-start">POST /api/v2/user/payment/start</a></td>
+<td><a class="reference external" href="#get--api-v2-user-payment-start">GET /api/v2/user/payment/start</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -1245,16 +1245,16 @@
 </dl>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-v2-payment-eximbay-returnurl">
-<code class="descname">GET </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#get--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
+<dl class="post">
+<dt id="post--api-v2-payment-eximbay-returnurl">
+<code class="descname">POST </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#post--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
 <dd><p>추후에 엑심베이 결제 후 클라이언트 URL로 대체할 것입니다.
 :return:</p>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-payment-eximbay-returnurl">
-<code class="descname">POST </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#post--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
+<dl class="get">
+<dt id="get--api-v2-payment-eximbay-returnurl">
+<code class="descname">GET </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#get--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
 <dd><p>추후에 엑심베이 결제 후 클라이언트 URL로 대체할 것입니다.
 :return:</p>
 </dd></dl>
@@ -1323,14 +1323,6 @@
 </dl>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-v2-user-payment-postprocess">
-<code class="descname">GET </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#get--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
-<dd><p>결제 진행 이후 내부에서 결제 완료 처리하는 API.</p>
-<p>Paypal, Alipay같은 경우 결제 완료 후 Redirect할 주소를 넣어 결제 이후의 내부 쇼핑몰과 연결고리를 만들게 된다.</p>
-<p>Frontend에서 직접 call할 일은 없다.</p>
-</dd></dl>
-
 <dl class="post">
 <dt id="post--api-v2-user-payment-postprocess">
 <code class="descname">POST </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#post--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
@@ -1340,8 +1332,16 @@
 </dd></dl>
 
 <dl class="get">
-<dt id="get--api-v2-user-payment-start">
-<code class="descname">GET </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#get--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
+<dt id="get--api-v2-user-payment-postprocess">
+<code class="descname">GET </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#get--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
+<dd><p>결제 진행 이후 내부에서 결제 완료 처리하는 API.</p>
+<p>Paypal, Alipay같은 경우 결제 완료 후 Redirect할 주소를 넣어 결제 이후의 내부 쇼핑몰과 연결고리를 만들게 된다.</p>
+<p>Frontend에서 직접 call할 일은 없다.</p>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v2-user-payment-start">
+<code class="descname">POST </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#post--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
 <dd><p>결제 진행 API</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
@@ -1391,9 +1391,9 @@
 </dl>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-user-payment-start">
-<code class="descname">POST </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#post--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
+<dl class="get">
+<dt id="get--api-v2-user-payment-start">
+<code class="descname">GET </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#get--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
 <dd><p>결제 진행 API</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
@@ -1474,31 +1474,39 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-platform">GET /api/v2/admin/pretranslated/project/(int:project_id)/platform</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-platform-(partial_tag)">GET /api/v2/admin/pretranslated/project/(int:project_id)/platform/(partial_tag)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-admin-pretranslated-project-(int-project_id)-resource">POST /api/v2/admin/pretranslated/project/(int:project_id)/resource</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)">DELETE /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)">PUT /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file">POST /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)/file</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file-(int-file_id)">DELETE /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)/file/(int:file_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--api-v2-admin-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file-(int-file_id)">PUT /api/v2/admin/pretranslated/project/(int:project_id)/resource/(int:resource_id)/file/(int:file_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-tags">GET /api/v2/admin/pretranslated/project/(int:project_id)/tags</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -1538,22 +1546,26 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-addHit">PUT /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/addHit</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-file-(int-file_id)-(filename)">GET /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/file/(int:file_id)/(filename)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-markAsPaid">GET /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/markAsPaid</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-rate">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/rate</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-request">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/request</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-sendMail">POST /api/v2/user/pretranslated/project/(int:project_id)/resource/(int:resource_id)/sendMail</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -1642,6 +1654,20 @@
 </dd></dl>
 
 <dl class="get">
+<dt id="get--api-v2-admin-pretranslated-project-(int-project_id)-platform">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/platform</code><a class="headerlink" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-platform" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 플랫폼 입력 모든 후보 보여주기</p>
+<p><strong>Parameters</strong>: None</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: []</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
 <dt id="get--api-v2-admin-pretranslated-project-(int-project_id)-platform-(partial_tag)">
 <code class="descname">GET </code><code class="descname">/api/v2/admin/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/platform/</code><span class="sig-paren">(</span><em>partial_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-platform-(partial_tag)" title="정의 주소">¶</a></dt>
 <dd><p>프로젝트 플랫폼 입력 자동완성</p>
@@ -1653,8 +1679,7 @@
 </dd>
 <dt><strong>Response</strong></dt>
 <dd><ol class="first last arabic simple">
-<li><strong>200</strong>: 추가 성공</li>
-<li><strong>410</strong>: 추가 실패</li>
+<li><strong>200</strong>: []</li>
 </ol>
 </dd>
 </dl>
@@ -1837,6 +1862,20 @@
 </dd></dl>
 
 <dl class="get">
+<dt id="get--api-v2-admin-pretranslated-project-(int-project_id)-tags">
+<code class="descname">GET </code><code class="descname">/api/v2/admin/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/tags</code><a class="headerlink" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-tags" title="정의 주소">¶</a></dt>
+<dd><p>프로젝트 태그 모든 후보 보여주기</p>
+<p><strong>Parameters</strong>: None</p>
+<dl class="docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: []</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
 <dt id="get--api-v2-admin-pretranslated-project-(int-project_id)-tags-(partial_tag)">
 <code class="descname">GET </code><code class="descname">/api/v2/admin/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/tags/</code><span class="sig-paren">(</span><em>partial_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-tags-(partial_tag)" title="정의 주소">¶</a></dt>
 <dd><p>프로젝트 태그 자동완성</p>
@@ -1848,8 +1887,7 @@
 </dd>
 <dt><strong>Response</strong></dt>
 <dd><ol class="first last arabic simple">
-<li><strong>200</strong>: 추가 성공</li>
-<li><strong>410</strong>: 추가 실패</li>
+<li><strong>200</strong>: []</li>
 </ol>
 </dd>
 </dl>
@@ -2237,7 +2275,8 @@
 77
 78
 79
-80</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
+80
+81</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p">{</span>
     <span class="nt">&quot;cover_photo_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/user/pretranslated/project/2/coverPhoto/preview.png&quot;</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
@@ -2251,6 +2290,7 @@
         <span class="nt">&quot;read_permission_level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="nt">&quot;register_timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;Sun, 12 Feb 2017 09:10:04 GMT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;hit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="nt">&quot;resource_info&quot;</span><span class="p">:</span> <span class="p">[</span>
           <span class="p">{</span>
             <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -2320,6 +2360,24 @@
 </pre></div>
 </td></tr></table></div>
 </div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-addHit">
+<code class="descname">PUT </code><code class="descname">/api/v2/user/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/resource/</code><span class="sig-paren">(</span><em class="property">int: </em><em>resource_id</em><span class="sig-paren">)</span><code class="descname">/addHit</code><a class="headerlink" href="#put--api-v2-user-pretranslated-project-(int-project_id)-resource-(int-resource_id)-addHit" title="정의 주소">¶</a></dt>
+<dd><p>히트수 추가</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;project_id&#8221;</strong>: 프로젝트 ID. URL에 직접 삽입</li>
+<li><strong>&#8220;resource_id&#8221;</strong>: 구매한 번역물의 ID. URL에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><p class="first"><strong>200</strong>: 성공</p>
+<p class="last"><strong>410</strong>: DB Error</p>
 </dd>
 </dl>
 </dd></dl>
