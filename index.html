@@ -1136,11 +1136,11 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-payment-eximbay-returnurl">POST /api/v2/payment/eximbay/returnurl</a></td>
+<td><a class="reference external" href="#get--api-v2-payment-eximbay-returnurl">GET /api/v2/payment/eximbay/returnurl</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-payment-eximbay-returnurl">GET /api/v2/payment/eximbay/returnurl</a></td>
+<td><a class="reference external" href="#post--api-v2-payment-eximbay-returnurl">POST /api/v2/payment/eximbay/returnurl</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -1152,19 +1152,19 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-user-payment-postprocess">POST /api/v2/user/payment/postprocess</a></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--api-v2-user-payment-postprocess">GET /api/v2/user/payment/postprocess</a></td>
 <td>&nbsp;</td>
 </tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v2-user-payment-postprocess">POST /api/v2/user/payment/postprocess</a></td>
+<td>&nbsp;</td>
+</tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-user-payment-start">POST /api/v2/user/payment/start</a></td>
+<td><a class="reference external" href="#get--api-v2-user-payment-start">GET /api/v2/user/payment/start</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-user-payment-start">GET /api/v2/user/payment/start</a></td>
+<td><a class="reference external" href="#post--api-v2-user-payment-start">POST /api/v2/user/payment/start</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -1245,16 +1245,16 @@
 </dl>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-payment-eximbay-returnurl">
-<code class="descname">POST </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#post--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
+<dl class="get">
+<dt id="get--api-v2-payment-eximbay-returnurl">
+<code class="descname">GET </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#get--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
 <dd><p>추후에 엑심베이 결제 후 클라이언트 URL로 대체할 것입니다.
 :return:</p>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-v2-payment-eximbay-returnurl">
-<code class="descname">GET </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#get--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
+<dl class="post">
+<dt id="post--api-v2-payment-eximbay-returnurl">
+<code class="descname">POST </code><code class="descname">/api/v2/payment/eximbay/returnurl</code><a class="headerlink" href="#post--api-v2-payment-eximbay-returnurl" title="정의 주소">¶</a></dt>
 <dd><p>추후에 엑심베이 결제 후 클라이언트 URL로 대체할 것입니다.
 :return:</p>
 </dd></dl>
@@ -1323,14 +1323,6 @@
 </dl>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-user-payment-postprocess">
-<code class="descname">POST </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#post--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
-<dd><p>결제 진행 이후 내부에서 결제 완료 처리하는 API.</p>
-<p>Paypal, Alipay같은 경우 결제 완료 후 Redirect할 주소를 넣어 결제 이후의 내부 쇼핑몰과 연결고리를 만들게 된다.</p>
-<p>Frontend에서 직접 call할 일은 없다.</p>
-</dd></dl>
-
 <dl class="get">
 <dt id="get--api-v2-user-payment-postprocess">
 <code class="descname">GET </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#get--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
@@ -1340,8 +1332,16 @@
 </dd></dl>
 
 <dl class="post">
-<dt id="post--api-v2-user-payment-start">
-<code class="descname">POST </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#post--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
+<dt id="post--api-v2-user-payment-postprocess">
+<code class="descname">POST </code><code class="descname">/api/v2/user/payment/postprocess</code><a class="headerlink" href="#post--api-v2-user-payment-postprocess" title="정의 주소">¶</a></dt>
+<dd><p>결제 진행 이후 내부에서 결제 완료 처리하는 API.</p>
+<p>Paypal, Alipay같은 경우 결제 완료 후 Redirect할 주소를 넣어 결제 이후의 내부 쇼핑몰과 연결고리를 만들게 된다.</p>
+<p>Frontend에서 직접 call할 일은 없다.</p>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v2-user-payment-start">
+<code class="descname">GET </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#get--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
 <dd><p>결제 진행 API</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
@@ -1391,9 +1391,9 @@
 </dl>
 </dd></dl>
 
-<dl class="get">
-<dt id="get--api-v2-user-payment-start">
-<code class="descname">GET </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#get--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
+<dl class="post">
+<dt id="post--api-v2-user-payment-start">
+<code class="descname">POST </code><code class="descname">/api/v2/user/payment/start</code><a class="headerlink" href="#post--api-v2-user-payment-start" title="정의 주소">¶</a></dt>
 <dd><p>결제 진행 API</p>
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>

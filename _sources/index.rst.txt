@@ -111,7 +111,7 @@ CICERON API doc index
   .. autoflask:: app.application:app
      :modules: app.pretranslated
      :endpoints:
-     :order: path
+     :order: path 
 
 
 Stats
