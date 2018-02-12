@@ -144,6 +144,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="app.pretranslated.Pretranslated.listingTagsOfPlatform">
+<code class="descname">listingTagsOfPlatform</code><span class="sig-paren">(</span><em>platform</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.listingTagsOfPlatform" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="app.pretranslated.Pretranslated.markAsDownloaded">
 <code class="descname">markAsDownloaded</code><span class="sig-paren">(</span><em>resource_id</em>, <em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.markAsDownloaded" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
@@ -165,7 +170,7 @@
 
 <dl class="method">
 <dt id="app.pretranslated.Pretranslated.pretranslatedFilteredSearch">
-<code class="descname">pretranslatedFilteredSearch</code><span class="sig-paren">(</span><em>endpoint</em>, <em>platform</em>, <em>group=None</em>, <em>tags=None</em>, <em>lang_id=None</em>, <em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedFilteredSearch" title="정의 주소">¶</a></dt>
+<code class="descname">pretranslatedFilteredSearch</code><span class="sig-paren">(</span><em>endpoint</em>, <em>platform</em>, <em>content_group=None</em>, <em>tags=None</em>, <em>lang_id=None</em>, <em>author=None</em>, <em>page=1</em>, <em>itemPerPage=20</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.Pretranslated.pretranslatedFilteredSearch" title="정의 주소">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -360,7 +365,7 @@
 <li><strong>&#8220;author&#8221;</strong>: 원작자</li>
 <li><strong>&#8220;cover_photo&#8221;</strong>: 사진파일</li>
 <li><strong>&#8220;quote_url&#8221;</strong>: 원문 URL (original: 자체 원본, http...: 원문 링크)</li>
-<li><strong>&#8220;group&#8221;</strong>: 연작 처리를 위한 그룹</li>
+<li><strong>&#8220;content_group&#8221;</strong>: 연작 처리를 위한 그룹</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -606,10 +611,11 @@
 <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ol class="first last arabic simple">
-<li><strong>&#8220;group&#8221;</strong>: String, Query string, 그룹</li>
+<li><strong>&#8220;content_group&#8221;</strong>: String, Query string, 그룹</li>
 <li><strong>&#8220;tags&#8221;</strong>: String, Query string, 태그를 쉼표로 구분</li>
 <li><strong>&#8220;lang_id&#8221;</strong>: Int, Query string, 언어 ID</li>
 <li><strong>&#8220;page&#8221;</strong>: Int, Query string, 페이징</li>
+<li><strong>&#8220;author&#8221;</strong>: Query string, 작가</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
@@ -910,6 +916,24 @@
 <dt><strong>Response</strong></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>200</strong>: []</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.pretranslated.PretranslatedAPI.pretranslatedListingTagsOfPlatform">
+<code class="descname">pretranslatedListingTagsOfPlatform</code><span class="sig-paren">(</span><em>platform</em><span class="sig-paren">)</span><a class="headerlink" href="#app.pretranslated.PretranslatedAPI.pretranslatedListingTagsOfPlatform" title="정의 주소">¶</a></dt>
+<dd><p>플랫폼의 모든 태그 보여주기</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>platform</strong>: String, URL에 직접 삽입, 플랫폼 이름</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: [&#8216;politics&#8217;, &#8216;grugru&#8217;]</li>
 </ol>
 </dd>
 </dl>
@@ -1291,7 +1315,7 @@
 <li><strong>&#8220;tone_id&#8221;</strong>: 톤 ID</li>
 <li><strong>&#8220;read_permission_level&#8221;</strong>: 권한 ID</li>
 <li><strong>&#8220;quote_url&#8221;</strong>: 원문 URL (original: 자체 원본, http...: 원문 링크)</li>
-<li><strong>&#8220;group&#8221;</strong>: 연작 처리를 위한 그룹</li>
+<li><strong>&#8220;content_group&#8221;</strong>: 연작 처리를 위한 그룹</li>
 </ol>
 </dd>
 <dt><strong>Response</strong></dt>
